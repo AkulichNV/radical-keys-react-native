@@ -24,11 +24,29 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="strokes"
+        options={{
+          title: 'Strokes',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'flower' : 'flower-outline'} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="explore"
         options={{
           title: 'Explore',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <TabBarIcon name={focused ? 'flower' : 'flower-outline'} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="keys"
+        options={{
+          title: 'Keys',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'flame' : 'flame-outline'} color={color} />
           ),
         }}
       />
