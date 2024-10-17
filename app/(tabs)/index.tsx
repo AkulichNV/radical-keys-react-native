@@ -1,6 +1,5 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { Image, StyleSheet } from 'react-native';
 
-import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
@@ -12,7 +11,7 @@ export default function HomeScreen() {
       headerImage={
         <Image
           source={require('@/assets/images/chinese-calligraphy-dragon.png')}
-          style={styles.reactLogo}
+          style={styles.calligraphyDragon}
         />
       }>
       <ThemedView style={styles.titleContainer}>
@@ -188,7 +187,7 @@ const styles = StyleSheet.create({
     gap: 8,
     marginBottom: 8,
   },
-  reactLogo: {
+  calligraphyDragon: {
     height: 210,
     width: 190,
     bottom: 0,

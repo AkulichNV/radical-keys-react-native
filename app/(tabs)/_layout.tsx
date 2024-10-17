@@ -50,6 +50,15 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="table"
+        options={{
+          title: 'Table Keys',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'flame' : 'flame-outline'} color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }

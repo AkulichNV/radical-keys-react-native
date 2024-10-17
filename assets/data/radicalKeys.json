@@ -1,0 +1,69 @@
+{
+  "radicalKeys": [
+  {
+    "number": 1,
+    "hanzi": "一",
+    "strokeNumber": 1,
+    "pinyin": "yī",
+    "sound": ".wav",
+    "unicode": "U+2F00",
+    "description": {
+      "short": "1, один, единица, начало",
+      "long": "Древний знак в виде короткой горизонтальной черты остался неизменным по сей день. Этот иероглиф помимо значения 'цифра один' имеет значения 'первый, во-первых, 'одинаковый', 'единый', 'единичный', 'один' (т.е. одинокий), 'каждый', 'отдельный', 'весь', 'сплошной', 'целый' и другие. В качестве ключевого знака употребляется редко."
+    },
+    "calligraphy": [
+      {
+        "gif": "radical-keys-react-native/assets/images/radical-gif/一-order.gif",
+        "images": [
+          "radical-keys-react-native/assets/images/strokeOrder/1.jpg"
+        ],
+        "strokeOrder": "Базовой формой ключа № 1 'Единица' является горизонтальная черта, хорошо сбалансированная, располагаемая в центре условного квадрата, имеющая стремление к чуть заметному волнообразному изгибу."
+      }
+    ],
+    "evolution": [
+      {
+        "title": "Символ большого печатного письма",
+        "image": "radical-keys-react-native/assets/images/evolution/1/一-bigseal.svg.png",
+        "link": "https://en.wikipedia.org/wiki/Large_seal_script"
+      },
+      {
+        "title": "Символ малого печатного письма",
+        "image": "radical-keys-react-native/assets/images/evolution/1/一-seal.svg.png",
+        "link": "https://en.wikipedia.org/wiki/Small_seal_script"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "hanzi": "丨",
+    "strokeNumber": 1,
+    "pinyin": "gǔn",
+    "sound": ".wav",
+    "unicode": "U+2F01",
+    "description": {
+      "short": "Палка, вертикальная черта",
+      "long": "Вертикальная черта в китайской иероглифике указывала на единство противоположностей, т.е. верх и низ. Поэтому этот иероглиф может обозначать 'двигаться вперед и отступать, подвигаться назад'. В современном языке иероглиф обычно употребляется в значении 'палка, палочка (осевая черта в иероглифе)', а также знак, заменяющий заглавный иероглиф в тексте словарной статьи в китайских словарях. В качестве ключевого знака иероглиф 'Палка' малопродуктивен."
+    },
+    "calligraphy": [
+      {
+        "gif": "radical-keys-react-native/assets/images/radical-gif/丨-order.gif",
+        "images": [
+          "radical-keys-react-native/assets/images/strokeOrder/2.jpg"
+        ],
+        "strokeOrder": "Базовая форма написания ключа № 2 'Палка' представляет собой вертикальную черту в обоих основных вариантах - 'нависшая капля росы' и 'висящая игла'. 'Нависшая капля росы' пишется ближе к периферии иероглифа, 'висящая игла' - ближе к центру."
+      }
+    ],
+    "evolution": [
+      {
+        "title": "Символ большого печатного письма",
+        "image": "radical-keys-react-native/assets/images/evolution/2/丨-bigseal.svg.png",
+        "link": "https://en.wikipedia.org/wiki/Large_seal_script"
+      },
+      {
+        "title": "Символ малого печатного письма",
+        "image": "radical-keys-react-native/assets/images/evolution/2/丨-seal.svg.png",
+        "link": "https://en.wikipedia.org/wiki/Small_seal_script"
+      }
+    ]
+  }
+]}
