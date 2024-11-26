@@ -27,7 +27,13 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-av", 
+        {
+          "microphonePermission": "Allow Radical-Keys App to access your microphone."
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

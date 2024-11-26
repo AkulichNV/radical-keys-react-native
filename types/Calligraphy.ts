@@ -1,5 +1,5 @@
 export interface Calligraphy {
   gif?: string,
-  images: string[],
-  strokeOrder: string
+  svg: string,
+  strokeOrder?: string
 }

@@ -1,13 +1,14 @@
-import AntDesign from '@expo/vector-icons/AntDesign';
 import { StyleSheet, Pressable } from 'react-native';
 import { useEffect, useState } from 'react';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
 
+import dataKeys from '@/assets/data/radicalKeys.json';
+import AntDesign from '@expo/vector-icons/AntDesign';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { RadicalKeys } from '@/types/RadicalKeys';
 import { groupCharactersByStrokes } from '@/scripts/groupCharactersByStrokes';
-import dataKeys from '../../assets/data/radicalKeys.json';
+import { RadicalKeys } from '@/types/RadicalKeys';
 
 export default function KeysScreen() {
   const [radicalKeys, setRadicalKeys] = useState<Record<number, RadicalKeys[]>>({});
@@ -17,8 +18,16 @@ export default function KeysScreen() {
     setRadicalKeys(groupedKeys);
   }, []);
 
-  function onHanzi(number: number) {
-    return console.log('tap', number);
+  type RootStackParamList = {
+    details: { id: number, radicalKey: RadicalKeys };
+    // Add other screens here if needed
+  };
+
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+
+  function onHanzi(number: number, strokeCount: number ) {
+    navigation.navigate('details', { id: number, radicalKey: radicalKeys[strokeCount][number - 1] });
+
   }
   return (
     <ParallaxScrollView
@@ -36,7 +45,7 @@ export default function KeysScreen() {
             {radicalKeys[strokeCount]?.map((keys) => (
               <Pressable 
               key={keys.unicode} 
-              onPress={() => onHanzi(keys.number)}
+              onPress={() => onHanzi(keys.number, strokeCount)}
             >
               <ThemedText type="cell">{keys.hanzi}</ThemedText>
             </Pressable>
