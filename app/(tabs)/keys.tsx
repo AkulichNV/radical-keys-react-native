@@ -9,6 +9,7 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { groupCharactersByStrokes } from '@/scripts/groupCharactersByStrokes';
 import { RadicalKeys } from '@/types/RadicalKeys';
+import { findCharacterById } from '@/scripts/findCharacterById';
 
 export default function KeysScreen() {
   const [radicalKeys, setRadicalKeys] = useState<Record<number, RadicalKeys[]>>({});
@@ -26,8 +27,8 @@ export default function KeysScreen() {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
   function onHanzi(number: number, strokeCount: number ) {
-    navigation.navigate('details', { id: number, radicalKey: radicalKeys[strokeCount][number - 1] });
-
+    navigation.navigate('details', { id: number, radicalKey: findCharacterById(dataKeys.radicalKeys, number) });
+    console.log(findCharacterById(dataKeys.radicalKeys, number));
   }
   return (
     <ParallaxScrollView
