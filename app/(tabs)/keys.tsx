@@ -10,6 +10,7 @@ import { ThemedView } from '@/components/ThemedView';
 import { groupCharactersByStrokes } from '@/scripts/groupCharactersByStrokes';
 import { RadicalKeys } from '@/types/RadicalKeys';
 import { findCharacterById } from '@/scripts/findCharacterById';
+import { RootParamList } from '@/types/RootParamList';
 
 export default function KeysScreen() {
   const [radicalKeys, setRadicalKeys] = useState<Record<number, RadicalKeys[]>>({});
@@ -19,16 +20,10 @@ export default function KeysScreen() {
     setRadicalKeys(groupedKeys);
   }, []);
 
-  type RootStackParamList = {
-    details: { id: number, radicalKey: RadicalKeys };
-    // Add other screens here if needed
-  };
+  const navigation = useNavigation<NavigationProp<RootParamList>>();
 
-  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
-
-  function onHanzi(number: number, strokeCount: number ) {
+  function onHanzi(number: number) {
     navigation.navigate('details', { id: number, radicalKey: findCharacterById(dataKeys.radicalKeys, number) });
-    console.log(findCharacterById(dataKeys.radicalKeys, number));
   }
   return (
     <ParallaxScrollView
@@ -46,7 +41,7 @@ export default function KeysScreen() {
             {radicalKeys[strokeCount]?.map((keys) => (
               <Pressable 
               key={keys.unicode} 
-              onPress={() => onHanzi(keys.number, strokeCount)}
+              onPress={() => onHanzi(keys.number)}
             >
               <ThemedText type="cell">{keys.hanzi}</ThemedText>
             </Pressable>

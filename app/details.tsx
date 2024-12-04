@@ -30,20 +30,17 @@ export default function DetailsScreen() {
   const [sound, setSound] = useState<Audio.Sound | undefined>();
 
   async function playSound() {
-    console.log('Loading Sound');
     const soundSource = radicalKey.sound as string;
     const soundPath = sounds[soundSource];
     const { sound } = await Audio.Sound.createAsync(soundPath);
     setSound(sound);
 
-    console.log('Playing Sound');
     await sound.playAsync();
   }
 
   useEffect(() => {
     return sound
       ? () => {
-          console.log('Unloading Sound');
           sound.unloadAsync();
         }
       : undefined;
