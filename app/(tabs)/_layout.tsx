@@ -51,6 +51,12 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="keys/[key]"
+        options={{
+          href: null
+        }}
+      />
+      <Tabs.Screen
         name="table"
         options={{
           title: 'Table Keys',

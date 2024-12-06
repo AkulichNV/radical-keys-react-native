@@ -1,7 +1,6 @@
-import {  Stack } from 'expo-router';
+import {  Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import { Pressable, StyleSheet, ScrollView } from 'react-native';
 import { useEffect, useState } from 'react';
-import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { Audio } from 'expo-av';
 
 import { sounds } from '@/assets/sounds/sounds';
@@ -17,20 +16,20 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 import { Evolution } from '@/types/Evolution';
 import { RadicalKeys } from '@/types/RadicalKeys';
 import { Calligraphy } from '@/types/Calligraphy';
-
-
-type DetailsScreenRouteProp = RouteProp<{ params: { id: number, radicalKey: RadicalKeys } }, 'params'>;
+import { useDataContext } from '@/context/KeyContext';
 
 export default function DetailsScreen() {
-  const route = useRoute<DetailsScreenRouteProp>();
-  const navigation = useNavigation();
-  const { id, radicalKey } = route.params;
+  const { key } = useLocalSearchParams();
+  const router = useRouter();
+
+  const { data } = useDataContext();
+  const radicalKey = data;
 
   const [valueText, setvalueText] = useState('Определение');
   const [sound, setSound] = useState<Audio.Sound | undefined>();
 
   async function playSound() {
-    const soundSource = radicalKey.sound as string;
+    const soundSource = radicalKey?.sound as string;
     const soundPath = sounds[soundSource];
     const { sound } = await Audio.Sound.createAsync(soundPath);
     setSound(sound);
@@ -82,10 +81,9 @@ export default function DetailsScreen() {
   }
   return (
     <ScrollView>
-      <Stack.Screen options={{ title: `details/${id}` }} />
-      
+      <Stack.Screen options={{ title: `keys/${key}` }} />
       <ThemedView style={styles.container}>
-        <TopBar onPress={() => navigation.goBack()} title={id} style={styles.topBar}/>
+        <TopBar onPress={()=>router.push('/keys')} title={key} style={styles.topBar} />
         <ThemedView style={styles.header}>
           <SvgGif 
           gifSource={radicalKey.calligraphy[0]?.gif  as string}

@@ -1,6 +1,5 @@
 import { StyleSheet, Pressable } from 'react-native';
 import { useEffect, useState } from 'react';
-import { NavigationProp, useNavigation } from '@react-navigation/native';
 
 import dataKeys from '@/assets/data/radicalKeys.json';
 import AntDesign from '@expo/vector-icons/AntDesign';
@@ -10,20 +9,26 @@ import { ThemedView } from '@/components/ThemedView';
 import { groupCharactersByStrokes } from '@/scripts/groupCharactersByStrokes';
 import { RadicalKeys } from '@/types/RadicalKeys';
 import { findCharacterById } from '@/scripts/findCharacterById';
-import { RootParamList } from '@/types/RootParamList';
+import { Link, useRouter } from 'expo-router';
+import { useDataContext } from '@/context/KeyContext';
 
 export default function KeysScreen() {
+  const router = useRouter();
   const [radicalKeys, setRadicalKeys] = useState<Record<number, RadicalKeys[]>>({});
+  const { setData } = useDataContext();
 
   useEffect(() => {
     const groupedKeys = groupCharactersByStrokes(dataKeys.radicalKeys);
     setRadicalKeys(groupedKeys);
   }, []);
 
-  const navigation = useNavigation<NavigationProp<RootParamList>>();
-
   function onHanzi(number: number) {
-    navigation.navigate('details', { id: number, radicalKey: findCharacterById(dataKeys.radicalKeys, number) });
+    const radicalKey = findCharacterById(dataKeys.radicalKeys, number)
+    setData(radicalKey);
+    router.push({
+          pathname: '/keys/[key]',
+          params: { key: number },
+        });
   }
   return (
     <ParallaxScrollView
@@ -40,11 +45,11 @@ export default function KeysScreen() {
           <ThemedView style={styles.titleContainer}>
             {radicalKeys[strokeCount]?.map((keys) => (
               <Pressable 
-              key={keys.unicode} 
+              key={keys.unicode}
               onPress={() => onHanzi(keys.number)}
-            >
-              <ThemedText type="cell">{keys.hanzi}</ThemedText>
-            </Pressable>
+              >
+                <ThemedText type="cell">{keys.hanzi}</ThemedText>
+              </Pressable>
             )) || <ThemedText type="defaultSemiBold">Нет иероглифов</ThemedText>}
           </ThemedView>
           </ThemedView>

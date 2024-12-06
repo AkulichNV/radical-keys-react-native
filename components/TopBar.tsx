@@ -5,7 +5,7 @@ import { ThemedText } from "./ThemedText";
 
 interface ITopBar {
   onPress: () => void;
-  title: string | number;
+  title: string | string[] | number;
   style?: ViewStyle;
 }
 
