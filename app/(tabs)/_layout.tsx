@@ -7,7 +7,7 @@ import { useColorScheme } from '@/hooks/useColorScheme';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
-
+  
   return (
     <Tabs
       screenOptions={{
@@ -27,15 +27,6 @@ export default function TabLayout() {
         name="strokes"
         options={{
           title: 'Strokes',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'flower' : 'flower-outline'} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'flower' : 'flower-outline'} color={color} />
           ),

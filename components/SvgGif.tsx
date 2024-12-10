@@ -1,4 +1,5 @@
-import { ImageBackground, Pressable, Image, StyleSheet, ViewStyle } from "react-native";
+import { ImageBackground, Pressable, StyleSheet, ViewStyle } from "react-native";
+import { Image } from "expo-image";
 import SvgRenderer from "./SvgRenderer";
 import { useState } from "react";
 
@@ -30,7 +31,7 @@ export function SvgGif({gifSource, svgSource, style}: ISvgGif) {
                 <Image
                   source={gifPath}
                   style={styles.grid}
-                  resizeMode="contain"
+                  contentFit="contain"
                 />
               ) : (
                 <SvgRenderer svgName={svgSource} svgModule={Svgs} />
