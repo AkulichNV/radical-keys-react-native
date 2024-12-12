@@ -69,6 +69,9 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     flexDirection: 'row',
-    gap: 8,
+    gap: 9,
+    flexWrap: 'wrap',
+    paddingBottom: 10,
+    paddingTop: 8
   },
 });
