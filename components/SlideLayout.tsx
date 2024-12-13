@@ -52,7 +52,6 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     borderRadius: 4,
     alignSelf: 'flex-start',
-    // marginHorizontal: '1%',
     marginBottom: 6,
     textAlign: 'center',
   },

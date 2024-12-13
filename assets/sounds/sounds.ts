@@ -8,6 +8,7 @@ export const sounds: { [key: string]: any } = {
   "gun3": require("./gun3.mp3"),
   "jiong3": require("./jiong3.mp3"),
   "jue2": require("./jue2.mp3"),
+  "mi4": require("./mi4.mp3"),
   "pie3": require("./pie3.mp3"),
   "ren2": require("./ren2.mp3"),
   "ru4": require("./ru4.mp3"),

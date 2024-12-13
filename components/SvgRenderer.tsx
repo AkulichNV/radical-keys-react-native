@@ -1,5 +1,4 @@
 import React from 'react';
-// import * as Svgs from '@/assets/images/svgs/svgs';
 
 interface ISvgRenderer {
   svgName: string;
