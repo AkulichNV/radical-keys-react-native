@@ -17,6 +17,10 @@ import U516BA from './516BA.svg';
 import U4E37 from './4E37.svg';
 import U5182 from './5182.svg';
 import U5196 from './5196.svg';
+import U51AB from './51AB.svg';
+import U51ABA from './51ABA.svg';
+import U51E0 from './51E0.svg';
+import U51F5 from './51F5.svg';
 
 export { 
   U4E00, 
@@ -37,5 +41,9 @@ export {
   U516BA,
   U4E37,
   U5182,
-  U5196 
+  U5196,
+  U51AB,
+  U51ABA,
+  U51E0,
+  U51F5
 };

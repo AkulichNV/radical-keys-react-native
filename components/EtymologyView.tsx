@@ -23,8 +23,8 @@ export const EtymologyView = ({
     </ThemedView>
     <ThemedView style={styles.imagesContainer}>
       {images && images.map((img, index) => (
-        <ThemedView style={styles.svg}>
-          <SvgRenderer key={index}  svgName={img} svgModule={evolutionSvgs[svg]}/>
+        <ThemedView key={index} style={styles.svg}>
+          <SvgRenderer  svgName={img} svgModule={evolutionSvgs[svg]}/>
           </ThemedView >
       ))}
     </ThemedView>

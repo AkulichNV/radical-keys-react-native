@@ -12,6 +12,9 @@ import * as E5165 from './5165/E5165';
 import * as E516B from './516B/E516B';
 import * as E5182 from './5182/E5182';
 import * as E5196 from './5196/E5196';
+import * as E51AB from './51AB/E51AB';
+import * as E51E0 from './51E0/E51E0';
+import * as E51F5 from './51F5/E51F5';
 
 export const evolutionSvgs = {
   U4E00: E4E00,
@@ -27,5 +30,8 @@ export const evolutionSvgs = {
   U5165: E5165,
   U516B: E516B,
   U5182: E5182,
-  U5196: E5196
+  U5196: E5196,
+  U51AB: E51AB,
+  U51E0: E51E0,
+  U51F5: E51F5
 };
