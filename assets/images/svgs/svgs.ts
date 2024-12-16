@@ -21,6 +21,9 @@ import U51AB from './51AB.svg';
 import U51ABA from './51ABA.svg';
 import U51E0 from './51E0.svg';
 import U51F5 from './51F5.svg';
+import U5200 from './5200.svg';
+import U5202 from './5202.svg';
+import U5200A from './5200A.svg';
 
 export { 
   U4E00, 
@@ -45,5 +48,8 @@ export {
   U51AB,
   U51ABA,
   U51E0,
-  U51F5
+  U51F5,
+  U5200,
+  U5202,
+  U5200A
 };
