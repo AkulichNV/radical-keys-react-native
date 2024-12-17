@@ -3,6 +3,7 @@
  */
 export const sounds: { [key: string]: any } = {
   "ba1": require("./ba1.mp3"),
+  "bao1": require("./bao1.mp3"),
   "bing1": require("./bing1.mp3"),
   "dao1": require("./dao1.mp3"),
   "er2": require("./er2.mp3"),
@@ -12,6 +13,7 @@ export const sounds: { [key: string]: any } = {
   "jiong3": require("./jiong3.mp3"),
   "jue2": require("./jue2.mp3"),
   "kan3": require("./kan3.mp3"),
+  "li4": require("./li4.mp3"),
   "mi4": require("./mi4.mp3"),
   "pie3": require("./pie3.mp3"),
   "ren2": require("./ren2.mp3"),
