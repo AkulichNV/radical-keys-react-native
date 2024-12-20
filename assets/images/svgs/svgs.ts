@@ -26,6 +26,9 @@ import U5202 from './5202.svg';
 import U5200A from './5200A.svg';
 import U529B from './529B.svg';
 import U52F9 from './52F9.svg';
+import U5315 from './5315.svg';
+import U531A from './531A.svg';
+import U5338 from './5338.svg';
 
 export { 
   U4E00, 
@@ -55,5 +58,8 @@ export {
   U5202,
   U5200A,
   U529B,
-  U52F9
+  U52F9,
+  U5315,
+  U531A,
+  U5338
 };
