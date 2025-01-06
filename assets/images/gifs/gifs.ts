@@ -34,5 +34,8 @@ export const gifs: { [key: string]: any } = {
   "5369": require("./5369.gif"),
   "5382": require("./5382.gif"),
   "53B6": require("./53B6.gif"),
-  "53C8": require("./53C8.gif")
+  "53C8": require("./53C8.gif"),
+  "53E3": require("./53E3.gif"),
+  "56D7": require("./56D7.gif"),
+  "571F": require("./571F.gif")
 };

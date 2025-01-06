@@ -36,6 +36,9 @@ import U353E from './353E.svg';
 import U5382 from './5382.svg';
 import U53B6 from './53B6.svg';
 import U53C8 from './53C8.svg';
+import U53E3 from './53E3.svg';
+import U56D7 from './56D7.svg';
+import U571F from './571F.svg';
 
 export { 
   U4E00, 
@@ -75,5 +78,8 @@ export {
   U353E,
   U5382,
   U53B6,
-  U53C8
+  U53C8,
+  U53E3,
+  U56D7,
+  U571F
 };
