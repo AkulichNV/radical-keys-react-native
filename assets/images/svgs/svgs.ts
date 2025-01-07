@@ -39,6 +39,9 @@ import U53C8 from './53C8.svg';
 import U53E3 from './53E3.svg';
 import U56D7 from './56D7.svg';
 import U571F from './571F.svg';
+import U58EB from './58EB.svg';
+import U5902 from './5902.svg';
+import U590A from './590A.svg';
 
 export { 
   U4E00, 
@@ -81,5 +84,8 @@ export {
   U53C8,
   U53E3,
   U56D7,
-  U571F
+  U571F,
+  U58EB,
+  U5902,
+  U590A
 };
