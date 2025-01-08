@@ -1,10 +1,9 @@
-import U53C8_00 from './53C8_00.svg';
-import U53C8_10 from './53C8_20.svg';
-import U53C8_11 from './53C8_21.svg';
-import U53C8_12 from './53C8_22.svg';
-import U53C8_20 from './53C8_10.svg';
-import U53C8_30 from './53C8_30.svg';
-import U53C8_31 from './53C8_31.svg';
-import U53C8_40 from './53C8_40.svg';
+import U58EB_00 from './58EB_00.svg';
+import U58EB_10 from './58EB_10.svg';
+import U58EB_11 from './58EB_11.svg';
+import U58EB_12 from './58EB_12.svg';
+import U58EB_20 from './58EB_20.svg';
+import U58EB_30 from './58EB_30.svg';
+import U58EB_40 from './58EB_40.svg';
 
-export { U53C8_00, U53C8_10, U53C8_11, U53C8_12, U53C8_20,  U53C8_30, U53C8_31, U53C8_40 };
+export { U58EB_00, U58EB_10, U58EB_11, U58EB_12, U58EB_20,  U58EB_30, U58EB_40 };
