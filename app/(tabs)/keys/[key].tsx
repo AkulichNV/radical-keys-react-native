@@ -1,5 +1,5 @@
-import {  Stack, useLocalSearchParams, useRouter } from 'expo-router';
-import { Pressable, StyleSheet, ScrollView } from 'react-native';
+import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
+import { Pressable, StyleSheet, ScrollView, ImageBackground } from 'react-native';
 import { useEffect, useState } from 'react';
 import { Audio } from 'expo-av';
 
@@ -11,12 +11,12 @@ import { SlideLayout } from '@/components/SlideLayout';
 import { TopBar } from '@/components/TopBar';
 import { DescriptionView } from '@/components/DescriptionView';
 import { StrokeOrder } from '@/components/StrokeOrder';
-import { SvgGif } from '@/components/SvgGif';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { Evolution } from '@/types/Evolution';
-import { RadicalKeys } from '@/types/RadicalKeys';
 import { Calligraphy } from '@/types/Calligraphy';
 import { useDataContext } from '@/context/KeyContext';
+import SvgRenderer from '@/components/SvgRenderer';
+import * as Svgs from '@/assets/images/svgs/svgs';
 
 export default function DetailsScreen() {
   const { key } = useLocalSearchParams();
@@ -25,7 +25,7 @@ export default function DetailsScreen() {
   const { data } = useDataContext();
   const radicalKey = data;
 
-  const [valueText, setvalueText] = useState('Определение');
+  const [valueText, setValueText] = useState('Определение');
   const [sound, setSound] = useState<Audio.Sound | undefined>();
 
   async function playSound() {
@@ -45,7 +45,7 @@ export default function DetailsScreen() {
       : undefined;
   }, [sound]);
 
-  function SwitchSelectedValue(value: string) {
+  function RenderSelectedContent(value: string) {
     switch (value) {
       case 'Определение':
         return <DescriptionView description={radicalKey.description.long}/>
@@ -79,16 +79,24 @@ export default function DetailsScreen() {
         return <ThemedText type="subtitle">{value}</ThemedText>;
     }
   }
+
   return (
     <ScrollView>
       <Stack.Screen options={{ title: `keys/${key}` }} />
       <ThemedView style={styles.container}>
-        <TopBar onPress={()=>router.push('/keys')} title={key} style={styles.topBar} />
+        <TopBar onPress={()=>{
+          router.push('/keys');
+          setValueText('Определение');
+          }} 
+          title={key} style={styles.topBar} />
         <ThemedView style={styles.header}>
-          <SvgGif 
-          gifSource={radicalKey.calligraphy[0]?.gif  as string}
-          svgSource={radicalKey.calligraphy[0]?.svg  as string}
-          />
+          <ImageBackground 
+            source={require('@/assets/images/z200.png')} 
+            style={styles.grid}
+            resizeMode="cover"
+          >
+            <SvgRenderer svgName={radicalKey.calligraphy[0]?.svg  as string} svgModule={Svgs} />
+          </ImageBackground>
           <ThemedView style={styles.description}>
           <Pressable onPress={playSound}>
             <ThemedText type="subtitle">{radicalKey.pinyin}{' '}
@@ -101,9 +109,9 @@ export default function DetailsScreen() {
         <SlideLayout 
         values={['Определение', 'Порядок черт', 'Этимология']}
         selectedValue={valueText}
-        setSelectedValue={setvalueText}
+        setSelectedValue={setValueText}
         >
-          {SwitchSelectedValue(valueText)}
+          {RenderSelectedContent(valueText)}
         </SlideLayout>
       </ThemedView>
     </ScrollView>

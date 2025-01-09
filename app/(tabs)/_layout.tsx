@@ -44,7 +44,8 @@ export default function TabLayout() {
       <Tabs.Screen
         name="keys/[key]"
         options={{
-          href: null
+          href: null,
+          tabBarStyle: { display: 'none' }
         }}
       />
       <Tabs.Screen
