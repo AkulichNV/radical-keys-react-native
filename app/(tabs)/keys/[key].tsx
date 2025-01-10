@@ -15,7 +15,7 @@ import * as Svgs from '@/assets/images/svgs/svgs';
 import { RenderSelectedContent } from '@/components/tabsContent/RenderSelectedContent';
 
 export default function DetailsScreen() {
-  const { key } = useLocalSearchParams();
+  const { key, from } = useLocalSearchParams();
   const router = useRouter();
 
   const { data } = useDataContext();
@@ -46,7 +46,11 @@ export default function DetailsScreen() {
       <Stack.Screen options={{ title: `keys/${key}` }} />
       <ThemedView style={styles.container}>
         <TopBar onPress={()=>{
-          router.push('/keys');
+          if (from === 'keys') {
+            router.push('/keys');
+          } else if (from === 'table') {
+            router.push('/table');
+          }
           setValueText('Определение');
           }} 
           title={key} style={styles.topBar} />

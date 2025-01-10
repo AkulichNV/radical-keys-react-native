@@ -9,7 +9,7 @@ import { ThemedView } from '@/components/ThemedView';
 import { groupCharactersByStrokes } from '@/scripts/groupCharactersByStrokes';
 import { RadicalKeys } from '@/types/RadicalKeys';
 import { findCharacterById } from '@/scripts/findCharacterById';
-import { Link, useRouter } from 'expo-router';
+import { useRouter } from 'expo-router';
 import { useDataContext } from '@/context/KeyContext';
 
 export default function KeysScreen() {
@@ -27,7 +27,7 @@ export default function KeysScreen() {
     setData(radicalKey);
     router.push({
           pathname: '/keys/[key]',
-          params: { key: number },
+          params: { key: number, from: 'keys' },
         });
   }
   return (

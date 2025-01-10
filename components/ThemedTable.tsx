@@ -1,37 +1,46 @@
 import React from 'react';
-import { View, Text, StyleSheet, Pressable } from 'react-native';
+import { View, StyleSheet, Pressable } from 'react-native';
+import { useRouter } from 'expo-router';
+import { useDataContext } from '@/context/KeyContext';
 
 import { RadicalKeys } from '@/types/RadicalKeys';
 import { ThemedView } from './ThemedView';
 import { ThemedText } from './ThemedText';
+import { findCharacterById } from '@/scripts/findCharacterById';
+import dataKeys from '@/assets/data/radicalKeys.json';
 
 interface TableProps {
   data: RadicalKeys[];
 }
 
 const ThemedTable: React.FC<TableProps> = ({ data }) => {
+  const router = useRouter();
+  const { setData } = useDataContext();
   function onRowPress(id: number) {
-    console.log(id);
+    const radicalKey = findCharacterById(dataKeys.radicalKeys, id)
+    setData(radicalKey);
+    router.push({
+          pathname: '/keys/[key]',
+          params: { key: id, from: 'table' },
+        });
   }
   return (
-    <ThemedView style={styles.container}>
+    <ThemedView>
       {/* Table Header */}
       <View style={styles.row}>
-        <ThemedText type="subtitle" style={styles.header}>№</ThemedText>
-        <ThemedText type="subtitle" style={styles.header}>Иероглиф</ThemedText>
-        <ThemedText type="subtitle" style={styles.header}>Значение</ThemedText>
-        <ThemedText type="subtitle" style={styles.header}>Название</ThemedText>
-        <ThemedText type="subtitle" style={styles.header}>Кол-во черт</ThemedText>
+        <ThemedText type="subtitle" style={[styles.header, styles.cell1]}>№</ThemedText>
+        <ThemedText type="subtitle" style={[styles.header, styles.cell2]}>汉字</ThemedText>
+        <ThemedText type="subtitle" style={[styles.header, styles.cell3]}>拼音</ThemedText>
+        <ThemedText type="subtitle" style={[styles.header, styles.cell4]}>Значение</ThemedText>
       </View>
 
       {/* Table Rows */}
-      {data.map((row, index) => (
-        <Pressable style={styles.row} key={index} onPress={()=>{onRowPress(row.number)}}>
-          <ThemedText style={styles.cell}>{row.number}</ThemedText>
-          <ThemedText style={styles.cell}>{row.hanzi}</ThemedText>
-          <ThemedText style={styles.cell}>{row.description.short}</ThemedText>
-          <ThemedText style={styles.cell}>{row.pinyin}</ThemedText>
-          <ThemedText style={styles.cell}>{row.strokeNumber}</ThemedText>
+      {data.map((item, index) => (
+        <Pressable style={styles.row} key={index} onPress={()=>{onRowPress(item.number)}}>
+          <ThemedText style={[styles.cell, styles.cell1]}>{item.number}</ThemedText>
+          <ThemedText type="title" style={[styles.cell, styles.cell2]}>{item.hanzi}</ThemedText>
+          <ThemedText style={[styles.cell, styles.cell3]}>{item.pinyin}</ThemedText>
+          <ThemedText style={[styles.cell, styles.cell4]}>{item.description.short}</ThemedText>
         </Pressable>
       ))}
     </ThemedView>
@@ -39,10 +48,6 @@ const ThemedTable: React.FC<TableProps> = ({ data }) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    padding: 10,
-    // backgroundColor: '#fff',
-  },
   row: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -51,13 +56,24 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
   },
   header: {
-    fontWeight: 'bold',
-    fontSize: 16,
+    textAlign: 'center',
+  },
+  cell1: {
+    flex: 0.4,
+  },
+  cell2: {
     flex: 1,
   },
+  cell3: {
+    flex: 1.2,
+  },
+  cell4: {
+    flex: 2,
+    textAlign: 'right'
+  },
   cell: {
-    fontSize: 14,
-    flex: 1,
+    // fontSize: 14,
+    textAlign: 'center',
   },
 });
 

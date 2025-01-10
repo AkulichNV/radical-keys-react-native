@@ -17,27 +17,27 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
+          title: 'Каллиграфия',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
+            <TabBarIcon name={focused ? 'rose' : 'rose-outline'} color={color} />
           ),
         }}
       />
       <Tabs.Screen
         name="strokes"
         options={{
-          title: 'Strokes',
+          title: 'Порядок черт',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'flower' : 'flower-outline'} color={color} />
+            <TabBarIcon name={focused ? 'receipt' : 'receipt-outline'} color={color} />
           ),
         }}
       />
       <Tabs.Screen
         name="keys"
         options={{
-          title: 'Keys',
+          title: 'Ключи',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'flame' : 'flame-outline'} color={color} />
+            <TabBarIcon name={focused ? 'extension-puzzle' : 'extension-puzzle-outline'} color={color} />
           ),
         }}
       />
@@ -51,9 +51,9 @@ export default function TabLayout() {
       <Tabs.Screen
         name="table"
         options={{
-          title: 'Table Keys',
+          title: 'Таблица Ключей',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'flame' : 'flame-outline'} color={color} />
+            <TabBarIcon name={focused ? 'list' : 'list-outline'} color={color} />
           ),
         }}
       />
