@@ -4,19 +4,15 @@ import { useEffect, useState } from 'react';
 import { Audio } from 'expo-av';
 
 import { sounds } from '@/assets/sounds/sounds';
-import { EtymologyView } from '@/components/EtymologyView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { SlideLayout } from '@/components/SlideLayout';
 import { TopBar } from '@/components/TopBar';
-import { DescriptionView } from '@/components/DescriptionView';
-import { StrokeOrder } from '@/components/StrokeOrder';
 import AntDesign from '@expo/vector-icons/AntDesign';
-import { Evolution } from '@/types/Evolution';
-import { Calligraphy } from '@/types/Calligraphy';
 import { useDataContext } from '@/context/KeyContext';
 import SvgRenderer from '@/components/SvgRenderer';
 import * as Svgs from '@/assets/images/svgs/svgs';
+import { RenderSelectedContent } from '@/components/tabsContent/RenderSelectedContent';
 
 export default function DetailsScreen() {
   const { key } = useLocalSearchParams();
@@ -44,41 +40,6 @@ export default function DetailsScreen() {
         }
       : undefined;
   }, [sound]);
-
-  function RenderSelectedContent(value: string) {
-    switch (value) {
-      case 'Определение':
-        return <DescriptionView description={radicalKey.description.long}/>
-      case 'Порядок черт':
-        return (
-          <ThemedView>
-            {radicalKey.calligraphy.map((item: Calligraphy, index: number) => (
-              <StrokeOrder
-                key={index}
-                gifSource={item.gif}
-                svgSource={item.svg}
-                strokeOrder={item.strokeOrder}
-              />
-            ))}
-          </ThemedView>
-        );
-      case 'Этимология':
-        return (
-          <ThemedView>
-            {radicalKey.evolution.map((item: Evolution, index: number) => (
-              <EtymologyView
-                key={index}
-                svg={radicalKey.unicode}
-                images={item.image} 
-                title={item.title}
-              />
-            ))}
-          </ThemedView>
-        );
-      default:
-        return <ThemedText type="subtitle">{value}</ThemedText>;
-    }
-  }
 
   return (
     <ScrollView>
@@ -111,7 +72,7 @@ export default function DetailsScreen() {
         selectedValue={valueText}
         setSelectedValue={setValueText}
         >
-          {RenderSelectedContent(valueText)}
+          <RenderSelectedContent value={valueText} radicalKey={radicalKey} />
         </SlideLayout>
       </ThemedView>
     </ScrollView>

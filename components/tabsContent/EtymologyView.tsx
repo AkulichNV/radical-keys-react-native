@@ -1,8 +1,8 @@
 import { ViewStyle, StyleSheet } from "react-native";
-import { ThemedView } from "./ThemedView";
-import SvgRenderer from "./SvgRenderer";
+import { ThemedView } from "../ThemedView";
+import SvgRenderer from "../SvgRenderer";
 import { evolutionSvgs } from "@/assets/images/evolution/evolutionSvgs";
-import { ThemedText } from "./ThemedText";
+import { ThemedText } from "../ThemedText";
 
 interface IEtymologyView {
   svg: string,

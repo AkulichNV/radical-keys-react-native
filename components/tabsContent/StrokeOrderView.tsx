@@ -1,21 +1,21 @@
-import { ViewStyle, Image, StyleSheet, ImageBackground } from "react-native";
-import { ThemedView } from "./ThemedView";
-import { ThemedText } from "./ThemedText";
-import { SvgGif } from "./SvgGif";
+import { ViewStyle, StyleSheet } from "react-native";
+import { ThemedView } from "../ThemedView";
+import { ThemedText } from "../ThemedText";
+import { SvgGif } from "../SvgGif";
 
-interface IStrokeOrder {
+interface IStrokeOrderView {
   svgSource: string;
   gifSource: string | undefined;
   strokeOrder?: string;
   style?: ViewStyle;
 }
 
-export const StrokeOrder = ({
+export const StrokeOrderView = ({
   svgSource,
   gifSource,
   strokeOrder,
   style
-}: IStrokeOrder) => (
+}: IStrokeOrderView) => (
   <ThemedView style={[styles.container, style]}>
     <SvgGif 
       gifSource={gifSource}
