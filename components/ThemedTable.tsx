@@ -72,7 +72,6 @@ const styles = StyleSheet.create({
     textAlign: 'right'
   },
   cell: {
-    // fontSize: 14,
     textAlign: 'center',
   },
 });

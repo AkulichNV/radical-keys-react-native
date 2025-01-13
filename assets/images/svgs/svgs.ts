@@ -45,6 +45,12 @@ import U590A from './590A.svg';
 import U5915 from './5915.svg';
 import U5927 from './5927.svg';
 import U5973 from './5973.svg';
+import U5B50 from './5B50.svg';
+import U5B50A from './5B50A.svg';
+import U5B80 from './5B80.svg';
+import U5BF8 from './5BF8.svg';
+import U5C0F from './5C0F.svg';
+import U5C0FA from './5C0FA.svg';
 
 export { 
   U4E00, 
@@ -93,5 +99,11 @@ export {
   U590A,
   U5915,
   U5927,
-  U5973
+  U5973,
+  U5B50,
+  U5B50A,
+  U5B80,
+  U5BF8,
+  U5C0F,
+  U5C0FA
 };
