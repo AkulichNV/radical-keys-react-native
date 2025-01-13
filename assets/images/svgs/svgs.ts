@@ -51,6 +51,8 @@ import U5B80 from './5B80.svg';
 import U5BF8 from './5BF8.svg';
 import U5C0F from './5C0F.svg';
 import U5C0FA from './5C0FA.svg';
+import U5C22 from './5C22.svg';
+import U5C22A from './5C22A.svg';
 
 export { 
   U4E00, 
@@ -105,5 +107,7 @@ export {
   U5B80,
   U5BF8,
   U5C0F,
-  U5C0FA
+  U5C0FA,
+  U5C22,
+  U5C22A
 };
