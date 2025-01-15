@@ -2,17 +2,17 @@ import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import { Pressable, StyleSheet, ScrollView, ImageBackground } from 'react-native';
 import { useEffect, useState } from 'react';
 import { Audio } from 'expo-av';
+import AntDesign from '@expo/vector-icons/AntDesign';
 
+import * as Svgs from '@/assets/images/svgs/svgs';
 import { sounds } from '@/assets/sounds/sounds';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { SlideLayout } from '@/components/SlideLayout';
 import { TopBar } from '@/components/TopBar';
-import AntDesign from '@expo/vector-icons/AntDesign';
-import { useDataContext } from '@/context/KeyContext';
 import SvgRenderer from '@/components/SvgRenderer';
-import * as Svgs from '@/assets/images/svgs/svgs';
 import { RenderSelectedContent } from '@/components/tabsContent/RenderSelectedContent';
+import { useDataContext } from '@/context/KeyContext';
 
 export default function DetailsScreen() {
   const { key, from } = useLocalSearchParams();
