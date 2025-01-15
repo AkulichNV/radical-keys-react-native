@@ -55,5 +55,6 @@ const styles = StyleSheet.create({
   svg: {
     borderWidth: 1,
     borderColor: '#ECEDEE',
+    backgroundColor: '#ffffff',
   }
 });

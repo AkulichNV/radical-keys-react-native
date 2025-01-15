@@ -56,7 +56,7 @@ import U5C22A from './5C22A.svg';
 import U5C23 from './5C23.svg';
 import U5C38 from './5C38.svg';
 import U5C6E from './5C6E.svg';
-
+import U5C71 from './5C71.svg';
 
 export { 
   U4E00, 
@@ -116,5 +116,6 @@ export {
   U5C22A,
   U5C23,
   U5C38,
-  U5C6E
+  U5C6E,
+  U5C71
 };

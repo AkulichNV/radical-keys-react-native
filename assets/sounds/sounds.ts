@@ -29,6 +29,7 @@ export const sounds: { [key: string]: any } = {
   "pie3": require("./pie3.mp3"),
   "ren2": require("./ren2.mp3"),
   "ru4": require("./ru4.mp3"),
+  "shan1": require("./shan1.mp3"),
   "shi1": require("./shi1.mp3"),
   "shi2": require("./shi2.mp3"),
   "shi4": require("./shi4.mp3"),
