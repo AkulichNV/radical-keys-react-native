@@ -8,7 +8,7 @@ import { findCharacterById } from '@/scripts/findCharacterById';
 import { RadicalKeys } from '@/types/RadicalKeys';
 import dataKeys from '../../assets/data/radicalKeys.json';
 
-export default function TabTwoScreen() {
+export default function TableKeysScreen() {
 
   const data = dataKeys.radicalKeys;
   const router = useRouter();
