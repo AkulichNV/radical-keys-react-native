@@ -6,6 +6,9 @@
 const tintColorLight = '#0a7ea4';
 const tintColorDark = '#fff';
 
+const borderColorDark = '#bfc0c2';
+const borderColorLight = '#dacdc4';
+
 export const Colors = {
   light: {
     text: '#11181C',
@@ -17,8 +20,8 @@ export const Colors = {
     borderColor: '#11181C'
   },
   dark: {
-    text: '#ECEDEE',
-    background: '#151718',
+    text: '#e3ebed',
+    background: '#0a131a',
     tint: tintColorDark,
     icon: '#9BA1A6',
     tabIconDefault: '#9BA1A6',
