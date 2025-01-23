@@ -1,5 +1,5 @@
 import type { PropsWithChildren, ReactElement } from 'react';
-import { StyleSheet, useColorScheme } from 'react-native';
+import { ImageBackground, StyleSheet, useColorScheme } from 'react-native';
 import Animated, {
   interpolate,
   useAnimatedRef,
@@ -10,6 +10,7 @@ import Animated, {
 
 import { ThemedView } from '@/components/ThemedView';
 import { ThemedText } from './ThemedText';
+
 
 const HEADER_HEIGHT = 250;
 
@@ -107,8 +108,8 @@ const styles = StyleSheet.create({
     transform: [ { translateX: '-50%' }, { translateY: '-50%' } ],
     fontSize: 15,
     textAlign: 'center',  
-    borderColor: 'white',
-    borderWidth: 1,
+    // borderColor: 'white',
+    // borderWidth: 1,
     paddingTop: 15,
     paddingBottom: 15,
     borderRadius: 20,

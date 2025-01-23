@@ -1,4 +1,4 @@
-import { StyleSheet, Pressable, FlatList, ListRenderItem, Dimensions, useWindowDimensions } from 'react-native';
+import { StyleSheet, Pressable, FlatList, ListRenderItem, Dimensions, Image } from 'react-native';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'expo-router';
 
@@ -9,6 +9,7 @@ import { groupCharactersByStrokes } from '@/scripts/groupCharactersByStrokes';
 import { RadicalKeys } from '@/types/RadicalKeys';
 import { findCharacterById } from '@/scripts/findCharacterById';
 import { useDataContext } from '@/context/KeyContext';
+import ParallaxFlatList from '@/components/ParallaxFlatList';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -44,8 +45,8 @@ export default function KeysScreen() {
 
   const renderStrokeSection: ListRenderItem<number> = ({ item: strokeCount }) => (
     <ThemedView >
-      <ThemedText type="subtitle">
-        Кол-во черт: {strokeCount} ({radicalKeys[strokeCount]?.length || 0})
+      <ThemedText type="subtitle" style={styles.subtitle}>
+        Черт в знаке: {strokeCount} (всего таких {radicalKeys[strokeCount]?.length || 0})
       </ThemedText>
       <FlatList
         key={numColumns}
@@ -57,7 +58,7 @@ export default function KeysScreen() {
         renderItem={({ item: keys }) => (
           <Pressable onPress={() => onHanzi(keys.number)}>
             <ThemedView style={styles.character}>
-              <ThemedText type="subtitle">{keys.hanzi}</ThemedText>
+              <ThemedText type="subtitle" style={styles.characterText}>{keys.hanzi}</ThemedText>
             </ThemedView>
           </Pressable>
         )}
@@ -69,28 +70,29 @@ export default function KeysScreen() {
   );
 
   return (
-    <ThemedView style={{ flex : 1 }}>
-      <FlatList
-        data={strokeCounts}
-        keyExtractor={(item) => item.toString()}
-        renderItem={renderStrokeSection}
-        ListHeaderComponent={
-          <ThemedView style={styles.titleContainer}>
-            <ThemedText type="title">Иероглифические ключи</ThemedText>
-          </ThemedView>
-        }
-        showsHorizontalScrollIndicator={false}
-      />
-    </ThemedView>
+    <ParallaxFlatList
+      headerBackgroundColor={{ light: '#A1CEDC', dark: '#010606' }}
+      headerImage={
+          <Image
+            source={require('@/assets/images/background1.jpg')}
+            style={styles.headerImage}
+          />
+      }
+      title={'Иероглифические ключи'}
+      data={strokeCounts}
+      renderItem={renderStrokeSection}
+    />
   );
 }
 
 const styles = StyleSheet.create({
   headerImage: {
-    color: '#808080',
-    bottom: -90,
-    left: -35,
-    position: 'absolute',
+    height: 250,
+    width: '100%',
+    resizeMode: "contain",
+  },
+  subtitle: {
+    marginBottom: 15,
   },
   titleContainer: {
     flexDirection: 'row',
@@ -104,13 +106,23 @@ const styles = StyleSheet.create({
     marginBottom: ITEM_MARGIN,
   },
   character: {
+    flex: 1,
     fontWeight: 'bold',
-    textAlign: 'center',
-    padding: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
     borderWidth: 1,
     borderRadius: 10,
-    borderColor: '#ECEDEE',
+    borderColor: '#272f3a',
     width: ITEM_WIDTH,
     height: ITEM_WIDTH,
+    backgroundColor: '#010606',
+    shadowColor: '#ffffff',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,  
+    elevation: 5
+  },
+  characterText: {
+    textAlign: 'center',
   }
 });

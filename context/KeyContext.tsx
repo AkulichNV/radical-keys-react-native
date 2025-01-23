@@ -10,10 +10,10 @@ interface DataProviderProps {
   children: ReactNode;
 }
 
-const KeyContext = createContext<IKeyContext>();
+const KeyContext = createContext<IKeyContext | undefined>(undefined);
 
 export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
-  const [data, setData] = useState<RadicalKeys>();
+  const [data, setData] = useState<RadicalKeys>({} as RadicalKeys);
 
   return (
     <KeyContext.Provider value={{ data, setData }}>

@@ -30,7 +30,7 @@ export default function RootLayout() {
 
   return (
     <DataProvider>
-      <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
+      <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'}  backgroundColor={colorScheme === 'dark' ? '#0a131a' : '#fff' }/>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
         <Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
