@@ -13,11 +13,12 @@ import ParallaxFlatList from '@/components/ParallaxFlatList';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
-  // Calculate the number of columns based on screen width
-  const isTablet = windowWidth >= 768;
-  const numColumns = isTablet ? (windowWidth > windowHeight ? 12 : 8) : (windowWidth > windowHeight ? 7 : 6);
-  const ITEM_WIDTH = isTablet ? 80 : 50;
-  const ITEM_MARGIN = isTablet ? 15 : 10;
+
+// Calculate the number of columns based on screen width
+const isTablet = windowWidth >= 768;
+const numColumns = isTablet ? (windowWidth > windowHeight ? 12 : 8) : (windowWidth > windowHeight ? 7 : 6);
+const ITEM_WIDTH = isTablet ? 80 : 50;
+const ITEM_MARGIN = isTablet ? 15 : 10;
 
 export default function KeysScreen() {
   const router = useRouter();
@@ -41,16 +42,14 @@ export default function KeysScreen() {
 
   const strokeCounts = Array.from({ length: 17 }, (_, index) => index + 1);
 
-
-
-  const renderStrokeSection: ListRenderItem<number> = ({ item: strokeCount }) => (
+  const renderStrokeSection = ({ item }: {item: number }) => (
     <ThemedView >
       <ThemedText type="subtitle" style={styles.subtitle}>
-        Черт в знаке: {strokeCount} (всего таких {radicalKeys[strokeCount]?.length || 0})
+        Черт в знаке: {item} (всего таких {radicalKeys[item]?.length || 0})
       </ThemedText>
       <FlatList
         key={numColumns}
-        data={radicalKeys[strokeCount] || []}
+        data={radicalKeys[item] || []}
         keyExtractor={(item) => item.unicode.toString()}
         ListEmptyComponent={
           <ThemedText type="defaultSemiBold">Нет иероглифов</ThemedText>

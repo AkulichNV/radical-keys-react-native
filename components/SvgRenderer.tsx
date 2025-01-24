@@ -5,7 +5,7 @@ interface ISvgRenderer {
   svgModule: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> };
 }
 
-const SvgRenderer = ({ svgName, svgModule }: ISvgRenderer) => {
+export const SvgRenderer = ({ svgName, svgModule }: ISvgRenderer) => {
   const SvgComponent = svgModule[svgName];
 
   if (!SvgComponent) {
@@ -15,5 +15,3 @@ const SvgRenderer = ({ svgName, svgModule }: ISvgRenderer) => {
 
   return <SvgComponent width={100} height={100}/>;
 };
-
-export default SvgRenderer;

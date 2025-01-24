@@ -1,6 +1,6 @@
 import { ImageBackground, Pressable, StyleSheet, View, ViewStyle } from "react-native";
 import { Image } from "expo-image";
-import SvgRenderer from "./SvgRenderer";
+import { SvgRenderer } from "./SvgRenderer";
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { useState } from "react";
 

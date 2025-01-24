@@ -4,27 +4,27 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 import { ThemedText } from "./ThemedText";
 
 interface ITopBar {
-  onPress: () => void;
+  onPressBack: () => void;
   title: string | string[] | number;
   style?: ViewStyle;
 }
 
 export const TopBar = ({
-  onPress,
+  onPressBack,
   title,
   style
 }: ITopBar) => (
   <ThemedView style={[styles.container, style]}>
     <Pressable
       hitSlop={8}
-      onPress={onPress}
+      onPress={onPressBack}
       style={styles.rightButton}
     >
       <ThemedText type="title">
         <AntDesign name="left" size={25} />
       </ThemedText>
     </Pressable>
-    <ThemedText type='title' style={styles.title}>№{title}</ThemedText>
+    <ThemedText type='title' style={styles.title}>{title}</ThemedText>
   </ThemedView>
 );
 
@@ -34,16 +34,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    paddingTop: 30,
-    paddingBottom: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: '#0a7ea4',
-    marginBottom: 20
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderWidth: 1,
+    borderColor: '#272f3a',
+    borderRadius: 40,
+    marginVertical: 20
   },
   rightButton: {
-    flex: 0.75
+    flex: 0.85
   },
   title: {
-    flex: 1
+    flex: 1,
+    textAlignVertical: 'center',
+    paddingTop: 10
   }
 });
