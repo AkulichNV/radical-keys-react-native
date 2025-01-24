@@ -3,9 +3,12 @@ import React from 'react';
 interface ISvgRenderer {
   svgName: string;
   svgModule: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> };
+  width?: number;
+  height?: number;
+  color?: string;
 }
 
-export const SvgRenderer = ({ svgName, svgModule }: ISvgRenderer) => {
+export const SvgRenderer = ({ svgName, svgModule, width=100, height=100, color='#000001' }: ISvgRenderer) => {
   const SvgComponent = svgModule[svgName];
 
   if (!SvgComponent) {
@@ -13,5 +16,5 @@ export const SvgRenderer = ({ svgName, svgModule }: ISvgRenderer) => {
     return null;
   }
 
-  return <SvgComponent width={100} height={100}/>;
+  return <SvgComponent width={width} height={height} color={color}/>;
 };

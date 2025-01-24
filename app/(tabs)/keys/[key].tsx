@@ -57,8 +57,8 @@ export default function DetailsScreen() {
         <KeyHeader 
           svgName={radicalKey.calligraphy[0]?.svg}
           playSound={playSound}
+          number={radicalKey.number}
           pinyin={radicalKey.pinyin}
-          hanzi={radicalKey.hanzi}
           description={radicalKey.description.short}
         />
         <SlideLayout 

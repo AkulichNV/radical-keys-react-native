@@ -10,46 +10,87 @@ interface IKeyHeader {
   svgName: string,
   playSound: () => void,
   pinyin: string,
-  hanzi: string,
   description: string,
+  number: number
 };
 
-export const KeyHeader = ({svgName, playSound, pinyin, hanzi, description }: IKeyHeader) => {
+export const KeyHeader = ({svgName, playSound, pinyin, description, number }: IKeyHeader) => {
   return (
     <ThemedView style={styles.header}>
-          <ImageBackground 
-            source={require('@/assets/images/z200.png')} 
-            style={styles.grid}
-            resizeMode="cover"
-          >
-            <SvgRenderer svgName={svgName} svgModule={Svgs} />
-          </ImageBackground>
-          <ThemedView style={styles.description}>
-          <Pressable onPress={playSound}>
-            <ThemedText type="subtitle">{pinyin}{' '}
-              <AntDesign name="sound" size={18} color="white" />
-            </ThemedText>
+      <ImageBackground 
+        source={require('@/assets/images/darkGridBackground.png')} 
+        imageStyle={styles.background}
+        resizeMode="cover"
+      >
+        <ThemedText type='subtitle' style={styles.numberText}>No {number}</ThemedText>
+        
+        <ThemedView style={styles.svg}>
+          <Pressable onPress={() => {console.log('left')}}>
+            <AntDesign name="caretleft" size={18} color="white" style={{borderColor: '#ffffff', borderWidth: 0.1}} />
           </Pressable>
-          <ThemedText type="subtitle">{hanzi} = {description}</ThemedText>
-          </ThemedView>
+          <SvgRenderer svgName={svgName} svgModule={Svgs} width={250} height={250} color={'#ffffff'}/>
+          <Pressable onPress={() => {console.log('right')}}>
+            <AntDesign name="caretright" size={18} color="white" style={{borderColor: '#ffffff', borderWidth: 0.1}}/>
+          </Pressable>
         </ThemedView>
+      </ImageBackground>
+
+      <ThemedView style={styles.soundDescriptionContainer}>
+        <Pressable onPress={playSound} style={styles.content}>
+          <ThemedText type="subtitle">{pinyin}{' '}
+            <AntDesign name="sound" size={18} color="white" />
+          </ThemedText>
+        </Pressable>
+        <Pressable onPress={() => {console.log('description')}} style={styles.content}>
+          <ThemedText type="subtitle" style={styles.contentText}>{description}</ThemedText>
+        </Pressable>
+      </ThemedView>
+    </ThemedView>
   )
 }
 
 const styles = StyleSheet.create({
   header: {
     flex: 1,
-    flexDirection: 'row',
     gap: 20,
-    justifyContent: 'space-between',
     marginBottom: 10,
   },
-  description: {
+  svg: {
     flex: 1,
+    flexDirection: 'row',
+    backgroundColor: 'transparent',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    overflow: 'hidden',
+  },
+  background: {
+    borderWidth: 1,
+    borderColor: '#272f3a',
+    borderRadius: 40,
+  },
+  numberText: {
     textAlign: 'center'
   },
-  grid: {
-    width: 100,
-    height: 100,
+  soundDescriptionContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    gap: 20,
+    
+  },
+  content: {
+    flex: 0.5,
+    flexDirection: 'row',
+    borderWidth: 1,
+    borderColor: '#272f3a',
+    borderRadius: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft:'auto',
+    marginRight:'auto',
+    padding: 20,
+  },
+  contentText: {
+    textAlign: 'center',
   }
 });
