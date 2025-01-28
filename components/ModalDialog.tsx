@@ -9,23 +9,21 @@ type IModalDialog = PropsWithChildren<{
   onClose: () => void;
 }>;
 
-export const ModalDialog = ({isVisible, children, onClose }: IModalDialog) => {
-  return (
-    <Modal animationType="slide" transparent={true} visible={isVisible}>
-      <Pressable style={styles.overlay} onPress={onClose}>
-      <ThemedView style={styles.modalContent}>
-        <ThemedView style={styles.titleContainer}>
-          <ThemedText style={styles.title}>Значение иероглифа</ThemedText>
-          <Pressable onPress={onClose}>
-            <AntDesign name="close" color="#fff" size={22} />
-          </Pressable>
-        </ThemedView>
-        {children}
+export const ModalDialog = ({isVisible, children, onClose }: IModalDialog) => (
+  <Modal animationType="slide" transparent={true} visible={isVisible}>
+    <Pressable style={styles.overlay} onPress={onClose}>
+    <ThemedView style={styles.modalContent}>
+      <ThemedView style={styles.titleContainer}>
+        <ThemedText style={styles.title}>Значение иероглифа</ThemedText>
+        <Pressable onPress={onClose}>
+          <AntDesign name="close" color="#fff" size={22} />
+        </Pressable>
       </ThemedView>
-      </Pressable>
-    </Modal>
-  );
-}
+      {children}
+    </ThemedView>
+    </Pressable>
+  </Modal>
+);
 
 const styles = StyleSheet.create({
   overlay: {
@@ -36,7 +34,6 @@ const styles = StyleSheet.create({
   modalContent: {
     height: '41%',
     width: '100%',
-    // backgroundColor: '#25292e',
     borderTopRightRadius: 18,
     borderTopLeftRadius: 18,
     position: 'absolute',

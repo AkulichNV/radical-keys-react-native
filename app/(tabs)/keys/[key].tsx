@@ -5,15 +5,12 @@ import { Audio } from 'expo-av';
 
 import { sounds } from '@/assets/sounds/sounds';
 import { ThemedView } from '@/components/ThemedView';
-import { SlideLayout } from '@/components/SlideLayout';
 import { TopBar } from '@/components/TopBar';
-import { RenderSelectedContent } from '@/components/selectedContent/RenderSelectedContent';
 import { useDataContext } from '@/context/KeyContext';
 import { KeyHeader } from '@/components/KeyHeader';
 import { ModalDialog } from '@/components/ModalDialog';
-import { ThemedText } from '@/components/ThemedText';
-import { DescriptionView } from '@/components/selectedContent/DescriptionView';
-
+import { DescriptionView } from '@/components/DescriptionView';
+import { ContentView } from '@/components/selectedContent/ContentView';
 
 export default function DetailsScreen() {
   const { key, from } = useLocalSearchParams();
@@ -21,10 +18,9 @@ export default function DetailsScreen() {
 
   const { data } = useDataContext();
   const radicalKey = data;
-
-  const [valueText, setValueText] = useState<string>('Определение');
   const [sound, setSound] = useState<Audio.Sound | undefined>();
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
+  const [isStrokeOrder, setIsStrokeOrder] = useState<boolean>(true);
 
   async function onPlaySound() {
     const soundSource = radicalKey?.sound as string;
@@ -51,6 +47,14 @@ export default function DetailsScreen() {
     setIsModalVisible(true);
   };
 
+  const onStrokeOrder = () => {
+    setIsStrokeOrder(true);
+  };
+
+  const onEthimology = () => {
+    setIsStrokeOrder(false);
+  };
+
   return (
     <ScrollView>
       <Stack.Screen options={{ title: `keys/${key}` }} />
@@ -62,7 +66,7 @@ export default function DetailsScreen() {
             } else if (from === 'table') {
               router.push('/table');
             }
-            setValueText('Определение');
+            setIsStrokeOrder(true);
           }} 
           title={radicalKey.hanzi}  
         />
@@ -74,13 +78,16 @@ export default function DetailsScreen() {
           pinyin={radicalKey.pinyin}
           description={radicalKey.description.short}
         />
-        <SlideLayout 
-        values={['Определение', 'Порядок черт', 'Этимология']}
-        selectedValue={valueText}
-        setSelectedValue={setValueText}
-        >
-          <RenderSelectedContent value={valueText} radicalKey={radicalKey} />
-        </SlideLayout>
+
+        <ContentView 
+          isStrokeOrder={isStrokeOrder}
+          strokeOrder={onStrokeOrder}
+          ethimology={onEthimology}
+          calligraphy={radicalKey.calligraphy}
+          evolution={radicalKey.evolution}
+          unicode={radicalKey.unicode}
+        />
+
         <ModalDialog isVisible={isModalVisible} onClose={onModalClose}>
           <DescriptionView description={radicalKey.description.long} />
         </ModalDialog>

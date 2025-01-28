@@ -1,5 +1,5 @@
 import type { PropsWithChildren, ReactElement } from 'react';
-import { ImageBackground, StyleSheet, useColorScheme } from 'react-native';
+import { StyleSheet, useColorScheme } from 'react-native';
 import Animated, {
   interpolate,
   useAnimatedRef,
@@ -108,8 +108,6 @@ const styles = StyleSheet.create({
     transform: [ { translateX: '-50%' }, { translateY: '-50%' } ],
     fontSize: 15,
     textAlign: 'center',  
-    // borderColor: 'white',
-    // borderWidth: 1,
     paddingTop: 15,
     paddingBottom: 15,
     borderRadius: 20,

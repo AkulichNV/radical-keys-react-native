@@ -1,11 +1,10 @@
-import { ImageBackground, Modal, Pressable, StyleSheet } from "react-native";
+import { ImageBackground, Pressable, StyleSheet } from "react-native";
 import { ThemedView } from "./ThemedView";
 import { SvgRenderer } from "./SvgRenderer";
 import { ThemedText } from "./ThemedText";
 import AntDesign from "@expo/vector-icons/AntDesign";
 
 import * as Svgs from '@/assets/images/svgs/svgs';
-import { useState } from "react";
 
 interface IKeyHeader {
   svgName: string,
@@ -16,40 +15,46 @@ interface IKeyHeader {
   number: number
 };
 
-export const KeyHeader = ({svgName, playSound, descriptionOpenModal, pinyin, description, number }: IKeyHeader) => {
-  return (
-    <ThemedView style={styles.header}>
-      <ImageBackground 
-        source={require('@/assets/images/darkGridBackground.png')} 
-        imageStyle={styles.background}
-        resizeMode="cover"
-      >
-        <ThemedText type='subtitle' style={styles.numberText}>No {number}</ThemedText>
-        
-        <ThemedView style={styles.svg}>
-          <Pressable onPress={() => {console.log('left')}}>
-            <AntDesign name="caretleft" size={18} color="white" style={{borderColor: '#ffffff', borderWidth: 0.1}} />
-          </Pressable>
-          <SvgRenderer svgName={svgName} svgModule={Svgs} width={250} height={250} color={'#ffffff'}/>
-          <Pressable onPress={() => {console.log('right')}}>
-            <AntDesign name="caretright" size={18} color="white" style={{borderColor: '#ffffff', borderWidth: 0.1}}/>
-          </Pressable>
-        </ThemedView>
-      </ImageBackground>
-
-      <ThemedView style={styles.soundDescriptionContainer}>
-        <Pressable onPress={playSound} style={styles.content}>
-          <AntDesign name="sound" size={100} color="#0a131a" />
-          <ThemedText type="subtitle" style={styles.contentText}>{pinyin}</ThemedText>
+export const KeyHeader = ({
+  svgName, 
+  playSound, 
+  descriptionOpenModal, 
+  pinyin, 
+  description, 
+  number 
+}: IKeyHeader) => (
+  <ThemedView style={styles.header}>
+    <ImageBackground 
+      source={require('@/assets/images/darkGridBackground.png')} 
+      imageStyle={styles.background}
+      resizeMode="cover"
+    >
+      <ThemedText type='subtitle' style={styles.numberText}>No {number}</ThemedText>
+      
+      <ThemedView style={styles.svg}>
+        <Pressable onPress={() => {console.log('left')}}>
+          <AntDesign name="caretleft" size={18} color="white" style={{borderColor: '#ffffff', borderWidth: 0.1}} />
         </Pressable>
-        <Pressable onPress={descriptionOpenModal} style={styles.content}>
-          <AntDesign name="book" size={100} color="#0a131a" />
-          <ThemedText type="subtitle" style={styles.contentText}>{description}</ThemedText>
+        <SvgRenderer svgName={svgName} svgModule={Svgs} width={250} height={250} color={'#ffffff'}/>
+        <Pressable onPress={() => {console.log('right')}}>
+          <AntDesign name="caretright" size={18} color="white" style={{borderColor: '#ffffff', borderWidth: 0.1}}/>
         </Pressable>
       </ThemedView>
+    </ImageBackground>
+
+    <ThemedView style={styles.soundDescriptionContainer}>
+      <Pressable onPress={playSound} style={styles.content}>
+        <AntDesign name="sound" size={100} color="#0a131a" />
+        <ThemedText type="subtitle" style={styles.contentText}>{pinyin}</ThemedText>
+      </Pressable>
+      <Pressable onPress={descriptionOpenModal} style={styles.content}>
+        <AntDesign name="book" size={100} color="#0a131a" />
+        <ThemedText type="subtitle" style={styles.contentText}>{description}</ThemedText>
+      </Pressable>
     </ThemedView>
-  )
-}
+
+  </ThemedView>
+);
 
 const styles = StyleSheet.create({
   header: {
@@ -109,7 +114,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     gap: 20,
-    
   },
   content: {
     flex: 0.5,
