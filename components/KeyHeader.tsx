@@ -1,20 +1,22 @@
-import { ImageBackground, Pressable, StyleSheet } from "react-native";
+import { ImageBackground, Modal, Pressable, StyleSheet } from "react-native";
 import { ThemedView } from "./ThemedView";
 import { SvgRenderer } from "./SvgRenderer";
 import { ThemedText } from "./ThemedText";
 import AntDesign from "@expo/vector-icons/AntDesign";
 
 import * as Svgs from '@/assets/images/svgs/svgs';
+import { useState } from "react";
 
 interface IKeyHeader {
   svgName: string,
   playSound: () => void,
+  descriptionOpenModal: () => void,
   pinyin: string,
   description: string,
   number: number
 };
 
-export const KeyHeader = ({svgName, playSound, pinyin, description, number }: IKeyHeader) => {
+export const KeyHeader = ({svgName, playSound, descriptionOpenModal, pinyin, description, number }: IKeyHeader) => {
   return (
     <ThemedView style={styles.header}>
       <ImageBackground 
@@ -37,11 +39,11 @@ export const KeyHeader = ({svgName, playSound, pinyin, description, number }: IK
 
       <ThemedView style={styles.soundDescriptionContainer}>
         <Pressable onPress={playSound} style={styles.content}>
-          <ThemedText type="subtitle">{pinyin}{' '}
-            <AntDesign name="sound" size={18} color="white" />
-          </ThemedText>
+          <AntDesign name="sound" size={100} color="#0a131a" />
+          <ThemedText type="subtitle" style={styles.contentText}>{pinyin}</ThemedText>
         </Pressable>
-        <Pressable onPress={() => {console.log('description')}} style={styles.content}>
+        <Pressable onPress={descriptionOpenModal} style={styles.content}>
+          <AntDesign name="book" size={100} color="#0a131a" />
           <ThemedText type="subtitle" style={styles.contentText}>{description}</ThemedText>
         </Pressable>
       </ThemedView>
@@ -55,6 +57,37 @@ const styles = StyleSheet.create({
     gap: 20,
     marginBottom: 10,
   },
+
+  centeredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  modalView: {
+    margin: 20,
+    backgroundColor: '#272f3a',
+    borderRadius: 20,
+    padding: 35,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  modalText: {
+    marginBottom: 15,
+    textAlign: 'center'
+  },
+  buttonClose: {
+    borderRadius: 20,
+    padding: 10,
+    elevation: 2,
+  },
+
   svg: {
     flex: 1,
     flexDirection: 'row',
@@ -88,9 +121,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginLeft:'auto',
     marginRight:'auto',
-    padding: 20,
+    padding: 10,
+    position: "relative",
+    backgroundColor: '#000000'
   },
   contentText: {
     textAlign: 'center',
+    position: "absolute",
+    width: '100%'
   }
 });

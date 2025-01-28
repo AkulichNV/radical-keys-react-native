@@ -10,6 +10,9 @@ import { TopBar } from '@/components/TopBar';
 import { RenderSelectedContent } from '@/components/selectedContent/RenderSelectedContent';
 import { useDataContext } from '@/context/KeyContext';
 import { KeyHeader } from '@/components/KeyHeader';
+import { ModalDialog } from '@/components/ModalDialog';
+import { ThemedText } from '@/components/ThemedText';
+import { DescriptionView } from '@/components/selectedContent/DescriptionView';
 
 
 export default function DetailsScreen() {
@@ -19,10 +22,11 @@ export default function DetailsScreen() {
   const { data } = useDataContext();
   const radicalKey = data;
 
-  const [valueText, setValueText] = useState('Определение');
+  const [valueText, setValueText] = useState<string>('Определение');
   const [sound, setSound] = useState<Audio.Sound | undefined>();
+  const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
 
-  async function playSound() {
+  async function onPlaySound() {
     const soundSource = radicalKey?.sound as string;
     const soundPath = sounds[soundSource];
     const { sound } = await Audio.Sound.createAsync(soundPath);
@@ -38,6 +42,14 @@ export default function DetailsScreen() {
         }
       : undefined;
   }, [sound]);
+
+  const onModalClose = () => {
+    setIsModalVisible(false);
+  };
+
+  const onModalOpen = () => {
+    setIsModalVisible(true);
+  };
 
   return (
     <ScrollView>
@@ -56,7 +68,8 @@ export default function DetailsScreen() {
         />
         <KeyHeader 
           svgName={radicalKey.calligraphy[0]?.svg}
-          playSound={playSound}
+          playSound={onPlaySound}
+          descriptionOpenModal={onModalOpen}
           number={radicalKey.number}
           pinyin={radicalKey.pinyin}
           description={radicalKey.description.short}
@@ -68,6 +81,9 @@ export default function DetailsScreen() {
         >
           <RenderSelectedContent value={valueText} radicalKey={radicalKey} />
         </SlideLayout>
+        <ModalDialog isVisible={isModalVisible} onClose={onModalClose}>
+          <DescriptionView description={radicalKey.description.long} />
+        </ModalDialog>
       </ThemedView>
     </ScrollView>
   );
