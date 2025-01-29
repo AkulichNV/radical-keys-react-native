@@ -1,8 +1,9 @@
 import React from 'react';
+import { SvgProps } from 'react-native-svg';
 
 interface ISvgRenderer {
   svgName: string;
-  svgModule: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> };
+  svgModule:  { [key: string]: React.FC<SvgProps> };
   width?: number;
   height?: number;
   color?: string;

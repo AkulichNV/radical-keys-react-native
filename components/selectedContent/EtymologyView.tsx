@@ -24,8 +24,8 @@ export const EtymologyView = ({
     <ThemedView style={styles.imagesContainer}>
       {images && images.map((img, index) => (
         <ThemedView key={index} style={styles.svg}>
-          <SvgRenderer  svgName={img} svgModule={evolutionSvgs[svg]}/>
-          </ThemedView >
+          <SvgRenderer  svgName={img} svgModule={evolutionSvgs[svg as keyof typeof evolutionSvgs]}/>
+        </ThemedView >
       ))}
     </ThemedView>
   </ThemedView>
@@ -56,5 +56,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ECEDEE',
     backgroundColor: '#ffffff',
+    borderRadius: 40,
   }
 });

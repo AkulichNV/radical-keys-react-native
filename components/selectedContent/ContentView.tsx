@@ -4,7 +4,7 @@ import { ThemedView } from "../ThemedView";
 import { ThemedText } from "../ThemedText";
 import { StrokeOrderContent } from "./StrokeOrderContent";
 import { Calligraphy } from "@/types/Calligraphy";
-import { EtymologyContent } from "./EthimologyContent";
+import { EtymologyContent } from "./EtymologyContent";
 import { Evolution } from "@/types/Evolution";
 import FontAwesome5 from "@expo/vector-icons/build/FontAwesome5";
 
