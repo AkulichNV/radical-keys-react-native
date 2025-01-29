@@ -6,7 +6,7 @@ import { SvgGif } from "../SvgGif";
 interface IStrokeOrderView {
   svgSource: string;
   gifSource: string | undefined;
-  strokeOrder?: string;
+  strokeOrder?: string[];
   style?: ViewStyle;
 }
 
@@ -17,11 +17,14 @@ export const StrokeOrderView = ({
   style
 }: IStrokeOrderView) => (
   <ThemedView style={[styles.container, style]}>
+    {strokeOrder?.map((paragraph: string, index: number) => (
+      <ThemedText key={index} type="defaultSemiBold" style={styles.text}>{paragraph}</ThemedText>
+    ))}
     <SvgGif 
       gifSource={gifSource}
       svgSource={svgSource}
       />
-    {strokeOrder && <ThemedText type="defaultSemiBold" style={styles.text}>{strokeOrder}</ThemedText>}
+    
   </ThemedView>
 );
 
@@ -31,11 +34,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: 20,
-    borderTopWidth: 1,
-    borderTopColor: '#0a7ea4',
     marginBottom: 20
   },
   text: {
-    textAlign: 'justify'
+    textAlign: 'justify',
+    marginBottom: 20,
   }
 });

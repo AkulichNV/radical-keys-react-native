@@ -1,12 +1,12 @@
+import React from "react";
+import { useState } from "react";
 import { ImageBackground, Pressable, StyleSheet, View, ViewStyle } from "react-native";
 import { Image } from "expo-image";
-import { SvgRenderer } from "./SvgRenderer";
 import AntDesign from '@expo/vector-icons/AntDesign';
-import { useState } from "react";
 
+import { SvgRenderer } from "./SvgRenderer";
 import { gifs } from '@/assets/images/gifs/gifs';
 import * as Svgs from '@/assets/images/svgs/svgs';
-import React from "react";
 
 interface ISvgGif {
   gifSource: string | undefined;
@@ -25,10 +25,11 @@ export function SvgGif({gifSource, svgSource, style}: ISvgGif) {
   return (
   <ImageBackground 
     source={require('../assets/images/z200.png')} 
-    style={[styles.grid, style]}
+    imageStyle={styles.grid}
+    style={style}
     resizeMode="cover"
   >
-    <Pressable onPress={onGif}>
+    <Pressable onPress={onGif} style={styles.playButton}>
       {isGifVisible && gifPath ? (
         <Image
           source={gifPath}
@@ -37,9 +38,9 @@ export function SvgGif({gifSource, svgSource, style}: ISvgGif) {
         />
       ) : (
         <>
-          <AntDesign name="play" style={styles.icon} />
+          {gifPath && <AntDesign name="play" style={styles.icon} />}
           <View style={styles.svgView}>
-            <SvgRenderer svgName={svgSource} svgModule={Svgs} />
+            <SvgRenderer svgName={svgSource} svgModule={Svgs} width={200} height={200}/>
           </View>
         </>
       )}
@@ -49,15 +50,26 @@ export function SvgGif({gifSource, svgSource, style}: ISvgGif) {
 
 const styles = StyleSheet.create({
   grid: {
-    width: 100,
-    height: 100,
+    width: 200,
+    height: 200,
+    borderColor: '#d8caca',
+    borderWidth: 1,
+    borderRadius: 40,
+  },
+  playButton: {
+    position: 'relative',
   },
   icon: {
     color: "#d8caca",
-    fontSize: 24,
-    padding: 3
+    fontSize: 150,
+    position: 'absolute',
+    textAlign: 'center',
+    left: '12%',
+    top: '12%',
+    zIndex: 1,
+    opacity: 0.3
   },
   svgView: {
-    marginTop: -30,
+    width: '100%'
   }
 });

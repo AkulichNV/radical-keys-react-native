@@ -3,6 +3,7 @@ import { ThemedView } from "./ThemedView";
 import { SvgRenderer } from "./SvgRenderer";
 import { ThemedText } from "./ThemedText";
 import AntDesign from "@expo/vector-icons/AntDesign";
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
 import * as Svgs from '@/assets/images/svgs/svgs';
 
@@ -43,12 +44,12 @@ export const KeyHeader = ({
     </ImageBackground>
 
     <ThemedView style={styles.soundDescriptionContainer}>
-      <Pressable onPress={playSound} style={styles.content}>
-        <AntDesign name="sound" size={100} color="#0a131a" />
+      <Pressable onPress={playSound} style={styles.contentPress}>
+        <AntDesign name="sound" size={100} color="#272f3a" />
         <ThemedText type="subtitle" style={styles.contentText}>{pinyin}</ThemedText>
       </Pressable>
-      <Pressable onPress={descriptionOpenModal} style={styles.content}>
-        <AntDesign name="book" size={100} color="#0a131a" />
+      <Pressable onPress={descriptionOpenModal} style={styles.contentPress}>
+        <FontAwesome5 name="book-open" size={100} color="#272f3a" />
         <ThemedText type="subtitle" style={styles.contentText}>{description}</ThemedText>
       </Pressable>
     </ThemedView>
@@ -115,7 +116,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     gap: 20,
   },
-  content: {
+  contentPress: {
     flex: 0.5,
     flexDirection: 'row',
     borderWidth: 1,

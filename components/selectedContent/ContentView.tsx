@@ -33,7 +33,7 @@ export const ContentView = ({
         </Pressable>
         <Pressable onPress={ethimology} style={[styles.titleContent, !isStrokeOrder && styles.titleActive]}>
           <FontAwesome5 name="scroll" size={24} color="white" />
-          <ThemedText type="subtitle" style={styles.titleText}>История иероглифа</ThemedText>
+          <ThemedText type="subtitle" style={styles.titleText}>Эволюция символа</ThemedText>
         </Pressable>
       </ThemedView>
 
