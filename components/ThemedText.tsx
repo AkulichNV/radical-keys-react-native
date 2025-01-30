@@ -73,6 +73,6 @@ const styles = StyleSheet.create({
   subtitleBlue: {
     lineHeight: 20,
     fontSize: 20,
-    color: '#0a7ea4',
+    color: '#272f3a',
   }
 });

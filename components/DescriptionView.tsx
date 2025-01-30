@@ -3,7 +3,7 @@ import { ThemedView } from "./ThemedView";
 import { ThemedText } from "./ThemedText";
 
 interface IDescriptionView {
-  description: string;
+  description: string[];
   style?: ViewStyle;
 }
 
@@ -12,7 +12,9 @@ export const DescriptionView = ({
   style
 }: IDescriptionView) => (
   <ThemedView style={style}>
-    <ThemedText type="defaultSemiBold" style={styles.description}>{description}</ThemedText>
+    {description?.map((paragraph: string, index: number) => (
+      <ThemedText key={index} type="defaultSemiBold" style={styles.description}>{paragraph}</ThemedText>
+    ))}
   </ThemedView>
 );
 

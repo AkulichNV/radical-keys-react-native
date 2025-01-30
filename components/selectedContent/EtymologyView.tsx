@@ -1,4 +1,4 @@
-import { ViewStyle, StyleSheet } from "react-native";
+import { ViewStyle, StyleSheet, Pressable } from "react-native";
 import { ThemedView } from "../ThemedView";
 import { SvgRenderer } from "../SvgRenderer";
 import { evolutionSvgs } from "@/assets/images/evolution/evolutionSvgs";
@@ -9,24 +9,26 @@ interface IEtymologyView {
   images: string[];
   title: string;
   style?: ViewStyle;
+  onEtymologyContent: () => void;
 }
 
 export const EtymologyView = ({
   svg,
   images, 
   title,
+  onEtymologyContent,
   style
 }: IEtymologyView) => (
   <ThemedView style={[styles.container, style]}>
-    <ThemedView style={styles.textContainer}>
-      {title.split('').map((char, index) => <ThemedText key={index} type="subtitleBlue">{char}</ThemedText>)}
-    </ThemedView>
     <ThemedView style={styles.imagesContainer}>
       {images && images.map((img, index) => (
-        <ThemedView key={index} style={styles.svg}>
+        <Pressable key={index} style={styles.svg} onPress={onEtymologyContent}>
           <SvgRenderer  svgName={img} svgModule={evolutionSvgs[svg as keyof typeof evolutionSvgs]}/>
-        </ThemedView >
+        </Pressable >
       ))}
+    </ThemedView>
+    <ThemedView style={styles.textContainer}>
+      <ThemedText type="subtitleBlue">{title}</ThemedText>
     </ThemedView>
   </ThemedView>
 );
@@ -34,28 +36,25 @@ export const EtymologyView = ({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     gap: 15,
     paddingTop: 20,
-    marginBottom: 20,
-    borderTopWidth: 1,
-    borderTopColor: '#0a7ea4',
   },
   textContainer: {
-    flex: 0.06, 
-    flexDirection: 'column',
+    paddingBottom: 5
   },
   imagesContainer: {
     flex: 1, 
     flexDirection: 'row', 
-    gap: 15
+    gap: 15,
   },
   svg: {
     borderWidth: 1,
     borderColor: '#ECEDEE',
     backgroundColor: '#ffffff',
     borderRadius: 40,
+    padding: 11,
   }
 });

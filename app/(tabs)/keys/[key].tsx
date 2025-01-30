@@ -88,7 +88,7 @@ export default function DetailsScreen() {
           unicode={radicalKey.unicode}
         />
 
-        <ModalDialog isVisible={isModalVisible} onClose={onModalClose}>
+        <ModalDialog isVisible={isModalVisible} onClose={onModalClose} title={"Значение иероглифа"}>
           <DescriptionView description={radicalKey.description.long} />
         </ModalDialog>
       </ThemedView>
