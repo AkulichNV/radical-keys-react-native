@@ -44,13 +44,13 @@ export const KeyHeader = ({
     </ImageBackground>
 
     <ThemedView style={styles.soundDescriptionContainer}>
-      <Pressable onPress={playSound} style={styles.contentPress}>
-        <AntDesign name="sound" size={100} color="#272f3a" />
-        <ThemedText type="subtitle" style={styles.contentText}>{pinyin}</ThemedText>
-      </Pressable>
-      <Pressable onPress={descriptionOpenModal} style={styles.contentPress}>
+      <Pressable onPress={descriptionOpenModal} style={[styles.descriptionPress,styles.contentPress]}>
         <FontAwesome5 name="book-open" size={100} color="#272f3a" />
         <ThemedText type="subtitle" style={styles.contentText}>{description}</ThemedText>
+      </Pressable>
+      <Pressable onPress={playSound} style={[styles.soundPress, styles.contentPress]}>
+        <AntDesign name="sound" size={100} color="#272f3a" />
+        <ThemedText type="subtitle" style={styles.contentText}>{pinyin}</ThemedText>
       </Pressable>
     </ThemedView>
 
@@ -114,10 +114,15 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    gap: 20,
+    gap: 15,
   },
-  contentPress: {
-    flex: 0.5,
+  soundPress: {
+    flex: 0.45,
+  },
+  descriptionPress: {
+    flex: 0.55,
+  },
+  contentPress: {   
     flexDirection: 'row',
     borderWidth: 1,
     borderColor: '#272f3a',

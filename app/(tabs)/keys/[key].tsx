@@ -51,7 +51,7 @@ export default function DetailsScreen() {
     setIsStrokeOrder(true);
   };
 
-  const onEthimology = () => {
+  const onEtymology = () => {
     setIsStrokeOrder(false);
   };
 
@@ -82,7 +82,7 @@ export default function DetailsScreen() {
         <ContentView 
           isStrokeOrder={isStrokeOrder}
           strokeOrder={onStrokeOrder}
-          ethimology={onEthimology}
+          etymology={onEtymology}
           calligraphy={radicalKey.calligraphy}
           evolution={radicalKey.evolution}
           unicode={radicalKey.unicode}

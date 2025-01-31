@@ -11,7 +11,7 @@ import FontAwesome5 from "@expo/vector-icons/build/FontAwesome5";
 interface IContentView {
   isStrokeOrder: boolean,
   strokeOrder: () => void,
-  ethimology: () => void,
+  etymology: () => void,
   calligraphy: Calligraphy[],
   evolution: Evolution[];
   unicode: string;
@@ -20,20 +20,20 @@ interface IContentView {
 export const ContentView = ({ 
   isStrokeOrder, 
   strokeOrder, 
-  ethimology, 
+  etymology, 
   calligraphy, 
   evolution, 
   unicode 
 }: IContentView) => (
     <ThemedView style={styles.container}>
       <ThemedView style={styles.titleContainer}>
-        <Pressable onPress={strokeOrder} style={[styles.titleContent, isStrokeOrder && styles.titleActive]}>
+        <Pressable onPress={strokeOrder} style={[styles.strokeOrderPress, styles.titleContent, isStrokeOrder && styles.titleActive]}>
           <FontAwesome5 name="pen-fancy" size={24} color="white" />
-          <ThemedText type="subtitle" style={styles.titleText}>Правила письма</ThemedText>
+          <ThemedText type="subtitle" style={styles.titleText}>Правила написания</ThemedText>
         </Pressable>
-        <Pressable onPress={ethimology} style={[styles.titleContent, !isStrokeOrder && styles.titleActive]}>
+        <Pressable onPress={etymology} style={[styles.etymologyPress, styles.titleContent, !isStrokeOrder && styles.titleActive]}>
           <FontAwesome5 name="scroll" size={24} color="white" />
-          <ThemedText type="subtitle" style={styles.titleText}>Эволюция символа</ThemedText>
+          <ThemedText type="subtitle" style={styles.titleText}>Истоки символа</ThemedText>
         </Pressable>
       </ThemedView>
 
@@ -56,10 +56,15 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    gap: 20,
+    gap: 15,
+  },
+  strokeOrderPress: {
+    flex: 0.55,
+  },
+  etymologyPress: {
+    flex: 0.45,
   },
   titleContent: {
-    flex: 0.5,
     flexDirection: 'row',
     borderWidth: 1,
     borderColor: '#272f3a',
@@ -78,5 +83,4 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingLeft: 10
   }
-
 });

@@ -47,16 +47,16 @@ export const EtymologyContent = ({
   return (
     <ThemedView style={styles.container}>
       {evolution.map((item, index) => (
-        <>
-        <EtymologyView 
-          key={index} 
-          svg={unicode} 
-          images={item.image} 
-          title={item.title} 
-          onEtymologyContent={() => onModalOpen(item.title)}
-        />
-        {index !== evolution.length - 1 && <AntDesign key={index+100} name="caretdown" size={50} color="white" style={{borderColor: '#ffffff', borderWidth: 0.1}} />}
-        </>
+        <React.Fragment key={index}>
+          <EtymologyView 
+            key={unicode} 
+            svg={unicode} 
+            images={item.image} 
+            title={item.title} 
+            onEtymologyContent={() => onModalOpen(item.title)}
+          />
+          {index !== evolution.length - 1 && <AntDesign key={index+100} name="caretdown" size={50} color="#272f3a" style={{ marginLeft: 25}}/>}
+        </React.Fragment>
       ))}
       <ModalDialog isVisible={isModalVisible} onClose={onModalClose} title={`${etymologyTitle}  (${etymologyPinyin})`}>
         <DescriptionView description={etymologyDescription} />
@@ -69,6 +69,5 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
   }
 });

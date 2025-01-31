@@ -20,15 +20,15 @@ export const EtymologyView = ({
   style
 }: IEtymologyView) => (
   <ThemedView style={[styles.container, style]}>
+    <ThemedView style={styles.textContainer}>
+      {title.split('').map((char, index) => <ThemedText key={index} type="subtitleBlue">{char}</ThemedText>)}
+    </ThemedView>
     <ThemedView style={styles.imagesContainer}>
       {images && images.map((img, index) => (
         <Pressable key={index} style={styles.svg} onPress={onEtymologyContent}>
-          <SvgRenderer  svgName={img} svgModule={evolutionSvgs[svg as keyof typeof evolutionSvgs]}/>
+          <SvgRenderer  svgName={img} svgModule={evolutionSvgs[svg as keyof typeof evolutionSvgs]} width={80} height={80}/>
         </Pressable >
       ))}
-    </ThemedView>
-    <ThemedView style={styles.textContainer}>
-      <ThemedText type="subtitleBlue">{title}</ThemedText>
     </ThemedView>
   </ThemedView>
 );
@@ -36,18 +36,23 @@ export const EtymologyView = ({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 15,
-    paddingTop: 20,
+    paddingTop: 10,
+    marginLeft: -10,
   },
   textContainer: {
+    flex: 0.06, 
+    flexDirection: 'column',
     paddingBottom: 5
   },
   imagesContainer: {
     flex: 1, 
     flexDirection: 'row', 
+    alignItems: 'center',
+    justifyContent: 'center',
     gap: 15,
   },
   svg: {
