@@ -18,33 +18,38 @@ export default function StrokesScreen() {
     const gifPath2 = giSource2 ? gifs[giSource2] : null;
       return (
       <ThemedView style={styles.container} >
-        <ThemedText type="title" style={styles.titleContainer}>{item.numberRule}</ThemedText>
-        <ThemedText type="default" style={styles.ruleContent}>{item.ruleContent}</ThemedText>
-        <ImageBackground 
+
+        {/* {item.numberRule % 2 === 0 ? } */}
+        <ThemedText type="default" style={item.numberRule % 2 === 0 ? styles.numberEven : styles.numberOdd}>{item.numberRule}</ThemedText>
+        {item.numberRule % 2 !== 0 && <ThemedText type="default" style={styles.ruleContentEven}>{item.ruleContent}</ThemedText>}
+        <ThemedView style={styles.gifContainer}>
+          <ImageBackground 
+            source={require('@/assets/images/z100.png')} 
+            imageStyle={styles.background}
+            resizeMode="cover"
+          >
+            <Image
+              source={gifPath1}
+              style={styles.grid}
+              contentFit="contain"
+            />
+          </ImageBackground>
+
+          {gifPath2 && 
+          <ImageBackground 
           source={require('@/assets/images/z100.png')} 
           imageStyle={styles.background}
           resizeMode="cover"
-        >
-          <Image
-            source={gifPath1}
-            style={styles.grid}
-            contentFit="contain"
-          />
-        </ImageBackground>
-
-        {gifPath2 && 
-        <ImageBackground 
-        source={require('@/assets/images/z100.png')} 
-        imageStyle={styles.background}
-        resizeMode="cover"
-      >
-        <Image
-          source={gifPath2}
-          style={styles.grid}
-          contentFit="contain"
-        />
-      </ImageBackground>
-        }
+          >
+            <Image
+              source={gifPath2}
+              style={styles.grid}
+              contentFit="contain"
+            />
+          </ImageBackground>
+          }
+        </ThemedView>
+        {item.numberRule % 2 === 0 && <ThemedText type="default" style={styles.ruleContentOdd}>{item.ruleContent}</ThemedText>}
       </ThemedView>
       )
     }
@@ -66,32 +71,57 @@ export default function StrokesScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'row',
-  },
-  titleContainer: {
-    flex: 0.2
-  },
-  ruleContent: {
-    flex: 0.8
-  },
   headerImage: {
     height: 250,
     width: '100%',
     resizeMode: "contain",
   },
-
+  container: {
+    flex: 1,
+    flexDirection: 'row',
+    gap: 10,
+    paddingTop: 20,
+    paddingBottom: 30,
+    borderTopWidth: 1,
+    borderColor: '#ffffff',
+    position: 'relative'
+  },
+  numberEven: {
+    position: "absolute",
+    top: -25,
+    right: 0,
+  },
+  numberOdd: {
+    position: "absolute",
+    top: -25,
+    left: 0,
+  },
+  ruleContentEven: {
+    flex: 1,
+    textAlign: 'left',
+  },
+  ruleContentOdd: {
+    flex: 1,
+    textAlign: 'right',
+  },
+  gifContainer: {
+    flex: 0.5,
+    flexDirection: 'column',
+    gap: 10
+  },
   background: {
+    width: 100,
+    height: 100,
     borderWidth: 1,
     borderColor: '#272f3a',
-    borderRadius: 40,
+    borderRadius: 20,
+    
   },
   grid: {
     width: 100,
     height: 100,
     borderColor: '#d8caca',
     borderWidth: 1,
-    borderRadius: 40,
+    borderRadius: 20,
   },
 });
