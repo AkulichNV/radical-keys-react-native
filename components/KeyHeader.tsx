@@ -93,7 +93,6 @@ const styles = StyleSheet.create({
     padding: 10,
     elevation: 2,
   },
-
   svg: {
     flex: 1,
     flexDirection: 'row',

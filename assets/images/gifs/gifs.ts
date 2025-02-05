@@ -55,5 +55,32 @@ export const gifs: { [key: string]: any } = {
   "5C23": require("./5C23.gif"),
   "5C38": require("./5C38.gif"),
   "5C6E": require("./5C6E.gif"),
-  "5C71": require("./5C71.gif"),
+  "5C71": require("./5C71.gif"), 
+
+  "5DDD": require("./5DDD.gif"), // 47 поток
+  "884C": require("./884C.gif"), //144 идти
+  "807F": require("./807F.gif"), //129 орудие письма
+  "624C": require("./624C.gif"), // 64 рука
+  "7F8AA": require("./7F8AA.gif"), // 123 баран
+  "6728": require("./6728.gif"), // 75 дерево
+  "7F51": require("./7F51.gif"), // 122 сеть
+  "7530": require("./7530.gif"), // 102 поле
+  "6C34": require("./6C34.gif"), // 85 вода
+  "9F52": require("./9F52.gif"), // 211 зубы
+  "8F66": require("./8F66.gif"), // 159 телега вторая форма
+  "8F66A": require("./8F66A.gif"), // телега третья форма
+  "65B9": require("./65B9.gif"), // 70 квадрат
+  "9580": require("./9580.gif"), // 169 ворота
+  "95E8": require("./95E8.gif"), // ворота другая форма
+  "6208": require("./6208.gif"), // 71 копье
+  "77E2": require("./77E2.gif"), // 111 стрела
+  "76AE": require("./76AE.gif"), // 107 кожа
+  "81E3": require("./81E3.gif"), // 131 чиновник
+  "7389": require("./7389.gif"), // 96 нефрит
+  "9091": require("./9091.gif"), // 163 город
+  "961D": require("./961D.gif"), // 170 и 163 вторая форма холм и город 
+  "9EFD": require("./9EFD.gif"), // 205 лягушка
+
+
+  "8FD9": require("./8FD9.gif"), // Этот
 };

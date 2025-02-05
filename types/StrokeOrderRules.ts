@@ -1,5 +1,7 @@
+import { Example } from "./Example";
+
 export interface StrokeOrderRules {
-  numberRule: string,
+  numberRule: number,
   ruleContent: string,
-  exampleGif: string[],
+  example: Example
 }
