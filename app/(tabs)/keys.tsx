@@ -41,13 +41,15 @@ export default function KeysScreen() {
         ListEmptyComponent={
           <ThemedText type="defaultSemiBold">Нет иероглифов</ThemedText>
         }
-        renderItem={({ item: keys }) => (
-          <Pressable onPress={() => navigateToRadical(keys.number, 'keys')}>
-            <ThemedView style={styles.character}>
-              <ThemedText type="subtitle" style={styles.characterText}>{keys.hanzi}</ThemedText>
-            </ThemedView>
-          </Pressable>
-        )}
+        renderItem={({ item: keys }) => 
+          keys.hanzi ? (
+            <Pressable onPress={() => navigateToRadical(keys.number, 'keys')}>
+              <ThemedView style={styles.character}>
+                <ThemedText type="subtitle" style={styles.characterText}>{keys.hanzi}</ThemedText>
+              </ThemedView>
+            </Pressable>
+          ) : null
+      }
         numColumns={numColumns} // Number of columns for wrapping
         columnWrapperStyle={styles.rowWrapper} // Styling for rows
         showsHorizontalScrollIndicator={false}

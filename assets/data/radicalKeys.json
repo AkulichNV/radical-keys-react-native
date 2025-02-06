@@ -1825,6 +1825,148 @@
           "image": ["U5C71_00"]
         }
       ]
+    },
+    {
+      "number": 47,
+      "hanzi": "巛",
+      "strokeNumber": 3,
+      "pinyin": "chuān",
+      "sound": "chuan1",
+      "unicode": "U5DDB",
+      "description": {
+        "short": "Поток",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "5DDB",
+          "svg": "U5DDB",
+          "strokeOrder": [""]
+        },
+        {
+          "gif": "5DDD",
+          "svg": "U5DDD",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U5DDB_10", "U5DDB_11", "U5DDB_12"]
+        },
+        {
+          "title": "金文",
+          "image": ["U5DDB_20"]
+        },
+        {
+          "title": "楚系簡帛",
+          "image": ["U5DDB_30"]
+        },
+        {
+          "title": "說文",
+          "image": ["U5DDB_40"]
+        },
+        {
+          "title": "隸書",
+          "image": ["U5DDB_50", "U5DDB_51", "U5DDB_52"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U5DDB_00"]
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "hanzi": "工",
+      "strokeNumber": 3,
+      "pinyin": "gōng",
+      "sound": "gong1",
+      "unicode": "U5DE5",
+      "description": {
+        "short": "Работа",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "5DE5",
+          "svg": "U5DE5",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U5DE5_10", "U5DE5_11", "U5DE5_12"]
+        },
+        {
+          "title": "金文",
+          "image": ["U5DE5_20", "U5DE5_21", "U5DE5_22"]
+        },
+        {
+          "title": "楚系簡帛",
+          "image": ["U5DE5_30"]
+        },
+        {
+          "title": "說文",
+          "image": ["U5DE5_40", "U5DE5_41"]
+        },
+        {
+          "title": "秦系簡牘",
+          "image": ["U5DE5_50"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U5DE5_00"]
+        }
+      ]
+    },
+
+
+    {
+      "number": 49,
+      "hanzi": "",
+      "strokeNumber": 3,
+      "pinyin": "",
+      "sound": "",
+      "unicode": "",
+      "description": {
+        "short": "",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "",
+          "svg": "",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U5C71_10"]
+        },
+        {
+          "title": "金文",
+          "image": ["U5C71_20", "U5C71_21", "U5C71_22"]
+        },
+        {
+          "title": "楚系簡帛",
+          "image": ["U5C71_30"]
+        },
+        {
+          "title": "說文",
+          "image": ["U5C71_40"]
+        },
+        {
+          "title": "秦系簡牘",
+          "image": ["U5C71_50"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U5C71_00"]
+        }
+      ]
     }
   ]
 }

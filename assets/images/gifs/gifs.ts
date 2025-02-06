@@ -55,9 +55,11 @@ export const gifs: { [key: string]: any } = {
   "5C23": require("./5C23.gif"),
   "5C38": require("./5C38.gif"),
   "5C6E": require("./5C6E.gif"),
-  "5C71": require("./5C71.gif"), 
+  "5C71": require("./5C71.gif"),
+  "5DDB": require("./5DDB.gif"),
+  "5DDD": require("./5DDD.gif"),
+  "5DE5": require("./5DE5.gif"),
 
-  "5DDD": require("./5DDD.gif"), // 47 поток
   "884C": require("./884C.gif"), //144 идти
   "807F": require("./807F.gif"), //129 орудие письма
   "624C": require("./624C.gif"), // 64 рука

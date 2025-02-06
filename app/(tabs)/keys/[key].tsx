@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
@@ -58,7 +59,9 @@ export default function DetailsScreen() {
           }} 
           title={radicalKey.hanzi}  
         />
-        <KeyHeader 
+        {radicalKey.calligraphy[0].svg && 
+        <>
+        <KeyHeader
           svgName={radicalKey.calligraphy[0]?.svg}
           playSound={onPlaySound}
           descriptionOpenModal={() => setIsModalVisible(true)}
@@ -66,21 +69,15 @@ export default function DetailsScreen() {
           onPressRight={() => navigateToRadical(radicalKey.number + 1, from)}
           number={radicalKey.number}
           pinyin={radicalKey.pinyin}
-          description={radicalKey.description.short}
-        />
-
-        <ContentView 
-          isStrokeOrder={isStrokeOrder}
-          strokeOrder={() => setIsStrokeOrder(true)}
-          etymology={() => setIsStrokeOrder(false)}
-          calligraphy={radicalKey.calligraphy}
-          evolution={radicalKey.evolution}
-          unicode={radicalKey.unicode}
-        />
-
-        <ModalDialog isVisible={isModalVisible} onClose={() => setIsModalVisible(false)} title={"Значение иероглифа"}>
-          <DescriptionView description={radicalKey.description.long} />
-        </ModalDialog>
+          description={radicalKey.description.short} /><ContentView
+            isStrokeOrder={isStrokeOrder}
+            strokeOrder={() => setIsStrokeOrder(true)}
+            etymology={() => setIsStrokeOrder(false)}
+            calligraphy={radicalKey.calligraphy}
+            evolution={radicalKey.evolution}
+            unicode={radicalKey.unicode} /><ModalDialog isVisible={isModalVisible} onClose={() => setIsModalVisible(false)} title={"Значение иероглифа"}>
+            <DescriptionView description={radicalKey.description.long} />
+          </ModalDialog></> }
       </ThemedView>
     </ScrollView>
   );

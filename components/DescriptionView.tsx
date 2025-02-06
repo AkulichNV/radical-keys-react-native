@@ -12,9 +12,17 @@ export const DescriptionView = ({
   style
 }: IDescriptionView) => (
   <ThemedView style={style}>
-    {description?.map((paragraph: string, index: number) => (
-      <ThemedText key={index} type="defaultSemiBold" style={styles.description}>{paragraph}</ThemedText>
-    ))}
+    {description[0] ? (
+      description.map((paragraph: string, index: number) => (
+        <ThemedText key={index} type="defaultSemiBold" style={styles.description}>
+          {paragraph}
+        </ThemedText>
+      ))
+    ) : (
+      <ThemedText type="defaultSemiBold" style={styles.description}>
+        Нет описания
+      </ThemedText>
+    )}
   </ThemedView>
 );
 

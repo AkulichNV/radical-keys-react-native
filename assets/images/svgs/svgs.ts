@@ -57,6 +57,9 @@ import U5C23 from './5C23.svg';
 import U5C38 from './5C38.svg';
 import U5C6E from './5C6E.svg';
 import U5C71 from './5C71.svg';
+import U5DDB from './5DDB.svg';
+import U5DDD from './5DDD.svg';
+import U5DE5 from './5DE5.svg';
 
 export { 
   U4E00, 
@@ -117,5 +120,8 @@ export {
   U5C23,
   U5C38,
   U5C6E,
-  U5C71
+  U5C71,
+  U5DDB,
+  U5DDD,
+  U5DE5
 };

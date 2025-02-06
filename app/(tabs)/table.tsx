@@ -5,19 +5,23 @@ import { ThemedText } from '@/components/ThemedText';
 import ParallaxFlatList from '@/components/ParallaxFlatList';
 import { useNavigateToRadical } from '@/hooks/useNavigateToRadical';
 import { RadicalKeys } from '@/types/RadicalKeys';
+import React from 'react';
 
 export default function TableKeysScreen() {
   const data = dataKeys.radicalKeys;
   const navigateToRadical = useNavigateToRadical();
 
-  const renderRow =({ item }: { item: RadicalKeys }) => (
-    <Pressable style={styles.row} onPress={() => navigateToRadical(item.number, 'table')}>
-      <ThemedText style={[styles.cell, styles.cell1]}>{item.number}</ThemedText>
-      <ThemedText style={[styles.cell, styles.cell2]}>{item.pinyin}</ThemedText>
-      <ThemedText type="title" style={[styles.cell, styles.cell3]}>{item.hanzi}</ThemedText>
-      <ThemedText style={[styles.cell, styles.cell4]}>{item.description.short}</ThemedText>
-    </Pressable>
-  )
+  const renderRow =({ item }: { item: RadicalKeys }) => 
+    item.hanzi ? (
+      <Pressable style={styles.row} onPress={() => navigateToRadical(item.number, 'table')}>
+        <ThemedText style={[styles.cell, styles.cell1]}>{item.number}</ThemedText>
+        <ThemedText style={[styles.cell, styles.cell2]}>{item.pinyin}</ThemedText>
+        <ThemedText type="title" style={[styles.cell, styles.cell3]}>{item.hanzi}</ThemedText>
+        <ThemedText style={[styles.cell, styles.cell4]}>{item.description?.short}</ThemedText>
+      </Pressable>
+    ) : (
+      <></>
+    );
 
   return (
     <ParallaxFlatList
