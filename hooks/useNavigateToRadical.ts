@@ -11,11 +11,10 @@ export const useNavigateToRadical = () => {
 
   return (number: number, from: string | string[]) => {
     if (number === 0) {
-      number = dataKeys.radicalKeys.length - 1;
-
-    } if (number === dataKeys.radicalKeys.length) {
+      number = dataKeys.radicalKeys.length;
+    } if (number > dataKeys.radicalKeys.length) {
       number = 1;
-    }
+    };
     const radicalKey = findCharacterById(dataKeys.radicalKeys, number);
     setData(radicalKey);
     router.push({
