@@ -1,15 +1,13 @@
-import { StyleSheet, Pressable, FlatList, ListRenderItem, Dimensions, Image } from 'react-native';
+import { StyleSheet, Pressable, FlatList, Dimensions, Image } from 'react-native';
 import { useEffect, useState } from 'react';
-import { useRouter } from 'expo-router';
 
 import dataKeys from '@/assets/data/radicalKeys.json';
+import ParallaxFlatList from '@/components/ParallaxFlatList';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { useNavigateToRadical } from '@/hooks/useNavigateToRadical';
 import { groupCharactersByStrokes } from '@/scripts/groupCharactersByStrokes';
 import { RadicalKeys } from '@/types/RadicalKeys';
-import { findCharacterById } from '@/scripts/findCharacterById';
-import { useDataContext } from '@/context/KeyContext';
-import ParallaxFlatList from '@/components/ParallaxFlatList';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -21,24 +19,13 @@ const ITEM_WIDTH = isTablet ? 80 : 50;
 const ITEM_MARGIN = isTablet ? 15 : 10;
 
 export default function KeysScreen() {
-  const router = useRouter();
   const [radicalKeys, setRadicalKeys] = useState<Record<number, RadicalKeys[]>>({});
-  const { setData } = useDataContext();
-
+  const navigateToRadical = useNavigateToRadical();
 
   useEffect(() => {
     const groupedKeys = groupCharactersByStrokes(dataKeys.radicalKeys);
     setRadicalKeys(groupedKeys);
   }, []);
-
-  function onHanzi(number: number) {
-    const radicalKey = findCharacterById(dataKeys.radicalKeys, number)
-    setData(radicalKey);
-    router.push({
-          pathname: '/keys/[key]',
-          params: { key: number, from: 'keys' },
-        });
-  }
 
   const strokeCounts = Array.from({ length: 17 }, (_, index) => index + 1);
 
@@ -55,7 +42,7 @@ export default function KeysScreen() {
           <ThemedText type="defaultSemiBold">Нет иероглифов</ThemedText>
         }
         renderItem={({ item: keys }) => (
-          <Pressable onPress={() => onHanzi(keys.number)}>
+          <Pressable onPress={() => navigateToRadical(keys.number, 'keys')}>
             <ThemedView style={styles.character}>
               <ThemedText type="subtitle" style={styles.characterText}>{keys.hanzi}</ThemedText>
             </ThemedView>

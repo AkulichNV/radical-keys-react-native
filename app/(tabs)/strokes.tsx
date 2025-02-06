@@ -1,32 +1,31 @@
-import { ImageBackground, StyleSheet } from 'react-native';
-import { Image } from "expo-image";
+import { StyleSheet } from 'react-native';
+import { Image, ImageBackground } from "expo-image";
 
+import dataStrokeOrdersRules from '@/assets/data/strokeOrderRules.json';
+import { gifs } from '@/assets/images/gifs/gifs';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import ParallaxFlatList from '@/components/ParallaxFlatList';
-import dataStrokeOrdersRules from '@/assets/data/strokeOrderRules.json';
 import { StrokeOrderRules } from '@/types/StrokeOrderRules';
-import { gifs } from '@/assets/images/gifs/gifs';
 
 export default function StrokesScreen() {
   const data = dataStrokeOrdersRules.strokeOrderRules;
 
-   function strokeOrderRulesSection({ item }: { item: StrokeOrderRules }) {
+  function strokeOrderRulesSection({ item }: { item: StrokeOrderRules }) {
     const giSource1 = item.example.unicode[0]; 
     const gifPath1 = giSource1 ? gifs[giSource1] : null;
     const giSource2 = item.example.unicode[1]; 
     const gifPath2 = giSource2 ? gifs[giSource2] : null;
-      return (
-      <ThemedView style={styles.container} >
 
-        {/* {item.numberRule % 2 === 0 ? } */}
+    return (
+      <ThemedView style={styles.container} >
         <ThemedText type="default" style={item.numberRule % 2 === 0 ? styles.numberEven : styles.numberOdd}>{item.numberRule}</ThemedText>
         {item.numberRule % 2 !== 0 && <ThemedText type="default" style={styles.ruleContentEven}>{item.ruleContent}</ThemedText>}
         <ThemedView style={styles.gifContainer}>
           <ImageBackground 
             source={require('@/assets/images/z100.png')} 
             imageStyle={styles.background}
-            resizeMode="cover"
+            contentFit="cover"
           >
             <Image
               source={gifPath1}
@@ -37,9 +36,9 @@ export default function StrokesScreen() {
 
           {gifPath2 && 
           <ImageBackground 
-          source={require('@/assets/images/z100.png')} 
-          imageStyle={styles.background}
-          resizeMode="cover"
+            source={require('@/assets/images/z100.png')} 
+            imageStyle={styles.background}
+            contentFit="cover"
           >
             <Image
               source={gifPath2}

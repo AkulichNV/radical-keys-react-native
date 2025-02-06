@@ -1,16 +1,17 @@
-import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
-import { StyleSheet, ScrollView } from 'react-native';
 import { useEffect, useState } from 'react';
+import { StyleSheet, ScrollView } from 'react-native';
+import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import { Audio } from 'expo-av';
 
 import { sounds } from '@/assets/sounds/sounds';
 import { ThemedView } from '@/components/ThemedView';
 import { TopBar } from '@/components/TopBar';
-import { useDataContext } from '@/context/KeyContext';
 import { KeyHeader } from '@/components/KeyHeader';
 import { ModalDialog } from '@/components/ModalDialog';
 import { DescriptionView } from '@/components/DescriptionView';
 import { ContentView } from '@/components/selectedContent/ContentView';
+import { useDataContext } from '@/context/KeyContext';
+import { useNavigateToRadical } from '@/hooks/useNavigateToRadical';
 
 export default function DetailsScreen() {
   const { key, from } = useLocalSearchParams();
@@ -18,9 +19,12 @@ export default function DetailsScreen() {
 
   const { data } = useDataContext();
   const radicalKey = data;
+
   const [sound, setSound] = useState<Audio.Sound | undefined>();
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
   const [isStrokeOrder, setIsStrokeOrder] = useState<boolean>(true);
+
+  const navigateToRadical = useNavigateToRadical();
 
   async function onPlaySound() {
     const soundSource = radicalKey?.sound as string;
@@ -38,22 +42,6 @@ export default function DetailsScreen() {
         }
       : undefined;
   }, [sound]);
-
-  const onModalClose = () => {
-    setIsModalVisible(false);
-  };
-
-  const onModalOpen = () => {
-    setIsModalVisible(true);
-  };
-
-  const onStrokeOrder = () => {
-    setIsStrokeOrder(true);
-  };
-
-  const onEtymology = () => {
-    setIsStrokeOrder(false);
-  };
 
   return (
     <ScrollView>
@@ -73,7 +61,9 @@ export default function DetailsScreen() {
         <KeyHeader 
           svgName={radicalKey.calligraphy[0]?.svg}
           playSound={onPlaySound}
-          descriptionOpenModal={onModalOpen}
+          descriptionOpenModal={() => setIsModalVisible(true)}
+          onPressLeft={() => navigateToRadical(radicalKey.number - 1, from)}
+          onPressRight={() => navigateToRadical(radicalKey.number + 1, from)}
           number={radicalKey.number}
           pinyin={radicalKey.pinyin}
           description={radicalKey.description.short}
@@ -81,14 +71,14 @@ export default function DetailsScreen() {
 
         <ContentView 
           isStrokeOrder={isStrokeOrder}
-          strokeOrder={onStrokeOrder}
-          etymology={onEtymology}
+          strokeOrder={() => setIsStrokeOrder(true)}
+          etymology={() => setIsStrokeOrder(false)}
           calligraphy={radicalKey.calligraphy}
           evolution={radicalKey.evolution}
           unicode={radicalKey.unicode}
         />
 
-        <ModalDialog isVisible={isModalVisible} onClose={onModalClose} title={"Значение иероглифа"}>
+        <ModalDialog isVisible={isModalVisible} onClose={() => setIsModalVisible(false)} title={"Значение иероглифа"}>
           <DescriptionView description={radicalKey.description.long} />
         </ModalDialog>
       </ThemedView>

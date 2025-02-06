@@ -11,18 +11,22 @@ interface IKeyHeader {
   svgName: string,
   playSound: () => void,
   descriptionOpenModal: () => void,
+  onPressRight: () => void,
+  onPressLeft: () => void,
   pinyin: string,
   description: string,
-  number: number
+  number: number,
 };
 
 export const KeyHeader = ({
   svgName, 
   playSound, 
   descriptionOpenModal, 
+  onPressRight,
+  onPressLeft,
   pinyin, 
   description, 
-  number 
+  number,
 }: IKeyHeader) => (
   <ThemedView style={styles.header}>
     <ImageBackground 
@@ -33,11 +37,11 @@ export const KeyHeader = ({
       <ThemedText type='subtitle' style={styles.numberText}>No {number}</ThemedText>
       
       <ThemedView style={styles.svg}>
-        <Pressable onPress={() => {console.log('left')}}>
+        <Pressable onPress={onPressLeft}>
           <AntDesign name="caretleft" size={18} color="white" style={{borderColor: '#ffffff', borderWidth: 0.1}} />
         </Pressable>
         <SvgRenderer svgName={svgName} svgModule={Svgs} width={250} height={250} color={'#ffffff'}/>
-        <Pressable onPress={() => {console.log('right')}}>
+        <Pressable onPress={onPressRight}>
           <AntDesign name="caretright" size={18} color="white" style={{borderColor: '#ffffff', borderWidth: 0.1}}/>
         </Pressable>
       </ThemedView>

@@ -1,49 +1,32 @@
 import { StyleSheet, Pressable, Image } from 'react-native';
-import { useRouter } from 'expo-router';
 
+import dataKeys from '@/assets/data/radicalKeys.json';
 import { ThemedText } from '@/components/ThemedText';
-import { useDataContext } from '@/context/KeyContext';
-import { findCharacterById } from '@/scripts/findCharacterById';
-import { RadicalKeys } from '@/types/RadicalKeys';
-import dataKeys from '../../assets/data/radicalKeys.json';
 import ParallaxFlatList from '@/components/ParallaxFlatList';
+import { useNavigateToRadical } from '@/hooks/useNavigateToRadical';
+import { RadicalKeys } from '@/types/RadicalKeys';
 
 export default function TableKeysScreen() {
-
   const data = dataKeys.radicalKeys;
-  const router = useRouter();
-  const { setData } = useDataContext();
+  const navigateToRadical = useNavigateToRadical();
 
-  function onRowPress(id: number) {
-    const radicalKey = findCharacterById(dataKeys.radicalKeys, id);
-    setData(radicalKey);
-    router.push({
-      pathname: '/keys/[key]',
-      params: { key: id, from: 'table' },
-    });
-  }
-
-  function renderRow({ item }: { item: RadicalKeys }) {
-    
-    return (
-    <Pressable style={styles.row} onPress={() => onRowPress(item.number)}>
+  const renderRow =({ item }: { item: RadicalKeys }) => (
+    <Pressable style={styles.row} onPress={() => navigateToRadical(item.number, 'table')}>
       <ThemedText style={[styles.cell, styles.cell1]}>{item.number}</ThemedText>
       <ThemedText style={[styles.cell, styles.cell2]}>{item.pinyin}</ThemedText>
       <ThemedText type="title" style={[styles.cell, styles.cell3]}>{item.hanzi}</ThemedText>
-      
       <ThemedText style={[styles.cell, styles.cell4]}>{item.description.short}</ThemedText>
     </Pressable>
-    )
-  }
+  )
 
   return (
     <ParallaxFlatList
     headerBackgroundColor={{ light: '#A1CEDC', dark: '#010606' }}
     headerImage={
-        <Image
-          source={require('@/assets/images/background1.jpg')}
-          style={styles.headerImage}
-        />
+      <Image
+        source={require('@/assets/images/background1.jpg')}
+        style={styles.headerImage}
+      />
     }
     title={'Таблица иероглифических ключей'}
     data={data}
@@ -86,11 +69,7 @@ const styles = StyleSheet.create({
   },
   cell3: {
     flex: 1.2,
-    // borderWidth: 1,
-    // borderColor: '#ccc',
-    // paddingTop: 15,
     alignSelf: 'center',
-    // textAlign: 'center',
   },
   cell4: {
     flex: 2,
