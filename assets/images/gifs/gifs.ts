@@ -59,6 +59,22 @@ export const gifs: { [key: string]: any } = {
   "5DDB": require("./5DDB.gif"),
   "5DDD": require("./5DDD.gif"),
   "5DE5": require("./5DE5.gif"),
+  "5DF1": require("./5DF1.gif"),
+  "5DF2": require("./5DF2.gif"),
+  "5DF3": require("./5DF3.gif"),
+  "5DFE": require("./5DFE.gif"),
+  "5E72": require("./5E72.gif"),
+  "5E7A": require("./5E7A.gif"),
+  "4E48": require("./4E48.gif"),
+  "5E7F": require("./5E7F.gif"),
+  "5EF4": require("./5EF4.gif"),
+  "5EFE": require("./5EFE.gif"),
+  "5F0B": require("./5F0B.gif"),
+  "5F13": require("./5F13.gif"),
+  "5F50": require("./5F50.gif"),
+  "5F51": require("./5F51.gif"),
+  "5F61": require("./5F61.gif"),
+  "5F73": require("./5F73.gif"),
 
   "884C": require("./884C.gif"), //144 идти
   "807F": require("./807F.gif"), //129 орудие письма

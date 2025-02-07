@@ -46,6 +46,18 @@ import * as E5C6E from './5C6E/E5C6E';
 import * as E5C71 from './5C71/E5C71';
 import * as E5DDB from './5DDB/E5DDB';
 import * as E5DE5 from './5DE5/E5DE5';
+import * as E5DF1 from './5DF1/E5DF1';
+import * as E5DFE from './5DFE/E5DFE';
+import * as E5E7A from './5E7A/E5E7A';
+import * as E5E7F from './5E7F/E5E7F';
+import * as E5E72 from './5E72/E5E72';
+import * as E5EF4 from './5EF4/E5EF4';
+import * as E5EFE from './5EFE/E5EFE';
+import * as E5F0B from './5F0B/E5F0B';
+import * as E5F13 from './5F13/E5F13';
+import * as E5F50 from './5F50/E5F50';
+import * as E5F61 from './5F61/E5F61';
+import * as E5F73 from './5F73/E5F73';
 
 export const evolutionSvgs = {
   U4E00: E4E00,
@@ -96,4 +108,16 @@ export const evolutionSvgs = {
   U5C71: E5C71,
   U5DDB: E5DDB,
   U5DE5: E5DE5,
+  U5DF1: E5DF1,
+  U5DFE: E5DFE,
+  U5E7A: E5E7A,
+  U5E7F: E5E7F,
+  U5E72: E5E72,
+  U5EF4: E5EF4,
+  U5EFE: E5EFE,
+  U5F0B: E5F0B,
+  U5F13: E5F13,
+  U5F50: E5F50,
+  U5F61: E5F61,
+  U5F73: E5F73
 };

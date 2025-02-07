@@ -1884,7 +1884,7 @@
       "sound": "gong1",
       "unicode": "U5DE5",
       "description": {
-        "short": "Работа",
+        "short": "Работа, труд",
         "long": [""]
       },
       "calligraphy": [
@@ -1921,15 +1921,474 @@
         }
       ]
     },
-
-
     {
       "number": 49,
+      "hanzi": "己",
+      "strokeNumber": 3,
+      "pinyin": "jǐ",
+      "sound": "ji3",
+      "unicode": "U5DF1",
+      "description": {
+        "short": "Сам, себя, самолично",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "5DF1",
+          "svg": "U5DF1",
+          "strokeOrder": [""]
+        },
+        {
+          "gif": "5DF2",
+          "svg": "U5DF2",
+          "strokeOrder": ["уǐ", "Стоп", "Наречие, означающее прошлое", "Вспомогательное слово: используются в конце, означает утверждение"]
+        },
+        {
+          "gif": "5DF3",
+          "svg": "U5DF3",
+          "strokeOrder": ["sì", "Зародыш (в значении: начало, основа)"]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U5DF1_10", "U5DF1_11"]
+        },
+        {
+          "title": "金文",
+          "image": ["U5DF1_20", "U5DF1_21", "U5DF1_22"]
+        },
+        {
+          "title": "楚系簡帛",
+          "image": ["U5DF1_30", "U5DF1_31"]
+        },
+        {
+          "title": "說文",
+          "image": ["U5DF1_40", "U5DF1_41"]
+        },
+        {
+          "title": "秦系簡牘",
+          "image": ["U5DF1_50"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U5DF1_00"]
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "hanzi": "巾",
+      "strokeNumber": 3,
+      "pinyin": "jīn",
+      "sound": "jin1",
+      "unicode": "U5DFE",
+      "description": {
+        "short": "Полотенце, платок",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "5DFE",
+          "svg": "U5DFE",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U5DFE_10"]
+        },
+        {
+          "title": "金文",
+          "image": ["U5DFE_20"]
+        },
+        {
+          "title": "楚系簡帛",
+          "image": ["U5DFE_30", "U5DFE_31"]
+        },
+        {
+          "title": "說文",
+          "image": ["U5DFE_40"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U5DFE_00"]
+        }
+      ]
+    },
+    {
+      "number": 51,
+      "hanzi": "干",
+      "strokeNumber": 3,
+      "pinyin": "gān",
+      "sound": "gan1",
+      "unicode": "U5E72",
+      "description": {
+        "short": "Щит",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "5E72",
+          "svg": "U5E72",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U5E72_10"]
+        },
+        {
+          "title": "金文",
+          "image": ["U5E72_20", "U5E72_21"]
+        },
+        {
+          "title": "楚系簡帛",
+          "image": ["U5E72_30", "U5E72_31"]
+        },
+        {
+          "title": "說文",
+          "image": ["U5E72_40"]
+        },
+        {
+          "title": "秦系簡牘",
+          "image": ["U5E72_50"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U5E72_00"]
+        }
+      ]
+    },
+    {
+      "number": 52,
+      "hanzi": "幺",
+      "strokeNumber": 3,
+      "pinyin": "yāo",
+      "sound": "yao1",
+      "unicode": "U5E7A",
+      "description": {
+        "short": "Младший, крошечный",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "5E7A",
+          "svg": "U5E7A",
+          "strokeOrder": [""]
+        },
+        {
+          "gif": "4E48",
+          "svg": "U4E48",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "金文",
+          "image": ["U5E7A_10", "U5E7A_11", "U5E7A_12"]
+        },
+        {
+          "title": "說文",
+          "image": ["U5E7A_20"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U5E7A_00"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U4E48_00"]
+        }
+      ]
+    },
+    {
+      "number": 53,
+      "hanzi": "广",
+      "strokeNumber": 3,
+      "pinyin": "yǎn",
+      "sound": "yan3",
+      "unicode": "U5E7F",
+      "description": {
+        "short": "Навес",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "5E7F",
+          "svg": "U5E7F",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "說文",
+          "image": ["U5E7F_10"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U5E7F_00"]
+        }
+      ]
+    },
+    {
+      "number": 54,
+      "hanzi": "廴",
+      "strokeNumber": 3,
+      "pinyin": "yǐn",
+      "sound": "yin3",
+      "unicode": "U5EF4",
+      "description": {
+        "short": "Тащиться, двигаться вперед",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "5EF4",
+          "svg": "U5EF4",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "說文",
+          "image": ["U5EF4_10"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U5EF4_00"]
+        }
+      ]
+    },
+    {
+      "number": 55,
+      "hanzi": "廾",
+      "strokeNumber": 3,
+      "pinyin": "gǒng",
+      "sound": "gong3",
+      "unicode": "U5EFE",
+      "description": {
+        "short": "Соединенные руки",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "5EFE",
+          "svg": "U5EFE",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U5EFE_10"]
+        },
+        {
+          "title": "金文",
+          "image": ["U5EFE_20", "U5EFE_21"]
+        },
+        {
+          "title": "說文",
+          "image": ["U5EFE_30", "U5EFE_31"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U5EFE_00"]
+        }
+      ]
+    },
+    {
+      "number": 56,
+      "hanzi": "弋",
+      "strokeNumber": 3,
+      "pinyin": "yì",
+      "sound": "yi4",
+      "unicode": "U5F0B",
+      "description": {
+        "short": "Стрелять из лука",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "5F0B",
+          "svg": "U5F0B",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U5F0B_10", "U5F0B_11", "U5F0B_12"]
+        },
+        {
+          "title": "金文",
+          "image": ["U5F0B_20", "U5F0B_21", "U5F0B_22"]
+        },
+        {
+          "title": "楚系簡帛",
+          "image": ["U5F0B_30", "U5F0B_31"]
+        },
+        {
+          "title": "說文",
+          "image": ["U5F0B_40"]
+        },
+        {
+          "title": "秦系簡牘",
+          "image": ["U5F0B_50"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U5F0B_00"]
+        }
+      ]
+    },
+    {
+      "number": 57,
+      "hanzi": "弓",
+      "strokeNumber": 3,
+      "pinyin": "gōng",
+      "sound": "gong1",
+      "unicode": "U5F13",
+      "description": {
+        "short": "Лук для стрельбы",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "5F13",
+          "svg": "U5F13",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U5F13_10", "U5F13_12", "U5F13_12"]
+        },
+        {
+          "title": "金文",
+          "image": ["U5F13_20", "U5F13_21", "U5F13_22"]
+        },
+        {
+          "title": "楚系簡帛",
+          "image": ["U5F13_30", "U5F13_31", "U5F13_32"]
+        },
+        {
+          "title": "說文",
+          "image": ["U5F13_40"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U5F13_00"]
+        }
+      ]
+    },
+    {
+      "number": 58,
+      "hanzi": "彐",
+      "strokeNumber": 3,
+      "pinyin": "jì",
+      "sound": "ji4",
+      "unicode": "U5F50",
+      "description": {
+        "short": "Голова свиньи",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "5F50",
+          "svg": "U5F50",
+          "strokeOrder": [""]
+        },
+        {
+          "gif": "5F51",
+          "svg": "U5F51",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "說文",
+          "image": ["U5F50_10"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U5F50_00"]
+        }
+      ]
+    },
+    {
+      "number": 59,
+      "hanzi": "彡",
+      "strokeNumber": 3,
+      "pinyin": "shān",
+      "sound": "shan1",
+      "unicode": "U5F61",
+      "description": {
+        "short": "Оперение",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "5F61",
+          "svg": "U5F61",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U5F61_10"]
+        },
+        {
+          "title": "說文",
+          "image": ["U5F61_20"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U5F61_00"]
+        }
+      ]
+    },
+    {
+      "number": 60,
+      "hanzi": "彳",
+      "strokeNumber": 3,
+      "pinyin": "chì",
+      "sound": "chi4",
+      "unicode": "U5F73",
+      "description": {
+        "short": "Шаг левой ногой",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "5F73",
+          "svg": "U5F73",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "說文",
+          "image": ["U5F73_10"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U5F73_00"]
+        }
+      ]
+    },
+
+    {
+      "number": 61,
       "hanzi": "",
       "strokeNumber": 3,
       "pinyin": "",
       "sound": "",
-      "unicode": "",
+      "unicode": "U",
       "description": {
         "short": "",
         "long": [""]
@@ -1937,7 +2396,7 @@
       "calligraphy": [
         {
           "gif": "",
-          "svg": "",
+          "svg": "U",
           "strokeOrder": [""]
         }
       ],
