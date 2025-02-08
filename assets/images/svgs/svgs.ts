@@ -76,6 +76,10 @@ import U5F50 from './5F50.svg';
 import U5F51 from './5F51.svg';
 import U5F61 from './5F61.svg';
 import U5F73 from './5F73.svg';
+import U5FC3 from './5FC3.svg';
+import U5FC3A from './5FC3A.svg';
+import U5FC4 from './5FC4.svg';
+import U38FA from './38FA.svg';
 
 export { 
   U4E00, 
@@ -156,4 +160,8 @@ export {
   U5F51,
   U5F61,
   U5F73,
+  U5FC3,
+  U5FC3A,
+  U5FC4,
+  U38FA
 };

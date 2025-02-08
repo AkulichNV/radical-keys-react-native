@@ -50,6 +50,7 @@ export const sounds: { [key: string]: any } = {
   "xi1": require("./xi1.mp3"),
   "xi4": require("./xi4.mp3"),
   "xiao3": require("./xiao3.mp3"),
+  "xin1": require("./xin1.mp3"),
   "yan3": require("./yan3.mp3"),
   "yao1": require("./yao1.mp3"),
   "yi1": require("./yi1.mp3"),
