@@ -2439,9 +2439,54 @@
         }
       ]
     },
-
     {
       "number": 62,
+      "hanzi": "戈",
+      "strokeNumber": 4,
+      "pinyin": "gē",
+      "sound": "ge1",
+      "unicode": "U6208",
+      "description": {
+        "short": "Китайский клевец, копье, война",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "6208",
+          "svg": "U6208",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U6208_10"]
+        },
+        {
+          "title": "金文",
+          "image": ["U6208_20", "U6208_21", "U6208_22"]
+        },
+        {
+          "title": "楚系簡帛",
+          "image": ["U6208_30"]
+        },
+        {
+          "title": "說文",
+          "image": ["U6208_40"]
+        },
+        {
+          "title": "秦系簡牘",
+          "image": ["U6208_50"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U6208_00"]
+        }
+      ]
+    },
+
+    {
+      "number": 63,
       "hanzi": "",
       "strokeNumber": 4,
       "pinyin": "",

@@ -77,6 +77,7 @@ export const gifs: { [key: string]: any } = {
   "5F73": require("./5F73.gif"),
   "5FC3": require("./5FC3.gif"),
   "5FC4": require("./5FC4.gif"),
+  "6208": require("./6208.gif"),
 
   "884C": require("./884C.gif"), //144 идти
   "807F": require("./807F.gif"), //129 орудие письма
@@ -92,7 +93,6 @@ export const gifs: { [key: string]: any } = {
   "65B9": require("./65B9.gif"), // 70 квадрат
   "9580": require("./9580.gif"), // 169 ворота
   "95E8": require("./95E8.gif"), // ворота другая форма
-  "6208": require("./6208.gif"), // 62 копье
   "77E2": require("./77E2.gif"), // 111 стрела
   "76AE": require("./76AE.gif"), // 107 кожа
   "81E3": require("./81E3.gif"), // 131 чиновник
