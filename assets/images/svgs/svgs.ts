@@ -81,6 +81,20 @@ import U5FC3A from './5FC3A.svg';
 import U5FC4 from './5FC4.svg';
 import U38FA from './38FA.svg';
 import U6208 from './6208.svg';
+import U65A4 from './65A4.svg';
+import U65B9 from './65B9.svg';
+import U624B from './624B.svg';
+import U9FB5 from './9FB5.svg';
+import U624C from './624C.svg';
+import U624D from './624D.svg';
+import U652F from './652F.svg';
+import U6236 from './6236.svg';
+import U6237 from './6237.svg';
+import U6238 from './6238.svg';
+import U6534 from './6534.svg';
+import U6535 from './6535.svg';
+import U6587 from './6587.svg';
+import U6597 from './6597.svg';
 
 export { 
   U4E00, 
@@ -165,5 +179,19 @@ export {
   U5FC3A,
   U5FC4,
   U38FA,
-  U6208
+  U6208,
+  U65A4,
+  U65B9,
+  U624B,
+  U9FB5,
+  U624C,
+  U624D,
+  U652F,
+  U6236,
+  U6237,
+  U6238,
+  U6534,
+  U6535,
+  U6587,
+  U6597
 };

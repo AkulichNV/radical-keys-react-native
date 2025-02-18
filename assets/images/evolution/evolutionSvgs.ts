@@ -60,6 +60,14 @@ import * as E5F61 from './5F61/E5F61';
 import * as E5F73 from './5F73/E5F73';
 import * as E5FC3 from './5FC3/E5FC3';
 import * as E6208 from './6208/E6208';
+import * as E65A4 from './65A4/E65A4';
+import * as E65B9 from './65B9/E65B9';
+import * as E624B from './624B/E624B';
+import * as E652F from './652F/E652F';
+import * as E6237 from './6236/E6237';
+import * as E6534 from './6534/E6534';
+import * as E6587 from './6587/E6587';
+import * as E6597 from './6597/E6597';
 
 export const evolutionSvgs = {
   U4E00: E4E00,
@@ -123,5 +131,13 @@ export const evolutionSvgs = {
   U5F61: E5F61,
   U5F73: E5F73,
   U5FC3: E5FC3,
-  U6208: E6208
+  U6208: E6208,
+  U65A4: E65A4,
+  U65B9: E65B9,
+  U624B: E624B,
+  U652F: E652F,
+  U6237: E6237,
+  U6534: E6534,
+  U6587: E6587,
+  U6597: E6597
 };

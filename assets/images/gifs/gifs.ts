@@ -78,10 +78,23 @@ export const gifs: { [key: string]: any } = {
   "5FC3": require("./5FC3.gif"),
   "5FC4": require("./5FC4.gif"),
   "6208": require("./6208.gif"),
+  "65A4": require("./65A4.gif"),
+  "624B": require("./624B.gif"),
+  "9FB5": require("./9FB5.gif"),
+  "624C": require("./624C.gif"),
+  "624D": require("./624D.gif"),
+  "652F": require("./652F.gif"),
+  "6236": require("./6236.gif"),
+  "6237": require("./6237.gif"),
+  "6238": require("./6238.gif"),
+  "6534": require("./6534.gif"),
+  "6535": require("./6535.gif"),
+  "6587": require("./6587.gif"),
+  "6597": require("./6597.gif"),
+  "65B9": require("./65B9.gif"),
 
   "884C": require("./884C.gif"), //144 идти
   "807F": require("./807F.gif"), //129 орудие письма
-  "624C": require("./624C.gif"), // 64 рука
   "7F8AA": require("./7F8AA.gif"), // 123 баран
   "6728": require("./6728.gif"), // 75 дерево
   "7F51": require("./7F51.gif"), // 122 сеть
@@ -90,7 +103,6 @@ export const gifs: { [key: string]: any } = {
   "9F52": require("./9F52.gif"), // 211 зубы
   "8F66": require("./8F66.gif"), // 159 телега вторая форма
   "8F66A": require("./8F66A.gif"), // телега третья форма
-  "65B9": require("./65B9.gif"), // 70 квадрат
   "9580": require("./9580.gif"), // 169 ворота
   "95E8": require("./95E8.gif"), // ворота другая форма
   "77E2": require("./77E2.gif"), // 111 стрела
@@ -100,7 +112,6 @@ export const gifs: { [key: string]: any } = {
   "9091": require("./9091.gif"), // 163 город
   "961D": require("./961D.gif"), // 170 и 163 вторая форма холм и город 
   "9EFD": require("./9EFD.gif"), // 205 лягушка
-
 
   "8FD9": require("./8FD9.gif"), // Этот
 };
