@@ -68,6 +68,16 @@ import * as E6237 from './6236/E6237';
 import * as E6534 from './6534/E6534';
 import * as E6587 from './6587/E6587';
 import * as E6597 from './6597/E6597';
+import * as E6B20 from './6B20/E6B20';
+import * as E6B62 from './6B62/E6B62';
+import * as E6B79 from './6B79/E6B79';
+import * as E6BB3 from './6BB3/E6BB3';
+import * as E6BCB from './6BCB/E6BCB';
+import * as E65E0 from './65E0/E65E0';
+import * as E65E5 from './65E5/E65E5';
+import * as E66F0 from './66F0/E66F0';
+import * as E6708 from './6708/E6708';
+import * as E6728 from './6728/E6728';
 
 export const evolutionSvgs = {
   U4E00: E4E00,
@@ -139,5 +149,15 @@ export const evolutionSvgs = {
   U6237: E6237,
   U6534: E6534,
   U6587: E6587,
-  U6597: E6597
+  U6597: E6597,
+  U6B20: E6B20,
+  U6B62: E6B62,
+  U6B79: E6B79,
+  U6BB3: E6BB3,
+  U6BCB: E6BCB,
+  U65E0: E65E0,
+  U65E5: E65E5,
+  U66F0: E66F0,
+  U6708: E6708,
+  U6728: E6728
 };
