@@ -3277,9 +3277,443 @@
         }
       ]
     },
-
     {
       "number": 81,
+      "hanzi": "比",
+      "strokeNumber": 4,
+      "pinyin": "bǐ",
+      "sound": "bi3",
+      "unicode": "U6BD4",
+      "description": {
+        "short": "Сравнивать",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "6BD4",
+          "svg": "U6BD4",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U6BD4_10"]
+        },
+        {
+          "title": "金文",
+          "image": ["U6BD4_20", "U6BD4_21", "U6BD4_22"]
+        },
+        {
+          "title": "楚系簡帛",
+          "image": ["U6BD4_30"]
+        },
+        {
+          "title": "說文",
+          "image": ["U6BD4_40", "U6BD4_41"]
+        },
+        {
+          "title": "秦系簡牘",
+          "image": ["U6BD4_50"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U6BD4_00"]
+        }
+      ]
+    },
+    {
+      "number": 82,
+      "hanzi": "毛",
+      "strokeNumber": 4,
+      "pinyin": "máo",
+      "sound": "mao2",
+      "unicode": "U6BDB",
+      "description": {
+        "short": "Шерсть, волосы",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "6BDB",
+          "svg": "U6BDB",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "金文",
+          "image": ["U6BDB_10", "U6BDB_11", "U6BDB_12"]
+        },
+        {
+          "title": "楚系簡帛",
+          "image": ["U6BDB_20"]
+        },
+        {
+          "title": "說文",
+          "image": ["U6BDB_30"]
+        },
+        {
+          "title": "秦系簡牘",
+          "image": ["U6BDB_40"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U6BDB_00"]
+        }
+      ]
+    },
+    {
+      "number": 83,
+      "hanzi": "氏",
+      "strokeNumber": 4,
+      "pinyin": "shì",
+      "sound": "shi4",
+      "unicode": "U6C0F",
+      "description": {
+        "short": "Род, фамилия",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "6C0F",
+          "svg": "U6C0F",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U6C0F_10"]
+        },
+        {
+          "title": "金文",
+          "image": ["U6C0F_20", "U6C0F_21", "U6C0F_22"]
+        },
+        {
+          "title": "楚系簡帛",
+          "image": ["U6C0F_30"]
+        },
+        {
+          "title": "說文",
+          "image": ["U6C0F_40"]
+        },
+        {
+          "title": "秦系簡牘",
+          "image": ["U6C0F_50"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U6C0F_00"]
+        }
+      ]
+    },
+    {
+      "number": 84,
+      "hanzi": "气",
+      "strokeNumber": 4,
+      "pinyin": "qì",
+      "sound": "qi4",
+      "unicode": "U6C14",
+      "description": {
+        "short": "Воздух, пар",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "6C14",
+          "svg": "U6C14",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U6C14_10"]
+        },
+        {
+          "title": "金文",
+          "image": ["U6C14_20", "U6C14_21", "U6C14_22"]
+        },
+        {
+          "title": "楚系簡帛",
+          "image": ["U6C14_30", "U6C14_31"]
+        },
+        {
+          "title": "說文",
+          "image": ["U6C14_40"]
+        },
+        {
+          "title": "秦系簡牘",
+          "image": ["U6C14_50"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U6C14_00"]
+        }
+      ]
+    },
+    {
+      "number": 85,
+      "hanzi": "水",
+      "strokeNumber": 4,
+      "pinyin": "shuǐ",
+      "sound": "shui3",
+      "unicode": "U6C34",
+      "description": {
+        "short": "Вода",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "6C34",
+          "svg": "U6C34",
+          "strokeOrder": [""]
+        },
+        {
+          "gif": "6C35",
+          "svg": "U6C35",
+          "strokeOrder": [""]
+        },
+        {
+          "svg": "U6C3A",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U6C34_10", "U6C34_11", "U6C34_12"]
+        },
+        {
+          "title": "金文",
+          "image": ["U6C34_20", "U6C34_21"]
+        },
+        {
+          "title": "楚系簡帛",
+          "image": ["U6C34_30", "U6C34_31"]
+        },
+        {
+          "title": "說文",
+          "image": ["U6C34_40"]
+        },
+        {
+          "title": "秦系簡牘",
+          "image": ["U6C34_50"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U6C34_00"]
+        }
+      ]
+    },
+    {
+      "number": 86,
+      "hanzi": "火",
+      "strokeNumber": 4,
+      "pinyin": "huǒ",
+      "sound": "huo3",
+      "unicode": "U706B",
+      "description": {
+        "short": "Огонь",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "706B",
+          "svg": "U706B",
+          "strokeOrder": [""]
+        },
+        {
+          "gif": "706C",
+          "svg": "U706C",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U706B_10", "U706B_11", "U706B_12"]
+        },
+        {
+          "title": "楚系簡帛",
+          "image": ["U706B_20"]
+        },
+        {
+          "title": "說文",
+          "image": ["U706B_30"]
+        },
+        {
+          "title": "秦系簡牘",
+          "image": ["U706B_40"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U706B_00"]
+        }
+      ]
+    },
+    {
+      "number": 87,
+      "hanzi": "爪",
+      "strokeNumber": 4,
+      "pinyin": "zhǎo",
+      "sound": "zhao3",
+      "unicode": "U722A",
+      "description": {
+        "short": "Когти",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "722A",
+          "svg": "U722A",
+          "strokeOrder": [""]
+        },
+        {
+          "gif": "722B",
+          "svg": "U722B",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U722A_10"]
+        },
+        {
+          "title": "金文",
+          "image": ["U722A_20"]
+        },
+        {
+          "title": "說文",
+          "image": ["U722A_30"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U722A_00"]
+        }
+      ]
+    },
+    {
+      "number": 88,
+      "hanzi": "父",
+      "strokeNumber": 4,
+      "pinyin": "fù",
+      "sound": "fu4",
+      "unicode": "U7236",
+      "description": {
+        "short": "Отец",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "7236",
+          "svg": "U7236",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U7236_10"]
+        },
+        {
+          "title": "金文",
+          "image": ["U7236_20", "U7236_21", "U7236_22"]
+        },
+        {
+          "title": "楚系簡帛",
+          "image": ["U7236_30"]
+        },
+        {
+          "title": "說文",
+          "image": ["U7236_40"]
+        },
+        {
+          "title": "秦系簡牘",
+          "image": ["U7236_50"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U7236_00"]
+        }
+      ]
+    },
+    {
+      "number": 89,
+      "hanzi": "爻",
+      "strokeNumber": 4,
+      "pinyin": "yáo",
+      "sound": "yao2",
+      "unicode": "U723B",
+      "description": {
+        "short": "Черта в гексаграмме, перемешивать",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "723B",
+          "svg": "U723B",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U723B_10"]
+        },
+        {
+          "title": "金文",
+          "image": ["U723B_20", "U723B_21", "U723B_22"]
+        },
+        {
+          "title": "說文",
+          "image": ["U723B_30"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U723B_00"]
+        }
+      ]
+    },
+    {
+      "number": 90,
+      "hanzi": "爿",
+      "strokeNumber": 4,
+      "pinyin": "qiáng",
+      "sound": "qiang2",
+      "unicode": "U723F",
+      "description": {
+        "short": "Доска",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "723F",
+          "svg": "U723F",
+          "strokeOrder": [""]
+        },
+        {
+          "gif": "4E2C",
+          "svg": "U4E2C",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U723F_10", "U723F_11"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U723F_00"]
+        }
+      ]
+    },
+
+    {
+      "number": 91,
       "hanzi": "",
       "strokeNumber": 4,
       "pinyin": "",
