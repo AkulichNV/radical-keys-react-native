@@ -121,6 +121,21 @@ export const gifs: { [key: string]: any } = {
   "723B": require("./723B.gif"),
   "723F": require("./723F.gif"),
   "7236": require("./7236.gif"),
+  "72AC": require("./72AC.gif"),
+  "72AD": require("./72AD.gif"),
+  "74DC": require("./74DC.gif"),
+  "74E6": require("./74E6.gif"),
+  "248E9": require("./248E9.gif"),
+  "725B": require("./725B.gif"),
+  "725C": require("./725C.gif"),
+  "738A": require("./738A.gif"),
+  "738B": require("./738B.gif"),
+  "751F": require("./751F.gif"),
+  "7247": require("./7247.gif"),
+  "7259": require("./7259.gif"),
+  "7384": require("./7384.gif"),
+  "7389": require("./7389.gif"),
+  "7518": require("./7518.gif"),
 
   "884C": require("./884C.gif"), //144 идти
   "807F": require("./807F.gif"), //129 орудие письма
@@ -135,7 +150,6 @@ export const gifs: { [key: string]: any } = {
   "77E2": require("./77E2.gif"), // 111 стрела
   "76AE": require("./76AE.gif"), // 107 кожа
   "81E3": require("./81E3.gif"), // 131 чиновник
-  "7389": require("./7389.gif"), // 96 нефрит
   "9091": require("./9091.gif"), // 163 город
   "961D": require("./961D.gif"), // 170 и 163 вторая форма холм и город 
   "9EFD": require("./9EFD.gif"), // 205 лягушка

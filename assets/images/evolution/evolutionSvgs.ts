@@ -88,6 +88,16 @@ import * as E722A from './722A/E722A';
 import * as E723B from './723B/E723B';
 import * as E723F from './723F/E723F';
 import * as E7236 from './7236/E7236';
+import * as E72AC from './72AC/E72AC';
+import * as E74DC from './74DC/E74DC';
+import * as E74E6 from './74E6/E74E6';
+import * as E725B from './725B/E725B';
+import * as E751F from './751F/E751F';
+import * as E7247 from './7247/E7247';
+import * as E7259 from './7259/E7259';
+import * as E7384 from './7384/E7384';
+import * as E7389 from './7389/E7389';
+import * as E7518 from './7518/E7518';
 
 export const evolutionSvgs = {
   U4E00: E4E00,
@@ -179,5 +189,15 @@ export const evolutionSvgs = {
   U722A: E722A,
   U723B: E723B,
   U723F: E723F,
-  U7236: E7236
+  U7236: E7236,
+  U72AC: E72AC,
+  U74DC: E74DC,
+  U74E6: E74E6,
+  U725B: E725B,
+  U751F: E751F,
+  U7247: E7247,
+  U7259: E7259,
+  U7384: E7384,
+  U7389: E7389,
+  U7518: E7518
 };
