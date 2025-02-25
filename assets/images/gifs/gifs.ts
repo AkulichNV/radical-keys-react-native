@@ -136,19 +136,29 @@ export const gifs: { [key: string]: any } = {
   "7384": require("./7384.gif"),
   "7389": require("./7389.gif"),
   "7518": require("./7518.gif"),
+  "24D14": require("./24D14.gif"),
+  "76AE": require("./76AE.gif"),
+  "76BF": require("./76BF.gif"),
+  "76EE": require("./76EE.gif"),
+  "77DB": require("./77DB.gif"),
+  "758B": require("./758B.gif"),
+  "767D": require("./767D.gif"),
+  "7528": require("./7528.gif"),
+  "7529": require("./7529.gif"),
+  "7530": require("./7530.gif"),
+  "7592": require("./7592.gif"),
+  "7676": require("./7676.gif"),
 
   "884C": require("./884C.gif"), //144 идти
   "807F": require("./807F.gif"), //129 орудие письма
   "7F8AA": require("./7F8AA.gif"), // 123 баран
   "7F51": require("./7F51.gif"), // 122 сеть
-  "7530": require("./7530.gif"), // 102 поле
   "9F52": require("./9F52.gif"), // 211 зубы
   "8F66": require("./8F66.gif"), // 159 телега вторая форма
   "8F66A": require("./8F66A.gif"), // телега третья форма
   "9580": require("./9580.gif"), // 169 ворота
   "95E8": require("./95E8.gif"), // ворота другая форма
   "77E2": require("./77E2.gif"), // 111 стрела
-  "76AE": require("./76AE.gif"), // 107 кожа
   "81E3": require("./81E3.gif"), // 131 чиновник
   "9091": require("./9091.gif"), // 163 город
   "961D": require("./961D.gif"), // 170 и 163 вторая форма холм и город 

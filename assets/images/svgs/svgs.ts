@@ -140,6 +140,18 @@ import U7259 from './7259.svg';
 import U7384 from './7384.svg';
 import U7389 from './7389.svg';
 import U7518 from './7518.svg';
+import U24D14 from './24D14.svg';
+import U76AE from './76AE.svg';
+import U76BF from './76BF.svg';
+import U76EE from './76EE.svg';
+import U77DB from './77DB.svg';
+import U758B from './758B.svg';
+import U767D from './767D.svg';
+import U7528 from './7528.svg';
+import U7529 from './7529.svg';
+import U7530 from './7530.svg';
+import U7592 from './7592.svg';
+import U7676 from './7676.svg';
 
 export { 
   U4E00, 
@@ -283,5 +295,17 @@ export {
   U7259,
   U7384,
   U7389,
-  U7518
+  U7518,
+  U24D14,
+  U76AE,
+  U76BF,
+  U76EE,
+  U77DB,
+  U758B,
+  U767D,
+  U7528,
+  U7529,
+  U7530,
+  U7592,
+  U7676
 };
