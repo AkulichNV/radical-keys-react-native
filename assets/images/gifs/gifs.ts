@@ -148,6 +148,20 @@ export const gifs: { [key: string]: any } = {
   "7530": require("./7530.gif"),
   "7592": require("./7592.gif"),
   "7676": require("./7676.gif"),
+  "77E2": require("./77E2.gif"),
+  "7A74": require("./7A74.gif"),
+  "7ACB": require("./7ACB.gif"),
+  "7AF9": require("./7AF9.gif"),
+  "7C73": require("./7C73.gif"),
+  "7CF8": require("./7CF8.gif"),
+  "7CF9": require("./7CF9.gif"),
+  "7E9F": require("./7E9F.gif"),
+  "25AD7": require("./25AD7.gif"),
+  "77F3": require("./77F3.gif"),
+  "79B8": require("./79B8.gif"),
+  "79BE": require("./79BE.gif"),
+  "793A": require("./793A.gif"),
+  "793B": require("./793B.gif"),
 
   "884C": require("./884C.gif"), //144 идти
   "807F": require("./807F.gif"), //129 орудие письма
@@ -158,7 +172,6 @@ export const gifs: { [key: string]: any } = {
   "8F66A": require("./8F66A.gif"), // телега третья форма
   "9580": require("./9580.gif"), // 169 ворота
   "95E8": require("./95E8.gif"), // ворота другая форма
-  "77E2": require("./77E2.gif"), // 111 стрела
   "81E3": require("./81E3.gif"), // 131 чиновник
   "9091": require("./9091.gif"), // 163 город
   "961D": require("./961D.gif"), // 170 и 163 вторая форма холм и город 
