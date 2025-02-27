@@ -162,11 +162,22 @@ export const gifs: { [key: string]: any } = {
   "79BE": require("./79BE.gif"),
   "793A": require("./793A.gif"),
   "793B": require("./793B.gif"),
+  "7F36": require("./7F36.gif"),
+  "7F51": require("./7F51.gif"),
+  "7F52": require("./7F52.gif"),
+  "7F8A": require("./7F8A.gif"),
+  "7F8AA": require("./7F8AA.gif"),
+  "2634C": require("./2634C.gif"),
+  "7FBD": require("./7FBD.gif"),
+  "8001": require("./8001.gif"),
+  "8002": require("./8002.gif"),
+  "800C": require("./800C.gif"),
+  "8012": require("./8012.gif"),
+  "8033": require("./8033.gif"),
+  "807F": require("./807F.gif"),
+  "8089": require("./8089.gif"),
 
   "884C": require("./884C.gif"), //144 идти
-  "807F": require("./807F.gif"), //129 орудие письма
-  "7F8AA": require("./7F8AA.gif"), // 123 баран
-  "7F51": require("./7F51.gif"), // 122 сеть
   "9F52": require("./9F52.gif"), // 211 зубы
   "8F66": require("./8F66.gif"), // 159 телега вторая форма
   "8F66A": require("./8F66A.gif"), // телега третья форма
