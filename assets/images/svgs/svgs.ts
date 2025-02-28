@@ -185,6 +185,17 @@ import U8033 from './8033.svg';
 import U8080 from './8080.svg';
 import U8089 from './8089.svg';
 import U26612 from './26612.svg';
+import U81E3 from './81E3.svg';
+import U81EA from './81EA.svg';
+import U81F3 from './81F3.svg';
+import U81FC from './81FC.svg';
+import U820C from './820C.svg';
+import U821B from './821B.svg';
+import U821F from './821F.svg';
+import U826E from './826E.svg';
+import U8272 from './8272.svg';
+import U8278 from './8278.svg';
+import U8279 from './8279.svg';
 
 export { 
   U4E00, 
@@ -373,5 +384,16 @@ export {
   U8033,
   U8080,
   U8089,
-  U26612
+  U26612,
+  U81E3,
+  U81EA,
+  U81F3,
+  U81FC,
+  U820C,
+  U821B,
+  U821F,
+  U826E,
+  U8272,
+  U8278,
+  U8279
 };

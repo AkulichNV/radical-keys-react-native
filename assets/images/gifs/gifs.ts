@@ -176,6 +176,17 @@ export const gifs: { [key: string]: any } = {
   "8033": require("./8033.gif"),
   "807F": require("./807F.gif"),
   "8089": require("./8089.gif"),
+  "81E3": require("./81E3.gif"),
+  "81EA": require("./81EA.gif"),
+  "81F3": require("./81F3.gif"),
+  "81FC": require("./81FC.gif"),
+  "820C": require("./820C.gif"),
+  "821B": require("./821B.gif"),
+  "821F": require("./821F.gif"),
+  "826E": require("./826E.gif"),
+  "8272": require("./8272.gif"),
+  "8278": require("./8278.gif"),
+  "8279": require("./8279.gif"),
 
   "884C": require("./884C.gif"), //144 идти
   "9F52": require("./9F52.gif"), // 211 зубы
@@ -183,7 +194,6 @@ export const gifs: { [key: string]: any } = {
   "8F66A": require("./8F66A.gif"), // телега третья форма
   "9580": require("./9580.gif"), // 169 ворота
   "95E8": require("./95E8.gif"), // ворота другая форма
-  "81E3": require("./81E3.gif"), // 131 чиновник
   "9091": require("./9091.gif"), // 163 город
   "961D": require("./961D.gif"), // 170 и 163 вторая форма холм и город 
   "9EFD": require("./9EFD.gif"), // 205 лягушка
