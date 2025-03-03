@@ -138,6 +138,17 @@ import * as U821F from './821F/E821F';
 import * as U826E from './826E/E826E';
 import * as U8272 from './8272/E8272';
 import * as U8278 from './8278/E8278';
+import * as U8A00 from './8A00/E8A00';
+import * as U8C37 from './8C37/E8C37';
+import * as U8C46 from './8C46/E8C46';
+import * as U89D2 from './89D2/E89D2';
+import * as U864D from './864D/E864D';
+import * as U866B from './866B/E866B';
+import * as U884C from './884C/E884C';
+import * as U897F from './897F/E897F';
+import * as U898B from './898B/E898B';
+import * as U8840 from './8840/E8840';
+import * as U8863 from './8863/E8863';
 
 export const evolutionSvgs = {
   U4E00,
@@ -279,5 +290,16 @@ export const evolutionSvgs = {
   U821F,
   U826E,
   U8272,
-  U8278
+  U8278,
+  U8A00,
+  U8C37,
+  U8C46,
+  U89D2,
+  U864D,
+  U866B,
+  U884C,
+  U897F,
+  U898B,
+  U8840,
+  U8863
 };
