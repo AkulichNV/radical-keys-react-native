@@ -217,12 +217,26 @@ export const gifs: { [key: string]: any } = {
   "8F66": require("./8F66.gif"),
   "8F66A": require("./8F66A.gif"),
   "27FB7": require("./27FB7.gif"),
+  "8FB0": require("./8FB0.gif"),
+  "8FB5": require("./8FB5.gif"),
+  "8FB6": require("./8FB6.gif"),
+  "91C6": require("./91C6.gif"),
+  "91C6A": require("./91C6A.gif"),
+  "91CC": require("./91CC.gif"),
+  "91D1": require("./91D1.gif"),
+  "91D2": require("./91D2.gif"),
+  "957F": require("./957F.gif"),
+  "961C": require("./961C.gif"),
+  "9091": require("./9091.gif"), 
+  "9091A": require("./9091A.gif"),
+  "9149": require("./9149.gif"),
+  "9485": require("./9485.gif"),
+  "9577": require("./9577.gif"),
+  "9580": require("./9580.gif"), 
+  "95E8": require("./95E8.gif"), 
+  "961D": require("./961D.gif"), 
 
   "9F52": require("./9F52.gif"), // 211 зубы
-  "9580": require("./9580.gif"), // 169 ворота
-  "95E8": require("./95E8.gif"), // ворота другая форма
-  "9091": require("./9091.gif"), // 163 город
-  "961D": require("./961D.gif"), // 170 и 163 вторая форма холм и город 
   "9EFD": require("./9EFD.gif"), // 205 лягушка
 
   "8FD9": require("./8FD9.gif"), // Этот

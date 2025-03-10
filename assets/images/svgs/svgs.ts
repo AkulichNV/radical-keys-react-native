@@ -226,6 +226,25 @@ import U8F9B from './8F9B.svg';
 import U8F66 from './8F66.svg';
 import U8F66A from './8F66A.svg';
 import U27FB7 from './27FB7.svg';
+import U8FB0 from './8FB0.svg';
+import U8FB5 from './8FB5.svg';
+import U8FB6 from './8FB6.svg';
+import U91C6 from './91C6.svg';
+import U91C6A from './91C6A.svg';
+import U91CC from './91CC.svg';
+import U91D1 from './91D1.svg';
+import U91D2 from './91D2.svg';
+import U95E8 from './95E8.svg';
+import U957F from './957F.svg';
+import U961C from './961C.svg';
+import U961D from './961D.svg';
+import U9091 from './9091.svg';
+import U9091A from './9091A.svg';
+import U9149 from './9149.svg';
+import U9485 from './9485.svg';
+import U9577 from './9577.svg';
+import U9578 from './9578.svg';
+import U9580 from './9580.svg';
 
 export { 
   U4E00, 
@@ -455,5 +474,24 @@ export {
   U8F9B,
   U8F66,
   U8F66A,
-  U27FB7
+  U27FB7,
+  U8FB0,
+  U8FB5,
+  U8FB6,
+  U91C6,
+  U91C6A,
+  U91CC,
+  U91D1,
+  U91D2,
+  U95E8,
+  U957F,
+  U961C,
+  U961D,
+  U9091,
+  U9091A,
+  U9149,
+  U9485,
+  U9577,
+  U9578,
+  U9580
 };
