@@ -259,6 +259,23 @@ import U9752 from './9752.svg';
 import U9762 from './9762.svg';
 import U9763 from './9763.svg';
 import U9769 from './9769.svg';
+import U9A6C from './9A6C.svg';
+import U9AA8 from './9AA8.svg';
+import U9AD8 from './9AD8.svg';
+import U9AD9 from './9AD9.svg';
+import U9ADF from './9ADF.svg';
+import U98A8 from './98A8.svg';
+import U98CE from './98CE.svg';
+import U98DB from './98DB.svg';
+import U98DE from './98DE.svg';
+import U98DF from './98DF.svg';
+import U98E0 from './98E0.svg';
+import U99AC from './99AC.svg';
+import U9801 from './9801.svg';
+import U9875 from './9875.svg';
+import U9963 from './9963.svg';
+import U9996 from './9996.svg';
+import U9999 from './9999.svg';
 
 export { 
   U4E00, 
@@ -521,5 +538,22 @@ export {
   U9752,
   U9762,
   U9763,
-  U9769
+  U9769,
+  U9A6C,
+  U9AA8,
+  U9AD8,
+  U9AD9,
+  U9ADF,
+  U98A8,
+  U98CE,
+  U98DB,
+  U98DE,
+  U98DF,
+  U98E0,
+  U99AC,
+  U9801,
+  U9875,
+  U9963,
+  U9996,
+  U9999
 };

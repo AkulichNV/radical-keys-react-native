@@ -178,6 +178,16 @@ import * as U975E from './975E/E975E';
 import * as U9752 from './9752/E9752';
 import * as U9762 from './9762/E9762';
 import * as U9769 from './9769/E9769';
+import * as U9AA8 from './9AA8/E9AA8';
+import * as U9AD8 from './9AD8/E9AD8';
+import * as U9ADF from './9ADF/E9ADF';
+import * as U98A8 from './98A8/E98A8';
+import * as U98DB from './98DB/E98DB';
+import * as U98DF from './98DF/E98DF';
+import * as U99AC from './99AC/E99AC';
+import * as U9801 from './9801/E9801';
+import * as U9996 from './9996/E9996';
+import * as U9999 from './9999/E9999';
 
 export const evolutionSvgs = {
   U4E00,
@@ -359,5 +369,15 @@ export const evolutionSvgs = {
   U975E,
   U9752,
   U9762,
-  U9769
+  U9769,
+  U9AA8,
+  U9AD8,
+  U9ADF,
+  U98A8,
+  U98DB,
+  U98DF,
+  U99AC,
+  U9801,
+  U9996,
+  U9999
 };
