@@ -7937,7 +7937,7 @@
     {
       "number": 187,
       "hanzi": "馬",
-      "strokeNumber": 9,
+      "strokeNumber": 10,
       "pinyin": "mǎ",
       "sound": "ma3",
       "unicode": "U99AC",
@@ -8120,11 +8120,447 @@
         }
       ]
     },
-
     {
       "number": 191,
-      "hanzi": "",
+      "hanzi": "鬥",
       "strokeNumber": 10,
+      "pinyin": "dòu",
+      "sound": "dou4",
+      "unicode": "U9B25",
+      "description": {
+        "short": "Борьба",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "9B25",
+          "svg": "U9B25",
+          "strokeOrder": [""]
+        },
+        {
+          "gif": "6597",
+          "svg": "U6597",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U9B25_10"]
+        },
+        {
+          "title": "說文",
+          "image": ["U9B25_20"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U9B25_00"]
+        }
+      ]
+    },
+    {
+      "number": 192,
+      "hanzi": "鬯",
+      "strokeNumber": 10,
+      "pinyin": "chàng",
+      "sound": "chang4",
+      "unicode": "U9B2F",
+      "description": {
+        "short": "Жертвенное вино, беспрепятственно",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "9B2F",
+          "svg": "U9B2F",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U9B2F_10", "U9B2F_11", "U9B2F_12"]
+        },
+        {
+          "title": "金文",
+          "image": ["U9B2F_20", "U9B2F_21", "U9B2F_22"]
+        },
+        {
+          "title": "說文",
+          "image": ["U9B2F_30"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U9B2F_00"]
+        }
+      ]
+    },
+    {
+      "number": 193,
+      "hanzi": "鬲",
+      "strokeNumber": 10,
+      "pinyin": "lì",
+      "sound": "li4",
+      "unicode": "U9B32",
+      "description": {
+        "short": "Котел с тремя полыми ножками",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "9B32",
+          "svg": "U9B32",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U9B32_10", "U9B32_11", "U9B32_12"]
+        },
+        {
+          "title": "金文",
+          "image": ["U9B32_20", "U9B32_21", "U9B32_22"]
+        },
+        {
+          "title": "楚系簡帛",
+          "image": ["U9B32_30"]
+        },
+        {
+          "title": "說文",
+          "image": ["U9B32_40", "U9B32_41", "U9B32_42"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U9B32_00"]
+        }
+      ]
+    },
+    {
+      "number": 194,
+      "hanzi": "鬼",
+      "strokeNumber": 10,
+      "pinyin": "guǐ",
+      "sound": "gui3",
+      "unicode": "U9B3C",
+      "description": {
+        "short": "Призрак, дух мертвых, нечистая сила",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "9B3C",
+          "svg": "U9B3C",
+          "strokeOrder": [""]
+        },
+        {
+          "gif": "9B3CA",
+          "svg": "U9B3CA",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U9B3C_10", "U9B3C_11", "U9B3C_12"]
+        },
+        {
+          "title": "金文",
+          "image": ["U9B3C_20", "U9B3C_21", "U9B3C_22"]
+        },
+        {
+          "title": "楚系簡帛",
+          "image": ["U9B3C_30"]
+        },
+        {
+          "title": "說文",
+          "image": ["U9B3C_40", "U9B3C_41"]
+        },
+        {
+          "title": "秦系簡牘",
+          "image": ["U9B3C_50"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U9B3C_00", "U9B3C_01"]
+        }
+      ]
+    },
+    {
+      "number": 195,
+      "hanzi": "魚",
+      "strokeNumber": 11,
+      "pinyin": "yú",
+      "sound": "yu2",
+      "unicode": "U9B5A",
+      "description": {
+        "short": "Рыба",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "9B5A",
+          "svg": "U9B5A",
+          "strokeOrder": [""]
+        },
+        {
+          "gif": "9C7C",
+          "svg": "U9C7C",
+          "strokeOrder": ["Упрощенный современный вариант написания"]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U9B5A_10", "U9B5A_11"]
+        },
+        {
+          "title": "金文",
+          "image": ["U9B5A_20", "U9B5A_21", "U9B5A_22"]
+        },
+        {
+          "title": "楚系簡帛",
+          "image": ["U9B5A_30", "U9B5A_31", "U9B5A_32"]
+        },
+        {
+          "title": "秦系簡牘",
+          "image": ["U9B5A_40"]
+        },
+        {
+          "title": "說文",
+          "image": ["U9B5A_50"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U9B5A_00", "U9B5A_01"]
+        }
+      ]
+    },
+    {
+      "number": 196,
+      "hanzi": "鳥",
+      "strokeNumber": 11,
+      "pinyin": "niǎo",
+      "sound": "niao3",
+      "unicode": "U9CE5",
+      "description": {
+        "short": "Птица",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "9CE5",
+          "svg": "U9CE5",
+          "strokeOrder": [""]
+        },
+        {
+          "gif": "9E1F",
+          "svg": "U9E1F",
+          "strokeOrder": ["Упрощенный современный вариант написания"]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U9CE5_10", "U9CE5_11", "U9CE5_12"]
+        },
+        {
+          "title": "金文",
+          "image": ["U9CE5_20", "U9CE5_21", "U9CE5_22"]
+        },
+        {
+          "title": "楚系簡帛",
+          "image": ["U9CE5_30", "U9CE5_31"]
+        },
+        {
+          "title": "說文",
+          "image": ["U9CE5_40"]
+        },
+        {
+          "title": "秦系簡牘",
+          "image": ["U9CE5_50"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U9CE5_00", "U9CE5_01"]
+        }
+      ]
+    },
+    {
+      "number": 197,
+      "hanzi": "鹵",
+      "strokeNumber": 11,
+      "pinyin": "lǔ",
+      "sound": "lu3",
+      "unicode": "U9E75",
+      "description": {
+        "short": "Солончаковая почва, природная соль",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "9E75",
+          "svg": "U9E75",
+          "strokeOrder": [""]
+        },
+        {
+          "gif": "5364",
+          "svg": "U5364",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U9E75_10", "U9E75_11"]
+        },
+        {
+          "title": "金文",
+          "image": ["U9E75_20"]
+        },
+        {
+          "title": "說文",
+          "image": ["U9E75_30"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U9E75_00", "U9E75_01"]
+        }
+      ]
+    },
+    {
+      "number": 198,
+      "hanzi": "鹿",
+      "strokeNumber": 11,
+      "pinyin": "lù",
+      "sound": "lu4",
+      "unicode": "U9E7F",
+      "description": {
+        "short": "Олень",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "9E7F",
+          "svg": "U9E7F",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U9E7F_10", "U9E7F_11", "U9E7F_12"]
+        },
+        {
+          "title": "金文",
+          "image": ["U9E7F_20", "U9E7F_21", "U9E7F_22"]
+        },
+        {
+          "title": "楚系簡帛",
+          "image": ["U9E7F_30"]
+        },
+        {
+          "title": "說文",
+          "image": ["U9E7F_40"]
+        },
+        {
+          "title": "秦系簡牘",
+          "image": ["U9E7F_50"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U9E7F_00"]
+        }
+      ]
+    },
+    {
+      "number": 199,
+      "hanzi": "麥",
+      "strokeNumber": 11,
+      "pinyin": "mài",
+      "sound": "mai4",
+      "unicode": "U9EA5",
+      "description": {
+        "short": "Пшеница, ячмень, овес",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "9EA5",
+          "svg": "U9EA5",
+          "strokeOrder": [""]
+        },
+        {
+          "gif": "9EA6",
+          "svg": "U9EA6",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "甲骨文",
+          "image": ["U9EA5_10", "U9EA5_11", "U9EA5_12"]
+        },
+        {
+          "title": "金文",
+          "image": ["U9EA5_20", "U9EA5_21"]
+        },
+        {
+          "title": "說文",
+          "image": ["U9EA5_30"]
+        },
+        {
+          "title": "秦系簡牘",
+          "image": ["U9EA5_40"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U9EA5_00", "U9EA5_01"]
+        }
+      ]
+    },
+    {
+      "number": 200,
+      "hanzi": "麻",
+      "strokeNumber": 11,
+      "pinyin": "má",
+      "sound": "ma2",
+      "unicode": "U9EBB",
+      "description": {
+        "short": "Конопля, джут, лен, кунжут",
+        "long": [""]
+      },
+      "calligraphy": [
+        {
+          "gif": "9EBB",
+          "svg": "U9EBB",
+          "strokeOrder": [""]
+        }
+      ],
+      "evolution": [
+        {
+          "title": "金文",
+          "image": ["U9EBB_10"]
+        },
+        {
+          "title": "說文",
+          "image": ["U9EBB_20"]
+        },
+        {
+          "title": "秦系簡牘",
+          "image": ["U9EBB_30"]
+        },
+        {
+          "title": "楷書",
+          "image": ["U9EBB_00", "U9EBB_01"]
+        }
+      ]
+    },
+
+    {
+      "number": 201,
+      "hanzi": "",
+      "strokeNumber": 11,
       "pinyin": "",
       "sound": "",
       "unicode": "U",

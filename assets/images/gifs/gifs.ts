@@ -266,6 +266,21 @@ export const gifs: { [key: string]: any } = {
   "9963": require("./9963.gif"),
   "9996": require("./9996.gif"),
   "9999": require("./9999.gif"),
+  "9B2F": require("./9B2F.gif"),
+  "9B3C": require("./9B3C.gif"),
+  "9B3CA": require("./9B3CA.gif"),
+  "9B5A": require("./9B5A.gif"),
+  "9B25": require("./9B25.gif"),
+  "9B32": require("./9B32.gif"),
+  "9C7C": require("./9C7C.gif"),
+  "9CE5": require("./9CE5.gif"),
+  "9E1F": require("./9E1F.gif"),
+  "9E7F": require("./9E7F.gif"),
+  "9E75": require("./9E75.gif"),
+  "9EA5": require("./9EA5.gif"),
+  "9EA6": require("./9EA6.gif"),
+  "9EBB": require("./9EBB.gif"),
+  "5364": require("./5364.gif"),
 
   "9F52": require("./9F52.gif"), // 211 зубы
   "9EFD": require("./9EFD.gif"), // 205 лягушка
