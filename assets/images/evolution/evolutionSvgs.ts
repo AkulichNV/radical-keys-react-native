@@ -198,6 +198,20 @@ import * as U9E7F from './9E7F/E9E7F';
 import * as U9E75 from './9E75/E9E75';
 import * as U9EA5 from './9EA5/E9EA5';
 import * as U9EBB from './9EBB/E9EBB';
+import * as U9EC3 from './9EC3/E9EC3';
+import * as U9ECD from './9ECD/E9ECD';
+import * as U9ED1 from './9ED1/E9ED1';
+import * as U9EF9 from './9EF9/E9EF9';
+import * as U9EFD from './9EFD/E9EFD';
+import * as U9F0E from './9F0E/E9F0E';
+import * as U9F3B from './9F3B/E9F3B';
+import * as U9F4A from './9F4A/E9F4A';
+import * as U9F8D from './9F8D/E9F8D';
+import * as U9F9C from './9F9C/E9F9C';
+import * as U9F13 from './9F13/E9F13';
+import * as U9F20 from './9F20/E9F20';
+import * as U9F52 from './9F52/E9F52';
+import * as U9FA0 from './9FA0/E9FA0';
 
 export const evolutionSvgs = {
   U4E00,
@@ -399,5 +413,19 @@ export const evolutionSvgs = {
   U9E7F,
   U9E75,
   U9EA5,
-  U9EBB
+  U9EBB,
+  U9EC3,
+  U9ECD,
+  U9ED1,
+  U9EF9,
+  U9EFD,
+  U9F0E,
+  U9F3B,
+  U9F4A,
+  U9F8D,
+  U9F9C,
+  U9F13,
+  U9F20,
+  U9F52,
+  U9FA0
 };

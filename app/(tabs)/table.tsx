@@ -11,17 +11,18 @@ export default function TableKeysScreen() {
   const data = dataKeys.radicalKeys;
   const navigateToRadical = useNavigateToRadical();
 
-  const renderRow =({ item }: { item: RadicalKeys }) => 
+  const MemoizedRow = React.memo(({ item }: { item: RadicalKeys }) =>
+  // const renderRow =({ item }: { item: RadicalKeys }) => 
     item.hanzi ? (
       <Pressable style={styles.row} onPress={() => navigateToRadical(item.number, 'table')}>
         <ThemedText style={[styles.cell, styles.cell1]}>{item.number}</ThemedText>
         <ThemedText style={[styles.cell, styles.cell2]}>{item.pinyin}</ThemedText>
-        <ThemedText type="title" style={[styles.cell, styles.cell3]}>{item.hanzi}</ThemedText>
+        <ThemedText type="default" style={[styles.cell, styles.cell3]}>{item.hanzi}</ThemedText>
         <ThemedText style={[styles.cell, styles.cell4]}>{item.description?.short}</ThemedText>
       </Pressable>
-    ) : (
-      <></>
-    );
+    ) : null
+  );
+    const renderRow = ({ item }: { item: RadicalKeys }) => <MemoizedRow item={item} />;
 
   return (
     <ParallaxFlatList
@@ -57,14 +58,14 @@ const styles = StyleSheet.create({
     elevation: 3
   },
   cell1: {
-    flex: 0.4,
+    flex: 0.5,
     backgroundColor: '#272f3a',
     paddingLeft: 15,
     alignContent: 'center',
     
   },
   cell2: {
-    flex: 1,
+    flex: 1.2,
     borderWidth: 1,
     borderColor: '#272f3a',
     borderBottomRightRadius: 40,
@@ -72,8 +73,10 @@ const styles = StyleSheet.create({
     
   },
   cell3: {
-    flex: 1.2,
+    flex: 1,
     alignSelf: 'center',
+    fontSize: 32,
+    marginTop: 15,
   },
   cell4: {
     flex: 2,

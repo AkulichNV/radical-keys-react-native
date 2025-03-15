@@ -27,7 +27,7 @@ export default function KeysScreen() {
     setRadicalKeys(groupedKeys);
   }, []);
 
-  const strokeCounts = Array.from({ length: 17 }, (_, index) => index + 1);
+  const strokeCounts = Array.from({ length: 15 }, (_, index) => index + 1);
 
   const renderStrokeSection = ({ item }: {item: number }) => (
     <ThemedView >

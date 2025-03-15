@@ -60,6 +60,7 @@ export default function StrokesScreen() {
           <Image
             source={require('@/assets/images/background1.jpg')}
             style={styles.headerImage}
+            contentFit="contain"
           />
       }
       title={'Основные правила порядка черт'}
@@ -73,7 +74,6 @@ const styles = StyleSheet.create({
   headerImage: {
     height: 250,
     width: '100%',
-    resizeMode: "contain",
   },
   container: {
     flex: 1,

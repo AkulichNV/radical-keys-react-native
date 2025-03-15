@@ -291,6 +291,32 @@ import U9EA5 from './9EA5.svg';
 import U9EA6 from './9EA6.svg';
 import U9EBB from './9EBB.svg';
 import U5364 from './5364.svg';
+import U4E80 from './4E80.svg';
+import U9EC3 from './9EC3.svg';
+import U9EC4 from './9EC4.svg';
+import U9ECD from './9ECD.svg';
+import U9ED1 from './9ED1.svg';
+import U9EF9 from './9EF9.svg';
+import U9EF9A from './9EF9A.svg';
+import U9EFD from './9EFD.svg';
+import U9EFE from './9EFE.svg';
+import U9F0E from './9F0E.svg';
+import U9F3B from './9F3B.svg';
+import U9F4A from './9F4A.svg';
+import U9F7F from './9F7F.svg';
+import U9F8D from './9F8D.svg';
+import U9F8DA from './9F8DA.svg';
+import U9F9C from './9F9C.svg';
+import U9F9CA from './9F9CA.svg';
+import U9F9F from './9F9F.svg';
+import U9F13 from './9F13.svg';
+import U9F14 from './9F14.svg';
+import U9F20 from './9F20.svg';
+import U9F20A from './9F20A.svg';
+import U9F50 from './9F50.svg';
+import U9F52 from './9F52.svg';
+import U9F99 from './9F99.svg';
+import U9FA0 from './9FA0.svg';
 
 export { 
   U4E00, 
@@ -585,5 +611,31 @@ export {
   U9EA5,
   U9EA6,
   U9EBB,
-  U5364
+  U5364,
+  U4E80,
+  U9EC3,
+  U9EC4,
+  U9ECD,
+  U9ED1,
+  U9EF9,
+  U9EF9A,
+  U9EFD,
+  U9EFE,
+  U9F0E,
+  U9F3B,
+  U9F4A,
+  U9F7F,
+  U9F8D,
+  U9F8DA,
+  U9F9C,
+  U9F9CA,
+  U9F9F,
+  U9F13,
+  U9F14,
+  U9F20,
+  U9F20A,
+  U9F50,
+  U9F52,
+  U9F99,
+  U9FA0
 };

@@ -281,9 +281,30 @@ export const gifs: { [key: string]: any } = {
   "9EA6": require("./9EA6.gif"),
   "9EBB": require("./9EBB.gif"),
   "5364": require("./5364.gif"),
-
-  "9F52": require("./9F52.gif"), // 211 зубы
-  "9EFD": require("./9EFD.gif"), // 205 лягушка
+  "4E80": require("./4E80.gif"),
+  "9EC3": require("./9EC3.gif"),
+  "9EC4": require("./9EC4.gif"),
+  "9ECD": require("./9ECD.gif"),
+  "9ED1": require("./9ED1.gif"),
+  "9EF9": require("./9EF9.gif"),
+  "9EFD": require("./9EFD.gif"),
+  "9EFE": require("./9EFE.gif"),
+  "9F0E": require("./9F0E.gif"),
+  "9F3B": require("./9F3B.gif"),
+  "9F4A": require("./9F4A.gif"),
+  "9F7F": require("./9F7F.gif"),
+  "9F8D": require("./9F8D.gif"),
+  "9F8DA": require("./9F8DA.gif"),
+  "9F9C": require("./9F9C.gif"),
+  "9F9CA": require("./9F9CA.gif"),
+  "9F9F": require("./9F9F.gif"),
+  "9F13": require("./9F13.gif"),
+  "9F20": require("./9F20.gif"),
+  "9F20A": require("./9F20A.gif"),
+  "9F50": require("./9F50.gif"),
+  "9F52": require("./9F52.gif"),
+  "9F99": require("./9F99.gif"),
+  "9FA0": require("./9FA0.gif"),
 
   "8FD9": require("./8FD9.gif"), // Этот
 };
