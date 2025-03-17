@@ -21,7 +21,7 @@ export const TopBar = ({
       style={styles.rightButton}
     >
       <ThemedText type="title">
-        <AntDesign name="left" size={25} />
+        <AntDesign name="caretleft" size={25}  />
       </ThemedText>
     </Pressable>
     <ThemedText type='title' style={styles.title}>{title}</ThemedText>

@@ -14,9 +14,9 @@ const windowHeight = Dimensions.get('window').height;
 
 // Calculate the number of columns based on screen width
 const isTablet = windowWidth >= 768;
-const numColumns = isTablet ? (windowWidth > windowHeight ? 12 : 8) : (windowWidth > windowHeight ? 7 : 6);
-const ITEM_WIDTH = isTablet ? 80 : 50;
-const ITEM_MARGIN = isTablet ? 15 : 10;
+const numColumns = isTablet ? (windowWidth > windowHeight ? 12 : 8) : (windowWidth > windowHeight ? 7 : 5);
+const ITEM_WIDTH = isTablet ? 80 : 60;
+const ITEM_MARGIN = isTablet ? 15 : 12;
 
 export default function KeysScreen() {
   const [radicalKeys, setRadicalKeys] = useState<Record<number, RadicalKeys[]>>({});
@@ -45,7 +45,7 @@ export default function KeysScreen() {
           keys.hanzi ? (
             <Pressable onPress={() => navigateToRadical(keys.number, 'keys')}>
               <ThemedView style={styles.character}>
-                <ThemedText type="subtitle" style={styles.characterText}>{keys.hanzi}</ThemedText>
+                <ThemedText type="default" style={styles.characterText}>{keys.hanzi}</ThemedText>
               </ThemedView>
             </Pressable>
           ) : null
@@ -90,8 +90,10 @@ const styles = StyleSheet.create({
     paddingTop: 8
   },
   rowWrapper: {
-    gap: ITEM_MARGIN,
-    marginBottom: ITEM_MARGIN,
+    // gap: ITEM_MARGIN,
+    // marginBottom: ITEM_MARGIN,
+    justifyContent: "space-between",
+    marginBottom: windowWidth * 0.04,
   },
   character: {
     flex: 1,
@@ -112,5 +114,7 @@ const styles = StyleSheet.create({
   },
   characterText: {
     textAlign: 'center',
+    fontSize: 32,
+    paddingTop: 10,
   }
 });

@@ -38,11 +38,11 @@ export const KeyHeader = ({
       
       <ThemedView style={styles.svg}>
         <Pressable onPress={onPressLeft}>
-          <AntDesign name="caretleft" size={18} color="white" style={{borderColor: '#ffffff', borderWidth: 0.1}} />
+          <ThemedText type='title'><AntDesign name="caretleft" size={30} color={"#272f3a"}/></ThemedText>
         </Pressable>
         <SvgRenderer svgName={svgName} svgModule={Svgs} width={250} height={250} color={'#ffffff'}/>
         <Pressable onPress={onPressRight}>
-          <AntDesign name="caretright" size={18} color="white" style={{borderColor: '#ffffff', borderWidth: 0.1}}/>
+          <ThemedText type='title'><AntDesign name="caretright" size={30} color={"#272f3a"}/></ThemedText>
         </Pressable>
       </ThemedView>
     </ImageBackground>
@@ -142,5 +142,5 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     position: "absolute",
     width: '100%'
-  }
+  },
 });

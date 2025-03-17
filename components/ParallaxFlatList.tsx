@@ -1,5 +1,5 @@
 import type { PropsWithChildren, ReactElement } from 'react';
-import { StyleSheet, useColorScheme } from 'react-native';
+import { Dimensions, StyleSheet, useColorScheme } from 'react-native';
 import Animated, {
   interpolate,
   useAnimatedRef,
@@ -105,7 +105,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: '75%',
     left: '50%',
-    transform: [ { translateX: '-50%' }, { translateY: '-50%' } ],
+    transform: [{ translateX: -0.23 * Dimensions.get('window').width }, { translateY: -35 }],
+    alignItems: 'center',
     fontSize: 15,
     textAlign: 'center',  
     paddingTop: 15,
@@ -113,7 +114,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   contentContainer: {
-    padding: 32,
+    padding: 25,
     gap: 15,
     overflow: 'hidden',
   },

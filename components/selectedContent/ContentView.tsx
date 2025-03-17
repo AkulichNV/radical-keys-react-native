@@ -28,11 +28,11 @@ export const ContentView = ({
     <ThemedView style={styles.container}>
       <ThemedView style={styles.titleContainer}>
         <Pressable onPress={strokeOrder} style={[styles.strokeOrderPress, styles.titleContent, isStrokeOrder && styles.titleActive]}>
-          <FontAwesome5 name="pen-fancy" size={24} color="white" />
+          <ThemedText type="title"><FontAwesome5 name="pen-fancy" size={25}/></ThemedText>
           <ThemedText type="subtitle" style={styles.titleText}>Правила написания</ThemedText>
         </Pressable>
         <Pressable onPress={etymology} style={[styles.etymologyPress, styles.titleContent, !isStrokeOrder && styles.titleActive]}>
-          <FontAwesome5 name="scroll" size={24} color="white" />
+        <ThemedText type="title"><FontAwesome5 name="scroll" size={24}/></ThemedText>
           <ThemedText type="subtitle" style={styles.titleText}>Истоки символа</ThemedText>
         </Pressable>
       </ThemedView>
