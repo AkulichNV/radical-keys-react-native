@@ -16,7 +16,7 @@ const windowHeight = Dimensions.get('window').height;
 const isTablet = windowWidth >= 768;
 const numColumns = isTablet ? (windowWidth > windowHeight ? 12 : 8) : (windowWidth > windowHeight ? 7 : 5);
 const ITEM_WIDTH = isTablet ? 80 : 60;
-const ITEM_MARGIN = isTablet ? 15 : 12;
+const ITEM_MARGIN = isTablet ? windowWidth * 0.022 :  windowWidth * 0.025;
 
 export default function KeysScreen() {
   const [radicalKeys, setRadicalKeys] = useState<Record<number, RadicalKeys[]>>({});
@@ -76,7 +76,7 @@ export default function KeysScreen() {
 const styles = StyleSheet.create({
   headerImage: {
     height: 250,
-    width: '100%',
+    width: "100%",
     resizeMode: "contain",
   },
   subtitle: {
@@ -90,10 +90,11 @@ const styles = StyleSheet.create({
     paddingTop: 8
   },
   rowWrapper: {
-    // gap: ITEM_MARGIN,
-    // marginBottom: ITEM_MARGIN,
-    justifyContent: "space-between",
-    marginBottom: windowWidth * 0.04,
+    overflow: 'hidden',
+    gap: ITEM_MARGIN,
+    marginBottom: ITEM_MARGIN,
+    justifyContent: "flex-start",
+    padding: 2
   },
   character: {
     flex: 1,

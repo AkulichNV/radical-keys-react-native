@@ -89,10 +89,10 @@ export default ParallaxFlatList;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: "center",
   },
   header: {
     overflow: 'hidden',
-    margin: -32,
     marginBottom: 0,
     height: HEADER_HEIGHT,
     position: 'relative',
@@ -103,9 +103,8 @@ const styles = StyleSheet.create({
   headerText: {
     width: '45%',
     position: 'absolute',
-    top: '75%',
-    left: '50%',
-    transform: [{ translateX: -0.23 * Dimensions.get('window').width }, { translateY: -35 }],
+    top: '65%',
+    left: '25%',
     alignItems: 'center',
     fontSize: 15,
     textAlign: 'center',  
@@ -117,6 +116,7 @@ const styles = StyleSheet.create({
     padding: 25,
     gap: 15,
     overflow: 'hidden',
+    maxWidth: "100%",
   },
 });
 
