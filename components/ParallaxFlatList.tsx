@@ -88,8 +88,7 @@ export default ParallaxFlatList;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: "center",
+    flex: 1
   },
   header: {
     overflow: 'hidden',

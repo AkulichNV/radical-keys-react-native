@@ -11,14 +11,18 @@ export default function TableKeysScreen() {
   const data = dataKeys.radicalKeys;
   const navigateToRadical = useNavigateToRadical();
 
+  const truncateText = (text: string, maxLength: number) => {
+    return text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
+  };
+
   const MemoizedRow = React.memo(({ item }: { item: RadicalKeys }) =>
   // const renderRow =({ item }: { item: RadicalKeys }) => 
     item.hanzi ? (
       <Pressable style={styles.row} onPress={() => navigateToRadical(item.number, 'table')}>
         <ThemedText style={[styles.cell, styles.cell1]}>{item.number}</ThemedText>
-        <ThemedText style={[styles.cell, styles.cell2]}>{item.pinyin}</ThemedText>
+        <ThemedText style={[styles.cell, styles.cell2]}>{item.pinyin.split(',')[0]}</ThemedText>
         <ThemedText type="default" style={[styles.cell, styles.cell3]}>{item.hanzi}</ThemedText>
-        <ThemedText style={[styles.cell, styles.cell4]}>{item.description?.short}</ThemedText>
+        <ThemedText style={[styles.cell, styles.cell4]}>{truncateText(item.description?.short, 31)}</ThemedText>
       </Pressable>
     ) : null
   );
@@ -55,14 +59,16 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.8,
     shadowRadius: 2,  
-    elevation: 3
+    elevation: 3,
+    height: 100,
+    alignItems: 'stretch',
   },
   cell1: {
     flex: 0.5,
     backgroundColor: '#272f3a',
     paddingLeft: 15,
-    alignContent: 'center',
-    
+    textAlign: 'center',
+    paddingTop: '10%',
   },
   cell2: {
     flex: 1.2,
@@ -70,18 +76,18 @@ const styles = StyleSheet.create({
     borderColor: '#272f3a',
     borderBottomRightRadius: 40,
     backgroundColor: '#272f3a',
-    
+    paddingTop: '10%'
   },
   cell3: {
     flex: 1,
     alignSelf: 'center',
     fontSize: 32,
-    marginTop: 15,
   },
   cell4: {
-    flex: 2,
+    flex: 2.1,
     textAlign: 'right',
-    paddingRight: 15,
+    paddingRight: 20,
+    paddingLeft: 10,
     borderTopLeftRadius: 40,
     backgroundColor: '#0e1211',
     borderWidth: 1,
