@@ -1,4 +1,4 @@
-import { StyleSheet, Pressable, Image } from 'react-native';
+import { StyleSheet, Pressable, Image, useColorScheme } from 'react-native';
 
 import dataKeys from '@/assets/data/radicalKeys.json';
 import { ThemedText } from '@/components/ThemedText';
@@ -11,6 +11,15 @@ export default function TableKeysScreen() {
   const data = dataKeys.radicalKeys;
   const navigateToRadical = useNavigateToRadical();
 
+  const scheme = useColorScheme();
+  const isDark = scheme === 'dark';
+
+  const backgroundColors = {
+    row: isDark ? '#010606' : '#fff6e4',
+    cell1: isDark ? '#272f3a' : '#fee8c5',
+    cell4: isDark ? '#0e1211' : '#f2e7c5',
+  };
+
   const truncateText = (text: string, maxLength: number) => {
     return text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
   };
@@ -18,11 +27,11 @@ export default function TableKeysScreen() {
   const MemoizedRow = React.memo(({ item }: { item: RadicalKeys }) =>
   // const renderRow =({ item }: { item: RadicalKeys }) => 
     item.hanzi ? (
-      <Pressable style={styles.row} onPress={() => navigateToRadical(item.number, 'table')}>
-        <ThemedText style={[styles.cell, styles.cell1]}>{item.number}</ThemedText>
-        <ThemedText style={[styles.cell, styles.cell2]}>{item.pinyin.split(',')[0]}</ThemedText>
+      <Pressable style={[styles.row, { backgroundColor: backgroundColors.row }]} onPress={() => navigateToRadical(item.number, 'table')}>
+        <ThemedText style={[styles.cell, styles.cell1, { backgroundColor: backgroundColors.cell1 }]}>{item.number}</ThemedText>
+        <ThemedText style={[styles.cell, styles.cell2, { backgroundColor: backgroundColors.cell1 }]}>{item.pinyin.split(',')[0]}</ThemedText>
         <ThemedText type="default" style={[styles.cell, styles.cell3]}>{item.hanzi}</ThemedText>
-        <ThemedText style={[styles.cell, styles.cell4]}>{truncateText(item.description?.short, 31)}</ThemedText>
+        <ThemedText style={[styles.cell, styles.cell4, { backgroundColor: backgroundColors.cell4 }]}>{truncateText(item.description?.short, 31)}</ThemedText>
       </Pressable>
     ) : null
   );
@@ -30,13 +39,7 @@ export default function TableKeysScreen() {
 
   return (
     <ParallaxFlatList
-    headerBackgroundColor={{ light: '#A1CEDC', dark: '#010606' }}
-    headerImage={
-      <Image
-        source={require('@/assets/images/background1.jpg')}
-        style={styles.headerImage}
-      />
-    }
+    headerBackgroundColor={{ light: '#fff6e4', dark: '#010606' }}
     title={'Таблица иероглифических ключей'}
     data={data}
     renderItem={renderRow}
@@ -52,7 +55,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#272f3a',
     borderRadius: 40,
-    backgroundColor: '#010606',
     flex: 1,
     overflow: 'hidden',
     shadowColor: '#ffffff',
@@ -65,17 +67,13 @@ const styles = StyleSheet.create({
   },
   cell1: {
     flex: 0.5,
-    backgroundColor: '#272f3a',
     paddingLeft: 15,
     textAlign: 'center',
     paddingTop: '10%',
   },
   cell2: {
     flex: 1.2,
-    borderWidth: 1,
-    borderColor: '#272f3a',
     borderBottomRightRadius: 40,
-    backgroundColor: '#272f3a',
     paddingTop: '10%'
   },
   cell3: {
@@ -89,9 +87,6 @@ const styles = StyleSheet.create({
     paddingRight: 20,
     paddingLeft: 10,
     borderTopLeftRadius: 40,
-    backgroundColor: '#0e1211',
-    borderWidth: 1,
-    borderColor: '#0e1211',
     shadowColor: '#fffff',
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.8,

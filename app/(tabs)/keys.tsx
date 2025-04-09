@@ -1,4 +1,4 @@
-import { StyleSheet, Pressable, FlatList, Dimensions, Image } from 'react-native';
+import { StyleSheet, Pressable, FlatList, Dimensions, useColorScheme } from 'react-native';
 import { useEffect, useState } from 'react';
 
 import dataKeys from '@/assets/data/radicalKeys.json';
@@ -28,6 +28,8 @@ export default function KeysScreen() {
   }, []);
 
   const strokeCounts = Array.from({ length: 15 }, (_, index) => index + 1);
+  const scheme = useColorScheme();
+  const backgroundColor = scheme === 'dark' ? '#010606' : '#fff6e4';
 
   const renderStrokeSection = ({ item }: {item: number }) => (
     <ThemedView >
@@ -44,7 +46,7 @@ export default function KeysScreen() {
         renderItem={({ item: keys }) => 
           keys.hanzi ? (
             <Pressable onPress={() => navigateToRadical(keys.number, 'keys')}>
-              <ThemedView style={styles.character}>
+              <ThemedView style={[styles.character, { backgroundColor }]}>
                 <ThemedText type="default" style={styles.characterText}>{keys.hanzi}</ThemedText>
               </ThemedView>
             </Pressable>
@@ -59,13 +61,7 @@ export default function KeysScreen() {
 
   return (
     <ParallaxFlatList
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#010606' }}
-      headerImage={
-          <Image
-            source={require('@/assets/images/background1.jpg')}
-            style={styles.headerImage}
-          />
-      }
+      headerBackgroundColor={{ light: '#fff6e4', dark: '#010606' }}
       title={'Иероглифические ключи'}
       data={strokeCounts}
       renderItem={renderStrokeSection}
@@ -74,11 +70,6 @@ export default function KeysScreen() {
 }
 
 const styles = StyleSheet.create({
-  headerImage: {
-    height: 250,
-    width: "100%",
-    resizeMode: "contain",
-  },
   subtitle: {
     marginBottom: 15,
   },
@@ -106,7 +97,6 @@ const styles = StyleSheet.create({
     borderColor: '#272f3a',
     width: ITEM_WIDTH,
     height: ITEM_WIDTH,
-    backgroundColor: '#010606',
     shadowColor: '#ffffff',
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.8,

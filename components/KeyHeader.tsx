@@ -1,4 +1,4 @@
-import { ImageBackground, Pressable, StyleSheet } from "react-native";
+import { ImageBackground, ImageSourcePropType, Pressable, StyleSheet } from "react-native";
 import { ThemedView } from "./ThemedView";
 import { SvgRenderer } from "./SvgRenderer";
 import { ThemedText } from "./ThemedText";
@@ -9,6 +9,10 @@ import * as Svgs from '@/assets/images/svgs/svgs';
 
 interface IKeyHeader {
   svgName: string,
+  gridBackgroundImage: ImageSourcePropType,
+  svgColorKey: string,
+  svgColorIcon: string,
+  backgroundColorPress: string,
   playSound: () => void,
   descriptionOpenModal: () => void,
   onPressRight: () => void,
@@ -19,7 +23,11 @@ interface IKeyHeader {
 };
 
 export const KeyHeader = ({
-  svgName, 
+  svgName,
+  gridBackgroundImage, 
+  svgColorKey,
+  svgColorIcon,
+  backgroundColorPress,
   playSound, 
   descriptionOpenModal, 
   onPressRight,
@@ -30,7 +38,7 @@ export const KeyHeader = ({
 }: IKeyHeader) => (
   <ThemedView style={styles.header}>
     <ImageBackground 
-      source={require('@/assets/images/darkGridBackground.png')} 
+      source={gridBackgroundImage} 
       imageStyle={styles.background}
       resizeMode="cover"
     >
@@ -40,7 +48,7 @@ export const KeyHeader = ({
         <Pressable onPress={onPressLeft}>
           <ThemedText type='title'><AntDesign name="caretleft" size={30} color={"#272f3a"}/></ThemedText>
         </Pressable>
-        <SvgRenderer svgName={svgName} svgModule={Svgs} width={250} height={250} color={'#ffffff'}/>
+        <SvgRenderer svgName={svgName} svgModule={Svgs} width={250} height={250} color={svgColorKey}/>
         <Pressable onPress={onPressRight}>
           <ThemedText type='title'><AntDesign name="caretright" size={30} color={"#272f3a"}/></ThemedText>
         </Pressable>
@@ -48,12 +56,12 @@ export const KeyHeader = ({
     </ImageBackground>
 
     <ThemedView style={styles.soundDescriptionContainer}>
-      <Pressable onPress={descriptionOpenModal} style={[styles.descriptionPress,styles.contentPress]}>
-        <FontAwesome5 name="book-open" size={100} color="#272f3a" />
+      <Pressable onPress={descriptionOpenModal} style={[styles.descriptionPress,styles.contentPress, {backgroundColor: backgroundColorPress}]}>
+        <FontAwesome5 name="book-open" size={100} color={svgColorIcon} />
         <ThemedText type="subtitle" style={styles.contentText}>{description}</ThemedText>
       </Pressable>
-      <Pressable onPress={playSound} style={[styles.soundPress, styles.contentPress]}>
-        <AntDesign name="sound" size={100} color="#272f3a" />
+      <Pressable onPress={playSound} style={[styles.soundPress, styles.contentPress, {backgroundColor: backgroundColorPress}]}>
+        <AntDesign name="sound" size={100} color={svgColorIcon} />
         <ThemedText type="subtitle" style={styles.contentText}>{pinyin}</ThemedText>
       </Pressable>
     </ThemedView>
@@ -136,7 +144,7 @@ const styles = StyleSheet.create({
     marginRight:'auto',
     padding: 10,
     position: "relative",
-    backgroundColor: '#000000'
+    // backgroundColor: '#000000'
   },
   contentText: {
     textAlign: 'center',

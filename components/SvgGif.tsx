@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   grid: {
     width: 200,
     height: 200,
-    borderColor: '#d8caca',
+    borderColor: '#dbcec4',
     borderWidth: 1,
     borderRadius: 40,
   },
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     position: 'relative',
   },
   icon: {
-    color: "#d8caca",
+    color: "#dbcec4",
     fontSize: 150,
     position: 'absolute',
     textAlign: 'center',

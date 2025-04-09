@@ -13,8 +13,10 @@ interface IContentView {
   strokeOrder: () => void,
   etymology: () => void,
   calligraphy: Calligraphy[],
-  evolution: Evolution[];
-  unicode: string;
+  evolution: Evolution[],
+  unicode: string,
+  backgroundColorPress: string,
+  backgroundActive: string,
 };
 
 export const ContentView = ({ 
@@ -23,15 +25,17 @@ export const ContentView = ({
   etymology, 
   calligraphy, 
   evolution, 
-  unicode 
+  unicode,
+  backgroundColorPress,
+  backgroundActive,
 }: IContentView) => (
     <ThemedView style={styles.container}>
       <ThemedView style={styles.titleContainer}>
-        <Pressable onPress={strokeOrder} style={[styles.strokeOrderPress, styles.titleContent, isStrokeOrder && styles.titleActive]}>
+        <Pressable onPress={strokeOrder} style={[styles.strokeOrderPress, styles.titleContent, {backgroundColor: backgroundColorPress}, isStrokeOrder && {backgroundColor: backgroundActive}]}>
           <ThemedText type="title"><FontAwesome5 name="pen-fancy" size={25}/></ThemedText>
           <ThemedText type="subtitle" style={styles.titleText}>Правила написания</ThemedText>
         </Pressable>
-        <Pressable onPress={etymology} style={[styles.etymologyPress, styles.titleContent, !isStrokeOrder && styles.titleActive]}>
+        <Pressable onPress={etymology} style={[styles.etymologyPress, styles.titleContent, {backgroundColor: backgroundColorPress}, !isStrokeOrder && {backgroundColor: backgroundActive}]}>
         <ThemedText type="title"><FontAwesome5 name="scroll" size={24}/></ThemedText>
           <ThemedText type="subtitle" style={styles.titleText}>Истоки символа</ThemedText>
         </Pressable>
@@ -74,10 +78,6 @@ const styles = StyleSheet.create({
     marginLeft:'auto',
     marginRight:'auto',
     padding: 20,
-    backgroundColor: '#000000'
-  },
-  titleActive: {
-    backgroundColor: '#272f3a'
   },
   titleText: {
     textAlign: 'center',

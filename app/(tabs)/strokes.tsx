@@ -55,14 +55,7 @@ export default function StrokesScreen() {
 
   return (
     <ParallaxFlatList
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#010606' }}
-      headerImage={
-          <Image
-            source={require('@/assets/images/background1.jpg')}
-            style={styles.headerImage}
-            contentFit="contain"
-          />
-      }
+      headerBackgroundColor={{ light: '#fff6e4', dark: '#010606' }}
       title={'Основные правила порядка черт'}
       data={data}
       renderItem={strokeOrderRulesSection}
@@ -83,7 +76,8 @@ const styles = StyleSheet.create({
     paddingBottom: 30,
     borderTopWidth: 1,
     borderColor: '#ffffff',
-    position: 'relative'
+    position: 'relative',
+    marginTop: 20
   },
   numberEven: {
     position: "absolute",

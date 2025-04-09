@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { StyleSheet, ScrollView } from 'react-native';
+import { StyleSheet, ScrollView, useColorScheme, ImageSourcePropType } from 'react-native';
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import { Audio } from 'expo-av';
 
@@ -26,6 +26,18 @@ export default function DetailsScreen() {
   const [isStrokeOrder, setIsStrokeOrder] = useState<boolean>(true);
 
   const navigateToRadical = useNavigateToRadical();
+
+  const colorScheme = useColorScheme();
+
+  const backgroundMap: { [key: string]: ImageSourcePropType } = {
+    light: require('@/assets/images/lightGridBackground.png'),
+    dark: require('@/assets/images/darkGridBackground.png'),
+  };
+
+  const backgroundImage = backgroundMap[colorScheme || 'light'];
+  const svgColorKey = colorScheme === 'dark' ? '#ffffff' : '#000000';
+  const svgColorIcon = colorScheme === 'dark' ? '#272f3a' : '#dbcec4';
+  const backgroundColorPress = colorScheme === 'dark' ? '#000000' : '#fffbf5';
 
   async function onPlaySound() {
     const soundSource = radicalKey?.sound as string;
@@ -61,23 +73,33 @@ export default function DetailsScreen() {
         />
         {radicalKey.calligraphy[0].svg && 
         <>
-        <KeyHeader
-          svgName={radicalKey.calligraphy[0]?.svg}
-          playSound={onPlaySound}
-          descriptionOpenModal={() => setIsModalVisible(true)}
-          onPressLeft={() => navigateToRadical(radicalKey.number - 1, from)}
-          onPressRight={() => navigateToRadical(radicalKey.number + 1, from)}
-          number={radicalKey.number}
-          pinyin={radicalKey.pinyin}
-          description={radicalKey.description.short} /><ContentView
-            isStrokeOrder={isStrokeOrder}
-            strokeOrder={() => setIsStrokeOrder(true)}
-            etymology={() => setIsStrokeOrder(false)}
-            calligraphy={radicalKey.calligraphy}
-            evolution={radicalKey.evolution}
-            unicode={radicalKey.unicode} /><ModalDialog isVisible={isModalVisible} onClose={() => setIsModalVisible(false)} title={"Значение иероглифа"}>
-            <DescriptionView description={radicalKey.description.long} />
-          </ModalDialog></> }
+          <KeyHeader
+            svgName={radicalKey.calligraphy[0]?.svg}
+            gridBackgroundImage={backgroundImage}
+            svgColorKey={svgColorKey}
+            svgColorIcon={svgColorIcon}
+            backgroundColorPress={backgroundColorPress}
+            playSound={onPlaySound}
+            descriptionOpenModal={() => setIsModalVisible(true)}
+            onPressLeft={() => navigateToRadical(radicalKey.number - 1, from)}
+            onPressRight={() => navigateToRadical(radicalKey.number + 1, from)}
+            number={radicalKey.number}
+            pinyin={radicalKey.pinyin}
+            description={radicalKey.description.short} />
+            <ContentView
+              isStrokeOrder={isStrokeOrder}
+              strokeOrder={() => setIsStrokeOrder(true)}
+              etymology={() => setIsStrokeOrder(false)}
+              calligraphy={radicalKey.calligraphy}
+              evolution={radicalKey.evolution}
+              unicode={radicalKey.unicode} 
+              backgroundColorPress={backgroundColorPress}
+              backgroundActive={svgColorIcon}
+            />
+            <ModalDialog isVisible={isModalVisible} onClose={() => setIsModalVisible(false)} title={"Значение иероглифа"}>
+              <DescriptionView description={radicalKey.description.long} />
+            </ModalDialog>
+          </> }
       </ThemedView>
     </ScrollView>
   );

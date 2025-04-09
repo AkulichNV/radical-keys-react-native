@@ -1,5 +1,5 @@
 import type { PropsWithChildren, ReactElement } from 'react';
-import { Dimensions, StyleSheet, useColorScheme } from 'react-native';
+import { StyleSheet, useColorScheme, Image } from 'react-native';
 import Animated, {
   interpolate,
   useAnimatedRef,
@@ -11,11 +11,9 @@ import Animated, {
 import { ThemedView } from '@/components/ThemedView';
 import { ThemedText } from './ThemedText';
 
-
 const HEADER_HEIGHT = 250;
 
 type Props<T> = PropsWithChildren<{
-  headerImage: ReactElement;
   headerBackgroundColor: { dark: string; light: string };
   data: T[];
   title: string;
@@ -23,7 +21,6 @@ type Props<T> = PropsWithChildren<{
 }>;
 
 const ParallaxFlatList = <T,>({
-  headerImage,
   headerBackgroundColor,
   data,
   title,
@@ -63,7 +60,15 @@ const ParallaxFlatList = <T,>({
         { backgroundColor: headerBackgroundColor[colorScheme] },
         headerAnimatedStyle,
       ]}>
-      {headerImage}
+      {/* {headerImage} */}
+      {colorScheme === 'dark' ? 
+      <Image
+        source={require('@/assets/images/background1.jpg')}
+        style={styles.headerImage}
+      /> : <Image
+        source={require('@/assets/images/background21.png')}
+        style={styles.headerImage}
+      />}
       <ThemedText type="subtitle" style={styles.headerText}>{title}</ThemedText>
     </Animated.View>
   );
@@ -98,6 +103,11 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     right: 0,
+  },
+  headerImage: {
+    height: 250,
+    width: "100%",
+    resizeMode: "contain",
   },
   headerText: {
     width: '45%',
