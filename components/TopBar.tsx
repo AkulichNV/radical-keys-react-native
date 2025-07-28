@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#272f3a',
     borderRadius: 40,
-    marginVertical: 20
+    marginVertical: 40
   },
   rightButton: {
     flex: 0.85

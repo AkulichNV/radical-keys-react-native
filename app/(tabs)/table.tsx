@@ -7,12 +7,15 @@ import { useNavigateToRadical } from '@/hooks/useNavigateToRadical';
 import { RadicalKeys } from '@/types/RadicalKeys';
 import React from 'react';
 
+
 export default function TableKeysScreen() {
   const data = dataKeys.radicalKeys;
   const navigateToRadical = useNavigateToRadical();
 
   const scheme = useColorScheme();
   const isDark = scheme === 'dark';
+
+  const styles = getStyles(isDark);
 
   const backgroundColors = {
     row: isDark ? '#010606' : '#fff6e4',
@@ -48,16 +51,16 @@ export default function TableKeysScreen() {
 
 }
 
-const styles = StyleSheet.create({
+const getStyles = (isDark: boolean) => StyleSheet.create({
   row: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    borderWidth: 1,
-    borderColor: '#272f3a',
+    borderWidth: isDark ? 1 : 2.5,
+    borderColor: isDark ? '#272f3a' : '#cccc99',
     borderRadius: 40,
     flex: 1,
     overflow: 'hidden',
-    shadowColor: '#ffffff',
+    shadowColor: isDark ? '#ffffff' : '#fce7c5',
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.8,
     shadowRadius: 2,  
