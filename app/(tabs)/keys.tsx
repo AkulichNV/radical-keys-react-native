@@ -62,7 +62,7 @@ export default function KeysScreen() {
   return (
     <ParallaxFlatList
       headerBackgroundColor={{ light: '#fff6e4', dark: '#010606' }}
-      title={'Иероглифические ключи'}
+      title={'Радикальные ключи по количеству черт'}
       data={strokeCounts}
       renderItem={renderStrokeSection}
     />

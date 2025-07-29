@@ -19,7 +19,7 @@ export default function TabLayout() {
         options={{
           title: 'Каллиграфия',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'rose' : 'rose-outline'} color={color} />
+            <TabBarIcon name={focused ? 'brush' : 'brush-outline'} color={color} />
           ),
         }}
       />
@@ -35,9 +35,9 @@ export default function TabLayout() {
       <Tabs.Screen
         name="keys"
         options={{
-          title: 'Ключи',
+          title: 'Радикалы',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'extension-puzzle' : 'extension-puzzle-outline'} color={color} />
+            <TabBarIcon name={focused ? 'grid' : 'grid-outline'} color={color} />
           ),
         }}
       />
@@ -51,9 +51,9 @@ export default function TabLayout() {
       <Tabs.Screen
         name="table"
         options={{
-          title: 'Таблица Ключей',
+          title: 'Справочник',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'list' : 'list-outline'} color={color} />
+            <TabBarIcon name={focused ? 'search' : 'search-outline'} color={color} />
           ),
         }}
       />

@@ -43,7 +43,7 @@ export default function TableKeysScreen() {
   return (
     <ParallaxFlatList
     headerBackgroundColor={{ light: '#fff6e4', dark: '#010606' }}
-    title={'Таблица иероглифических ключей'}
+    title={'Справочник иероглифических ключей'}
     data={data}
     renderItem={renderRow}
     />

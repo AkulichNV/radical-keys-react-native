@@ -56,7 +56,7 @@ export default function StrokesScreen() {
   return (
     <ParallaxFlatList
       headerBackgroundColor={{ light: '#fff6e4', dark: '#010606' }}
-      title={'Основные правила порядка черт'}
+      title={'Основные правила порядка черт иероглифов'}
       data={data}
       renderItem={strokeOrderRulesSection}
     />
