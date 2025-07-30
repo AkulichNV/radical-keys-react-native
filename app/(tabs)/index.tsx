@@ -21,12 +21,6 @@ export default function HomeScreen() {
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Первое правило каллиграфии</ThemedText>
         <ThemedText>
-          {/* Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({ ios: 'cmd + d', android: 'cmd + m' })}
-          </ThemedText>{' '}
-          to open developer tools. */}
           Острие крюка с{' '}<ThemedText type="defaultSemiBold">"выгнутой спиной"</ThemedText> 
           должно быть направлено либо в сторону точки соединения горизонтальной и выгнутой линий, либо вертикально вверх. 
           Также вертикально вверх должно быть направлено острие крюка{' '}
@@ -163,16 +157,6 @@ export default function HomeScreen() {
           в левой части сложных иероглифов всегда пишется пропорционально чуть выше, чем элементы, расположенные справа от него.
         </ThemedText>
       </ThemedView>
-      {/* <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView> */}
     </ParallaxScrollView>
   );
 }
