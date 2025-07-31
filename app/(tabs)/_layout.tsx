@@ -15,7 +15,7 @@ export default function TabLayout() {
         headerShown: false,
       }}>
       <Tabs.Screen
-        name="index"
+        name="calligraphy_rules"
         options={{
           title: 'Каллиграфия',
           tabBarIcon: ({ color, focused }) => (
