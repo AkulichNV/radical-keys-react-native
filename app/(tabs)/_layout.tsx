@@ -14,22 +14,27 @@ export default function TabLayout() {
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
       }}>
-      <Tabs.Screen
-        name="calligraphy_rules"
+        <Tabs.Screen
+        name="index"
         options={{
-          title: 'Каллиграфия',
+          title: 'Правила',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'brush' : 'brush-outline'} color={color} />
+            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
           ),
         }}
       />
       <Tabs.Screen
-        name="strokes"
+        name="rules/calligraphy_rules"
         options={{
-          title: 'Порядок черт',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'receipt' : 'receipt-outline'} color={color} />
-          ),
+          href: null,
+          tabBarStyle: { display: 'none' }
+        }}
+      />
+      <Tabs.Screen
+        name="rules/strokes_rules"
+        options={{
+          href: null,
+          tabBarStyle: { display: 'none' }
         }}
       />
       <Tabs.Screen
@@ -51,7 +56,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="table"
         options={{
-          title: 'Справочник',
+          title: 'Поиск',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'search' : 'search-outline'} color={color} />
           ),

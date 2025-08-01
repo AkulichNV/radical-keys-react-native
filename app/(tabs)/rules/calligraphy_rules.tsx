@@ -9,7 +9,7 @@ import ParallaxFlatList from '@/components/ParallaxFlatList';
 import { ICalligraphyRules } from '@/types/CalligraphyRules';
 
 export default function CalligraphyRulesScreen() {
-  const data = dataCalligraphyRules.calligraphyRules;
+  const data: ICalligraphyRules[] = dataCalligraphyRules.calligraphyRules;
 
   function calligraphyRulesSection({ item }: { item: ICalligraphyRules }) {
     const gifSource1 = item.example.gif[0];
