@@ -60,7 +60,6 @@ const ParallaxFlatList = <T,>({
         { backgroundColor: headerBackgroundColor[colorScheme] },
         headerAnimatedStyle,
       ]}>
-      {/* {headerImage} */}
       {colorScheme === 'dark' ? 
       <Image
         source={require('@/assets/images/background1.jpg')}

@@ -1,4 +1,4 @@
-import { StyleSheet, Pressable, Image, useColorScheme } from 'react-native';
+import { StyleSheet, Pressable, useColorScheme } from 'react-native';
 
 import dataKeys from '@/assets/data/radicalKeys.json';
 import { ThemedText } from '@/components/ThemedText';
