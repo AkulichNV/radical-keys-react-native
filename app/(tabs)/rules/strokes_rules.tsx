@@ -9,7 +9,7 @@ import ParallaxFlatList from '@/components/ParallaxFlatList';
 import { StrokeOrderRules } from '@/types/StrokeOrderRules';
 
 export default function StrokesScreen() {
-  const data = dataStrokeOrdersRules.strokeOrderRules;
+  const data: StrokeOrderRules[] = dataStrokeOrdersRules.strokeOrderRules;
 
   function strokeOrderRulesSection({ item }: { item: StrokeOrderRules }) {
     const giSource1 = item.example.unicode[0]; 

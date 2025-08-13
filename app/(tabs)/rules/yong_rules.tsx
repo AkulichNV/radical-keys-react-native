@@ -1,13 +1,15 @@
+import { useState } from 'react';
 import { StyleSheet, Pressable } from 'react-native';
 import { Image, ImageBackground } from "expo-image";
+
 import { ThemedView } from "@/components/ThemedView";
 import { ThemedText } from '@/components/ThemedText';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ModalDialog } from '@/components/ModalDialog';
-import { useState } from 'react';
+import { YongziTable } from '@/components/YongziTable';
 
 
-export default function StrokesScreen() {
+export default function YongScreen() {
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
 
   return (
@@ -47,24 +49,25 @@ export default function StrokesScreen() {
           </ImageBackground>
         </Pressable>
 
-        {/* YongziTable */}
+        <YongziTable/>
           
       </ThemedView>
       <ModalDialog 
         isVisible={isModalVisible} 
         onClose={() => setIsModalVisible(false)} 
-        title={"Штрихи вместе и раздельно: порядковые номера и направления штрихов (красным)"}>
+        title={"Штрихи вместе и раздельно: порядковые номера и направления штрихов (красным)"}
+      >
         <ImageBackground 
-            source={require('@/assets/images/lightGridBackground.png')} 
-            imageStyle={styles.background2}
-            contentFit="cover"
-            >
-            <Image
-                source={require('@/assets/images/strokes_of_永.png')}
-                style={styles.grid2}
-                contentFit="contain"
-            />
-          </ImageBackground>
+          source={require('@/assets/images/lightGridBackground.png')} 
+          imageStyle={styles.modalImage}
+          contentFit="cover"
+          >
+          <Image
+              source={require('@/assets/images/strokes_of_永.png')}
+              style={styles.modalImage}
+              contentFit="contain"
+          />
+        </ImageBackground>
       </ModalDialog>
     </ParallaxScrollView>
   );
@@ -91,12 +94,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 20,
   },
-  background2: {
+  modalImage: {
     width: "100%",
     height: 450,
-  },
-  grid2: {
-    width: "100%",
-    height: 450,
-  },
+  }
 })

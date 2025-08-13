@@ -1,0 +1,60 @@
+{
+  "yongziStrokes": [
+    {
+      "id": 1,
+      "chinese": "点",
+      "pinyin": "diǎn",
+      "description": "точка",
+      "image": "D"
+    },
+    {
+      "id": 2,
+      "chinese": "横",
+      "pinyin": "héng",
+      "description": "горизонтальная черта",
+      "image": "H"
+    },
+    {
+      "id": 3,
+      "chinese": "竖",
+      "pinyin": "shù",
+      "description": "вертикальная черта",
+      "image": "S"
+    },
+    {
+      "id": 4,
+      "chinese": "钩",
+      "pinyin": "gōu",
+      "description": "крючок, присоединяется к другим чертам, резко падает и уходит влево",
+      "image": "G"
+    },
+    {
+      "id": 5,
+      "chinese": "提",
+      "pinyin": "tí",
+      "description": "восходящая черта",
+      "image": "T"
+    },
+    {
+      "id": 6,
+      "chinese": "弯",
+      "pinyin": "wān",
+      "description": "изогнутая откидная влево, сужает толщину, наносится быстро",
+      "image": "W"
+    },
+    {
+      "id": 7,
+      "chinese": "撇",
+      "pinyin": "piě",
+      "description": "откидная влево с небольшим изгибом",
+      "image": "P"
+    },
+    {
+      "id": 8,
+      "chinese": "捺",
+      "pinyin": "nà",
+      "description": "откидная вправо с острым концом",
+      "image": "N"
+    }
+  ]
+}

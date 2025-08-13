@@ -31,7 +31,6 @@ export default function HomeScreen() {
   ]
   const router = useRouter();
   const scheme = useColorScheme();
-  const isDark = scheme === 'dark';
 
   function mainSection({ item }: { item: any }) {
     return <ThemedView style={styles.container} >

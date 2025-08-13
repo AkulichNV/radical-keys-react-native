@@ -108,7 +108,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#272f3a',
     borderRadius: 20,
-    
   },
   grid: {
     width: 100,
