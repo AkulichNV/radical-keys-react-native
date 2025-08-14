@@ -1,5 +1,6 @@
 import type { PropsWithChildren, ReactElement } from 'react';
-import { StyleSheet, useColorScheme, Image } from 'react-native';
+import { StyleSheet, useColorScheme, Image, Pressable } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import Animated, {
   interpolate,
   useAnimatedRef,
@@ -10,6 +11,7 @@ import Animated, {
 
 import { ThemedView } from '@/components/ThemedView';
 import { ThemedText } from './ThemedText';
+import { AntDesign } from '@expo/vector-icons';
 
 const HEADER_HEIGHT = 250;
 
@@ -18,6 +20,7 @@ type Props<T> = PropsWithChildren<{
   data: T[];
   title: string;
   renderItem: ({ item }: { item: T }) => ReactElement;
+  showBackButton?: boolean;
 }>;
 
 const ParallaxFlatList = <T,>({
@@ -25,10 +28,12 @@ const ParallaxFlatList = <T,>({
   data,
   title,
   renderItem,
+  showBackButton
 }: Props<T>): ReactElement => {
   const colorScheme = useColorScheme() ?? 'light';
   const flatListRef = useAnimatedRef<Animated.FlatList<T>>();
   const scrollOffset = useSharedValue(0);
+  const navigation = useNavigation();
 
   const scrollHandler = useAnimatedScrollHandler({
     onScroll: (event) => {
@@ -68,6 +73,13 @@ const ParallaxFlatList = <T,>({
         source={require('@/assets/images/background21.png')}
         style={styles.headerImage}
       />}
+      {showBackButton && (
+      <Pressable style={styles.backButton} onPress={() => navigation.goBack()}>
+        <ThemedText type="title">
+          <AntDesign name="back" size={15}  />
+      </ThemedText>
+      </Pressable>
+    )}
       <ThemedText type="subtitle" style={styles.headerText}>{title}</ThemedText>
     </Animated.View>
   );
@@ -104,7 +116,7 @@ const styles = StyleSheet.create({
     right: 0,
   },
   headerImage: {
-    height: 250,
+    height: HEADER_HEIGHT,
     width: "100%",
     resizeMode: "contain",
   },
@@ -126,5 +138,12 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     maxWidth: "100%",
   },
+  backButton: {
+    flex: 1,
+    width: '45%',
+    position: 'absolute',
+    top: '53%',
+    left: '25%',
+  }
 });
 

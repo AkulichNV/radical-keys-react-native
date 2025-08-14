@@ -16,6 +16,7 @@ export default function YongScreen() {
     <ParallaxScrollView
     title={'Восемь принципов Юн'}
     headerBackgroundColor={{ light: '#fff6e4', dark: '#010606' }}
+    showBackButton
     >
       <ThemedView style={styles.container} >
         <ThemedText type="default">

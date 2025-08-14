@@ -59,6 +59,7 @@ export default function CalligraphyRulesScreen() {
       title={'Основные правила каллиграфии'}
       data={data}
       renderItem={calligraphyRulesSection}
+      showBackButton
     />
   );
 }

@@ -59,15 +59,12 @@ export default function StrokesScreen() {
       title={'Основные правила порядка черт иероглифов'}
       data={data}
       renderItem={strokeOrderRulesSection}
+      showBackButton
     />
   );
 }
 
 const styles = StyleSheet.create({
-  headerImage: {
-    height: 250,
-    width: '100%',
-  },
   container: {
     flex: 1,
     flexDirection: 'row',
