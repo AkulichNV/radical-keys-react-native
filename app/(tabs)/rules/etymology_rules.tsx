@@ -5,36 +5,19 @@ import { ThemedView } from '@/components/ThemedView';
 import ParallaxFlatList from '@/components/ParallaxFlatList';
 import { ImageBackground } from 'expo-image';
 import { useRouter } from 'expo-router';
+import dataEtymologyRules from '@/assets/data/etymology.json';
+import { Etymology } from '@/types/Etymology';
+import { useState } from 'react';
 
 export default function HomeScreen() {
-  const data: any = [
-    {
-      "title": "Правила порядка черт",
-      "route": "/rules/strokes_rules"
-    },
-    {
-      "title": "Правила каллиграфии",
-      "route": "/rules/calligraphy_rules"
-    },
-    {
-      "title": "Восемь принципов Юн",
-      "route": "/rules/yong_rules"
-    },
-    {
-      "title": "Стили китайской каллиграфии",
-      "route": "/rules/etymology_rules"
-    },
-    {
-      "title": "Калиграффические элементы",
-      "route": "/rules/elements_rules"
-    }
-  ]
+  const [open, setOpen] = useState(false); //work incorrect
   const router = useRouter();
   const scheme = useColorScheme();
 
-  function mainSection({ item }: { item: any }) {
+  function mainSection({ item }: { item: Etymology }) {
+
     return <ThemedView style={styles.container} >
-      <Pressable style={styles.pressContainer} onPress={() => router.push(item.route as any)}>
+      <Pressable style={styles.pressContainer} onPress={() => setOpen(!open)}>
         <ImageBackground 
           source={scheme === 'dark' ? 
             require('@/assets/images/darkGridBackground.png') 
@@ -45,10 +28,18 @@ export default function HomeScreen() {
           contentFit="cover"
         >
           <ThemedText type='subtitle' style={styles.textContainer}>
-            {item.title}
+            {item.translateRus}
           </ThemedText>
         </ImageBackground>
       </Pressable>
+      <ThemedView style={{ display: open ? 'flex' : 'none' }}>
+        <ThemedText type='subtitle' style={styles.textContainer}>
+              {item.title} - {item.pinyin}
+        </ThemedText>
+        <ThemedText type='default' style={styles.textContainer}>
+              {item.description}
+        </ThemedText>
+      </ThemedView>
     </ThemedView>
   }
 
@@ -56,7 +47,7 @@ export default function HomeScreen() {
     <ParallaxFlatList
       headerBackgroundColor={{ light: '#fff6e4', dark: '#010606' }}
       title={'Основы китайской каллиграфии'}
-      data={data}
+      data={dataEtymologyRules.etymology}
       renderItem={mainSection}
     />
   );
