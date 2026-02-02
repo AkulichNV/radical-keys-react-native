@@ -19,16 +19,17 @@ export default function HomeScreen() {
     {
       "title": "Восемь принципов Юн",
       "route": "/rules/yong_rules"
-    },
-    {
-      "title": "Стили китайской каллиграфии",
-      "route": "/rules/etymology_rules"
-    },
-    {
-      "title": "Калиграффические элементы",
-      "route": "/rules/elements_rules"
-    }
-  ]
+    }]
+  //   ,
+  //   {
+  //     "title": "Стили китайской каллиграфии",
+  //     "route": "/rules/etymology_rules"
+  //   },
+  //   {
+  //     "title": "Калиграффические элементы",
+  //     "route": "/rules/elements_rules"
+  //   }
+  // ]
   const router = useRouter();
   const scheme = useColorScheme();
 

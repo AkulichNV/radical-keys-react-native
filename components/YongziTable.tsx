@@ -38,7 +38,7 @@ export const YongziTable = () => {
           <ThemedText style={[styles.cell, styles.cell1]}>{item.chinese}{'\n'}{item.pinyin}</ThemedText>
           <Image
             source={yongzi[item.image]}
-            style={[styles.cell, styles.cell2]}
+            style={[styles.cell, styles.cell2, { tintColor: isDark ? 'white' : 'black' }]}
             contentFit="contain"
           />
           <ThemedText style={[styles.cell, styles.cell3]}>{item.description}</ThemedText>
