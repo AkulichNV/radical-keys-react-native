@@ -18,13 +18,15 @@ type Props = PropsWithChildren<{
   title: string;
   headerBackgroundColor: { dark: string; light: string };
   showBackButton?: boolean;
+  topComponent?: ReactElement;
 }>;
 
 export default function ParallaxScrollView({
   children,
   title,
   headerBackgroundColor,
-  showBackButton
+  showBackButton,
+  topComponent
 }: Props) {
   const colorScheme = useColorScheme() ?? 'light';
   const scrollRef = useAnimatedRef<Animated.ScrollView>();
@@ -72,8 +74,9 @@ export default function ParallaxScrollView({
             </ThemedText>
             </Pressable>
           )}
-            <ThemedText type="subtitle" style={styles.headerText}>{title}</ThemedText>
-          </Animated.View>
+          <ThemedText type="subtitle" style={styles.headerText}>{title}</ThemedText>
+        </Animated.View>
+        {topComponent ? <ThemedView style={styles.topComponentWrap}>{topComponent}</ThemedView> : null}
         <ThemedView style={styles.content}>{children}</ThemedView>
       </Animated.ScrollView>
     </ThemedView>
@@ -104,7 +107,7 @@ const styles = StyleSheet.create({
     width: '45%',
     position: 'absolute',
     top: '65%',
-    left: '25%',
+    left: '27%',
     alignItems: 'center',
     fontSize: 15,
     textAlign: 'center',  
@@ -113,7 +116,6 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   content: {
-    // flex: 1,
     padding: 25,
     gap: 15,
     overflow: 'hidden',
@@ -125,5 +127,10 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: '55%',
     left: '27%',
-  }
+  },
+  topComponentWrap: {
+    paddingHorizontal: 16,
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
 });

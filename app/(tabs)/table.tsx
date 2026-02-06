@@ -1,3 +1,4 @@
+import React from 'react';
 import { StyleSheet, Pressable, useColorScheme } from 'react-native';
 
 import dataKeys from '@/assets/data/radicalKeys.json';
@@ -5,7 +6,7 @@ import { ThemedText } from '@/components/ThemedText';
 import ParallaxFlatList from '@/components/ParallaxFlatList';
 import { useNavigateToRadical } from '@/hooks/useNavigateToRadical';
 import { RadicalKeys } from '@/types/RadicalKeys';
-import React from 'react';
+import Search from '@/components/Search';
 
 
 export default function TableKeysScreen() {
@@ -28,7 +29,6 @@ export default function TableKeysScreen() {
   };
 
   const MemoizedRow = React.memo(({ item }: { item: RadicalKeys }) =>
-  // const renderRow =({ item }: { item: RadicalKeys }) => 
     item.hanzi ? (
       <Pressable style={[styles.row, { backgroundColor: backgroundColors.row }]} onPress={() => navigateToRadical(item.number, 'table')}>
         <ThemedText style={[styles.cell, styles.cell1, { backgroundColor: backgroundColors.cell1 }]}>{item.number}</ThemedText>
@@ -43,9 +43,10 @@ export default function TableKeysScreen() {
   return (
     <ParallaxFlatList
     headerBackgroundColor={{ light: '#fff6e4', dark: '#010606' }}
-    title={'Справочник иероглифических ключей'}
+    title={'Поиск иероглифических ключей'}
     data={data}
     renderItem={renderRow}
+    topComponent={<Search />}
     />
   );
 
@@ -60,11 +61,6 @@ const getStyles = (isDark: boolean) => StyleSheet.create({
     borderRadius: 40,
     flex: 1,
     overflow: 'hidden',
-    shadowColor: isDark ? '#ffffff' : '#fce7c5',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.8,
-    shadowRadius: 2,  
-    elevation: 3,
     height: 100,
     alignItems: 'stretch',
   },

@@ -21,6 +21,7 @@ type Props<T> = PropsWithChildren<{
   title: string;
   renderItem: ({ item }: { item: T }) => ReactElement;
   showBackButton?: boolean;
+  topComponent?: ReactElement;
 }>;
 
 const ParallaxFlatList = <T,>({
@@ -28,7 +29,8 @@ const ParallaxFlatList = <T,>({
   data,
   title,
   renderItem,
-  showBackButton
+  showBackButton,
+  topComponent
 }: Props<T>): ReactElement => {
   const colorScheme = useColorScheme() ?? 'light';
   const flatListRef = useAnimatedRef<Animated.FlatList<T>>();
@@ -59,29 +61,32 @@ const ParallaxFlatList = <T,>({
   });
 
   const listHeaderComponent = (
-    <Animated.View
-      style={[
-        styles.header,
-        { backgroundColor: headerBackgroundColor[colorScheme] },
-        headerAnimatedStyle,
-      ]}>
-      {colorScheme === 'dark' ? 
-      <Image
-        source={require('@/assets/images/background1.jpg')}
-        style={styles.headerImage}
-      /> : <Image
-        source={require('@/assets/images/background21.png')}
-        style={styles.headerImage}
-      />}
-      {showBackButton && (
-      <Pressable style={styles.backButton} onPress={() => navigation.goBack()}>
-        <ThemedText type="title">
-          <AntDesign name="back" size={15}  />
-      </ThemedText>
-      </Pressable>
-    )}
-      <ThemedText type="subtitle" style={styles.headerText}>{title}</ThemedText>
-    </Animated.View>
+    <>
+      <Animated.View
+        style={[
+          styles.header,
+          { backgroundColor: headerBackgroundColor[colorScheme] },
+          headerAnimatedStyle,
+        ]}>
+        {colorScheme === 'dark' ? 
+        <Image
+          source={require('@/assets/images/background1.jpg')}
+          style={styles.headerImage}
+        /> : <Image
+          source={require('@/assets/images/background21.png')}
+          style={styles.headerImage}
+        />}
+        {showBackButton && (
+        <Pressable style={styles.backButton} onPress={() => navigation.goBack()}>
+          <ThemedText type="title">
+            <AntDesign name="back" size={15}  />
+        </ThemedText>
+        </Pressable>
+      )}
+        <ThemedText type="subtitle" style={styles.headerText}>{title}</ThemedText>
+      </Animated.View>
+      {topComponent ? <ThemedView style={styles.topComponentWrap}>{topComponent}</ThemedView> : null}
+    </>
   );
 
   return (
@@ -124,7 +129,7 @@ const styles = StyleSheet.create({
     width: '45%',
     position: 'absolute',
     top: '65%',
-    left: '25%',
+    left: '27%',
     alignItems: 'center',
     fontSize: 15,
     textAlign: 'center',  
@@ -144,6 +149,10 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: '53%',
     left: '25%',
-  }
+  },
+  topComponentWrap: {
+    flex: 1,
+    paddingTop: 10,
+  },
 });
 
