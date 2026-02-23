@@ -80,7 +80,6 @@ export function ThemedTextInput({
 
 const styles = StyleSheet.create({
   containerBase: {
-    // width: "83%",
     flex: 1,
     borderRadius: 40
   },

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { View, TextInput, Pressable, StyleSheet, useColorScheme } from 'react-native';
-import { ThemedText } from '@/components/ThemedText';
+import { View, StyleSheet, useColorScheme } from 'react-native';
 import { ThemedTextInput } from "./ThemedTextInput";
 import { ThemedButton } from "./ThemedButton";
 import AntDesign from "@expo/vector-icons/AntDesign";
@@ -23,19 +22,21 @@ export default function Search({ placeholder = "Искать...", onSearch }: IS
     }
   };
 
+  const handleChange = (text: string) => {
+    setQuery(text);
+    if (onSearch) {
+      onSearch(text.trim());
+    }
+  };
+
   return (
     <View style={styles.container}>
       <ThemedTextInput
         style={styles.input}
         value={query}
-        onChangeText={setQuery}
+        onChangeText={handleChange}
         placeholder={placeholder}
         returnKeyType="search"
-        onSubmitEditing={handleSearch}
-      />
-      <ThemedButton
-        icon={<AntDesign name="search1" size={20} color="black" />}
-        onPress={handleSearch}
       />
     </View>
   );

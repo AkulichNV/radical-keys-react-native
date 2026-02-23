@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Pressable, useColorScheme } from 'react-native';
 
 import dataKeys from '@/assets/data/radicalKeys.json';
@@ -11,6 +11,7 @@ import Search from '@/components/Search';
 
 export default function TableKeysScreen() {
   const data = dataKeys.radicalKeys;
+  const [filtered, setFiltered] = useState(data);
   const navigateToRadical = useNavigateToRadical();
 
   const scheme = useColorScheme();
@@ -26,6 +27,24 @@ export default function TableKeysScreen() {
 
   const truncateText = (text: string, maxLength: number) => {
     return text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
+  };
+
+  const handleSearch = (query: string) => {
+    if (!query) {
+      setFiltered(data);
+      return;
+    }
+    const q = query.toLowerCase().trim();
+    const results = data.filter((item) => {
+      return (
+        String(item.number).includes(q) ||
+        item.hanzi?.toLowerCase().includes(q) ||
+        String(item.strokeNumber).includes(q) ||
+        item.sound?.toLowerCase().includes(q) ||
+        item.description?.short?.toLowerCase().includes(q)
+      );
+    });
+    setFiltered(results);
   };
 
   const MemoizedRow = React.memo(({ item }: { item: RadicalKeys }) =>
@@ -44,9 +63,9 @@ export default function TableKeysScreen() {
     <ParallaxFlatList
     headerBackgroundColor={{ light: '#fff6e4', dark: '#010606' }}
     title={'Поиск иероглифических ключей'}
-    data={data}
+    data={filtered} 
     renderItem={renderRow}
-    topComponent={<Search />}
+    topComponent={<Search onSearch={handleSearch} />}
     />
   );
 
