@@ -1,12 +1,59 @@
-# Welcome to your Expo app 👋
+# Radical Keys 📱
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A mobile application for learning Chinese characters using animation of writing characters, search, graphical etymology and historical script forms.
 
-## Get started
+Built with React Native + Expo.
+
+## Screenshots
+
+| Home | Radicals | Search |
+|------|------|------|
+| ![](assets/images/screenshots/home.jpg) | ![](assets/images/screenshots/radicals.jpg) | ![](assets/images/screenshots/search.jpg) |
+
+## ✨ Features
+
+- 🖌 Chinese calligraphy fundamentals
+- 🔢 Stroke order rules
+- 🧭 The Eight Principles of Yong (永字八法)
+- 🔍 Character search (by number, hanzi, stroke count, description)
+- 🎬 Stroke order animations (SVG + GIF)
+- 📚 Character etymology and historical evolution
+- 🏺 Paleographic forms (Shuowen, Chu bamboo slips, Clerical script, etc.)
+- 🔊 Text-to-speech pronunciation
+- 📱 Offline-first storage
+- 🌗 Automatic Dark/Light mode (syncs with device appearance settings)
+- 🇷🇺 Russian UI
+
+## 🛠 Tech Stack
+
+- ⚛️ React 18 + React Native 0.76
+- 🚀 Expo SDK 52
+- 🧭 Expo Router (file-based navigation)
+- 🎨 Reanimated + Gesture Handler
+- 🖼 SVG + Expo Image
+- 🌐 React Native Web
+- 🧪 Jest + TypeScript
+
+## 🧠 Architecture
+
+- Expo Router (file-based navigation)
+- Simple and clear folder structure
+- Separation of UI (components), screens, and utilities
+- Offline-first approach
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js >= 18
+- npm or yarn
+- Expo CLI
 
 1. Install dependencies
 
    ```bash
+   git clone https://github.com/AkulichNV/radical-keys-react-native.git
+   cd radical-keys-react-native
    npm install
    ```
 
@@ -18,33 +65,32 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
 In the output, you'll find options to open the app in a
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
 - [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📂 Project Structure
 
-## Get a fresh project
+- **app/** – Application screens using Expo Router (each file represents a route)
+- **components/** – Reusable UI components shared across screens
+- **context/** – Global state management via React Context
+- **hooks/** – Custom reusable hooks
+- **constants/** – Theme, colors, and configuration values
+- **types/** – Centralized TypeScript types and interfaces
+- **assets/** – Data, images, fonts, and sounds
+- **scripts/** – Development and utility scripts
 
-When you're ready, run:
+## 🗺 Roadmap
 
-```bash
-npm run reset-project
-```
+- [x] Character search (by number, hanzi, stroke count, description)
+- [x] Light and dark themes
+- [x] Stroke order animations (SVG + GIF)
+- [ ] Add English and Romanian localization
+- [ ] Chinese script styles
+- [ ] Basic stroke reference table (simple & compound)
+- [ ] Handwriting recognition
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🤝 Contributing
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Pull requests are welcome.
+For major changes, please open an issue first.
