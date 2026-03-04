@@ -87,12 +87,10 @@ const getStyles = (isDark: boolean) => StyleSheet.create({
     flex: 0.5,
     paddingLeft: 15,
     textAlign: 'center',
-    paddingTop: '10%',
   },
   cell2: {
     flex: 1.2,
     borderBottomRightRadius: 40,
-    paddingTop: '10%'
   },
   cell3: {
     flex: 1,

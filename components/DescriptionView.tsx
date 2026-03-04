@@ -29,6 +29,6 @@ export const DescriptionView = ({
 const styles = StyleSheet.create({
   description: {
     textAlign: 'justify',
-    padding: 20
+    padding: 10
   }
 });

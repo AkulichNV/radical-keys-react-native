@@ -7,6 +7,8 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { useNavigateToRadical } from '@/hooks/useNavigateToRadical';
 import { groupCharactersByStrokes } from '@/scripts/groupCharactersByStrokes';
+import { getMarginCoefficient } from '@/scripts/getMarginCoefficient';
+import { getNumColumns } from '@/scripts/getNumColumns';
 import { RadicalKeys } from '@/types/RadicalKeys';
 
 const windowWidth = Dimensions.get('window').width;
@@ -14,9 +16,12 @@ const windowHeight = Dimensions.get('window').height;
 
 // Calculate the number of columns based on screen width
 const isTablet = windowWidth >= 768;
-const numColumns = isTablet ? (windowWidth > windowHeight ? 12 : 8) : (windowWidth > windowHeight ? 7 : 5);
+const numColumns = getNumColumns(isTablet, windowWidth, windowHeight);
 const ITEM_WIDTH = isTablet ? 80 : 60;
-const ITEM_MARGIN = isTablet ? windowWidth * 0.022 :  windowWidth * 0.025;
+const ITEM_MARGIN = isTablet
+  ? windowWidth * 0.022
+  : windowWidth * getMarginCoefficient(windowWidth);
+console.log(windowWidth);
 
 export default function KeysScreen() {
   const [radicalKeys, setRadicalKeys] = useState<Record<number, RadicalKeys[]>>({});
