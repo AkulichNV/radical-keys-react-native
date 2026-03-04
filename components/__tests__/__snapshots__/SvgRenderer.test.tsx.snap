@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SvgRenderer renders correctly with valid svg and matches snapshot 1`] = `
+<View
+  data-color="#000001"
+  data-height={100}
+  data-width={100}
+  testID="mock-svg"
+/>
+`;

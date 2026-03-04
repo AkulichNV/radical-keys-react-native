@@ -21,7 +21,6 @@ const ITEM_WIDTH = isTablet ? 80 : 60;
 const ITEM_MARGIN = isTablet
   ? windowWidth * 0.022
   : windowWidth * getMarginCoefficient(windowWidth);
-console.log(windowWidth);
 
 export default function KeysScreen() {
   const [radicalKeys, setRadicalKeys] = useState<Record<number, RadicalKeys[]>>({});

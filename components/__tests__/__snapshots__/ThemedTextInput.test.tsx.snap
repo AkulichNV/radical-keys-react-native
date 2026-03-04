@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemedTextInput renders correctly with default props and matches snapshot 1`] = `
+<View
+  style={
+    [
+      {
+        "borderRadius": 40,
+        "flex": 1,
+      },
+      {
+        "backgroundColor": "#ffffff",
+      },
+      undefined,
+    ]
+  }
+>
+  <TextInput
+    placeholderTextColor="#6b7280"
+    style={
+      [
+        {
+          "color": "#000000",
+        },
+        {
+          "fontSize": 16,
+          "paddingHorizontal": 12,
+          "paddingVertical": 10,
+        },
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+      ]
+    }
+  />
+</View>
+`;

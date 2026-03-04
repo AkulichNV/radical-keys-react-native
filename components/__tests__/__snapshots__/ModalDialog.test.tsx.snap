@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalDialog renders correctly when not visible and matches snapshot 1`] = `null`;
+
+exports[`ModalDialog renders correctly when visible and matches snapshot 1`] = `
+<Modal
+  animationType="slide"
+  hardwareAccelerated={false}
+  transparent={true}
+  visible={true}
+>
+  <View
+    style={
+      {
+        "backgroundColor": "rgba(0, 0, 0, 0.6)",
+        "flex": 1,
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "flex": 1,
+        }
+      }
+    />
+    <View
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "borderTopLeftRadius": 18,
+          "borderTopRightRadius": 18,
+          "bottom": 0,
+          "maxHeight": "95%",
+          "position": "absolute",
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#464C55",
+            "borderTopLeftRadius": 10,
+            "borderTopRightRadius": 10,
+            "flexDirection": "row",
+            "height": 50,
+            "justifyContent": "space-between",
+            "paddingHorizontal": 20,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#fff",
+              "fontSize": 16,
+            }
+          }
+        >
+          Test Title
+        </Text>
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+        >
+          <Text
+            data-color="#fff"
+            data-size={22}
+            testID="antdesign-close"
+          />
+        </View>
+      </View>
+      <RCTScrollView
+        keyboardDismissMode="interactive"
+        keyboardShouldPersistTaps="handled"
+        style={
+          {
+            "flexGrow": 1,
+            "paddingBottom": 20,
+          }
+        }
+      >
+        <View />
+      </RCTScrollView>
+    </View>
+  </View>
+</Modal>
+`;

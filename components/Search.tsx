@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { View, StyleSheet, useColorScheme } from 'react-native';
 import { ThemedTextInput } from "./ThemedTextInput";
-import { ThemedButton } from "./ThemedButton";
-import AntDesign from "@expo/vector-icons/AntDesign";
 
 interface ISearch {
   placeholder?: string;
@@ -15,12 +13,6 @@ export default function Search({ placeholder = "Искать...", onSearch }: IS
     const scheme = useColorScheme();
     const isDark = scheme === 'dark';
      const styles = getStyles(isDark);
-
-  const handleSearch = () => {
-    if (onSearch) {
-      onSearch(query.trim());
-    }
-  };
 
   const handleChange = (text: string) => {
     setQuery(text);

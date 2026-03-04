@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SvgGif renders correctly in default state and matches snapshot 1`] = `
+<View
+  accessibilityIgnoresInvertColors={true}
+>
+  <Image
+    resizeMode="cover"
+    source="z200.png"
+    style={
+      [
+        {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        {
+          "height": undefined,
+          "width": undefined,
+        },
+        {
+          "borderColor": "#dbcec4",
+          "borderRadius": 40,
+          "borderWidth": 1,
+          "height": 200,
+          "width": 200,
+        },
+      ]
+    }
+  />
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "position": "relative",
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#dbcec4",
+          "fontSize": 150,
+          "left": "12%",
+          "opacity": 0.3,
+          "position": "absolute",
+          "textAlign": "center",
+          "top": "12%",
+          "zIndex": 1,
+        }
+      }
+      testID="antdesign-play"
+    />
+    <View
+      style={
+        {
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        data-height={200}
+        data-svgname="testSvg"
+        data-width={200}
+        testID="svg-renderer"
+      />
+    </View>
+  </View>
+</View>
+`;

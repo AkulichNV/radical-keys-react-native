@@ -1,0 +1,305 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KeyHeader renders correctly and matches snapshot 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+      "gap": 20,
+      "marginBottom": 10,
+    }
+  }
+>
+  <View
+    accessibilityIgnoresInvertColors={true}
+  >
+    <Image
+      resizeMode="cover"
+      source={
+        {
+          "uri": "https://example.com/bg.png",
+        }
+      }
+      style={
+        [
+          {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          {
+            "height": undefined,
+            "width": undefined,
+          },
+          {
+            "borderColor": "#272f3a",
+            "borderRadius": 40,
+            "borderWidth": 1,
+          },
+        ]
+      }
+    />
+    <Text
+      style={
+        {
+          "textAlign": "center",
+        }
+      }
+    >
+      No 
+      42
+    </Text>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+      >
+        <Text>
+          <Text
+            data-color="#272f3a"
+            data-size={30}
+            testID="antdesign-caretleft"
+          />
+        </Text>
+      </View>
+      <View
+        data-color="#ff0000"
+        data-height={250}
+        data-svgname="testSvg"
+        data-width={250}
+        testID="svg-renderer"
+      />
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+      >
+        <Text>
+          <Text
+            data-color="#272f3a"
+            data-size={30}
+            testID="antdesign-caretright"
+          />
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "flex": 1,
+        "flexDirection": "row",
+        "gap": 15,
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
+          {
+            "flex": 0.55,
+          },
+          {
+            "alignItems": "center",
+            "borderColor": "#272f3a",
+            "borderRadius": 40,
+            "borderWidth": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "marginLeft": "auto",
+            "marginRight": "auto",
+            "padding": 10,
+            "position": "relative",
+          },
+          {
+            "backgroundColor": "#0000ff",
+          },
+        ]
+      }
+    >
+      <Text
+        data-color="#00ff00"
+        data-size={100}
+        testID="fontawesome5-book-open"
+      />
+      <Text
+        style={
+          {
+            "position": "absolute",
+            "textAlign": "center",
+            "width": "100%",
+          }
+        }
+      >
+        Hello
+      </Text>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
+          {
+            "flex": 0.45,
+          },
+          {
+            "alignItems": "center",
+            "borderColor": "#272f3a",
+            "borderRadius": 40,
+            "borderWidth": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "marginLeft": "auto",
+            "marginRight": "auto",
+            "padding": 10,
+            "position": "relative",
+          },
+          {
+            "backgroundColor": "#0000ff",
+          },
+        ]
+      }
+    >
+      <Text
+        data-color="#00ff00"
+        data-size={100}
+        testID="antdesign-sound"
+      />
+      <Text
+        style={
+          {
+            "position": "absolute",
+            "textAlign": "center",
+            "width": "100%",
+          }
+        }
+      >
+        nǐ hǎo
+      </Text>
+    </View>
+  </View>
+</View>
+`;

@@ -50,11 +50,6 @@ export function ThemedTextInput({
     "background"
   );
 
-//   const borderColor = useThemeColor(
-//     { light: lightBorderColor ?? "#cccc99", dark: darkBorderColor ?? "#272f3a" },
-//     "background"
-//   );
-
   // placeholder color default
   const phColor =
     placeholderTextColor ??

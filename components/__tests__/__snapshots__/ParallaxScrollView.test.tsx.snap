@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ParallaxScrollView renders correctly and matches snapshot 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView>
+    <View>
+      <View
+        style={
+          [
+            {
+              "height": 250,
+              "left": 0,
+              "marginBottom": 0,
+              "overflow": "hidden",
+              "position": "relative",
+              "right": 0,
+              "top": 0,
+            },
+            {
+              "backgroundColor": "#fff",
+            },
+            {
+              "transform": [
+                {
+                  "translateY": -125,
+                },
+                {
+                  "scale": 2,
+                },
+              ],
+            },
+          ]
+        }
+      >
+        <Image
+          source="background21.png"
+          style={
+            {
+              "height": 250,
+              "resizeMode": "contain",
+              "width": "100%",
+            }
+          }
+        />
+        <Text
+          data-type="subtitle"
+          style={
+            {
+              "alignItems": "center",
+              "borderRadius": 20,
+              "fontSize": 15,
+              "left": "27%",
+              "paddingBottom": 15,
+              "paddingTop": 15,
+              "position": "absolute",
+              "textAlign": "center",
+              "top": "65%",
+              "width": "45%",
+            }
+          }
+        >
+          Test Title
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "gap": 15,
+            "maxWidth": "100%",
+            "overflow": "hidden",
+            "padding": 25,
+          }
+        }
+      >
+        <Text>
+          Content
+        </Text>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
