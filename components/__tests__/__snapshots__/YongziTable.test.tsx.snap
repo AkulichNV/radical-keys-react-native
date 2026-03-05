@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YongziTable renders correctly and matches snapshot 1`] = `
+[
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "stretch",
+        "backgroundColor": "#fff6e4",
+        "borderColor": "#cccc99",
+        "borderRadius": 40,
+        "borderWidth": 2.5,
+        "elevation": 3,
+        "flex": 1,
+        "flexDirection": "row",
+        "height": 150,
+        "justifyContent": "space-between",
+        "overflow": "hidden",
+        "shadowColor": "#fce7c5",
+        "shadowOffset": {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 0.8,
+        "shadowRadius": 2,
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "paddingVertical": 10,
+            "textAlign": "center",
+          },
+          {
+            "backgroundColor": "#fee8c5",
+            "borderBottomRightRadius": 40,
+            "flex": 1.7,
+            "fontSize": 25,
+            "lineHeight": 30,
+            "paddingTop": "10%",
+          },
+        ]
+      }
+    >
+      永
+      
+
+      yǒng
+    </Text>
+    <View
+      data-contentfit="contain"
+      data-source="path/to/stroke1.png"
+      style={
+        [
+          {
+            "paddingVertical": 10,
+            "textAlign": "center",
+          },
+          {
+            "alignSelf": "center",
+            "flex": 1.2,
+            "height": 60,
+          },
+          {
+            "tintColor": "black",
+          },
+        ]
+      }
+      testID="expo-image"
+    />
+    <Text
+      style={
+        [
+          {
+            "paddingVertical": 10,
+            "textAlign": "center",
+          },
+          {
+            "backgroundColor": "#f2e7c5",
+            "borderTopLeftRadius": 40,
+            "elevation": 5,
+            "flex": 2.1,
+            "paddingLeft": 10,
+            "paddingRight": 20,
+            "shadowColor": "#fffff",
+            "shadowOffset": {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 5,
+            "textAlign": "right",
+          },
+        ]
+      }
+    >
+      Horizontal
+    </Text>
+  </View>,
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "stretch",
+        "backgroundColor": "#fff6e4",
+        "borderColor": "#cccc99",
+        "borderRadius": 40,
+        "borderWidth": 2.5,
+        "elevation": 3,
+        "flex": 1,
+        "flexDirection": "row",
+        "height": 150,
+        "justifyContent": "space-between",
+        "overflow": "hidden",
+        "shadowColor": "#fce7c5",
+        "shadowOffset": {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 0.8,
+        "shadowRadius": 2,
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "paddingVertical": 10,
+            "textAlign": "center",
+          },
+          {
+            "backgroundColor": "#fee8c5",
+            "borderBottomRightRadius": 40,
+            "flex": 1.7,
+            "fontSize": 25,
+            "lineHeight": 30,
+            "paddingTop": "10%",
+          },
+        ]
+      }
+    >
+      字
+      
+
+      zì
+    </Text>
+    <View
+      data-contentfit="contain"
+      data-source="path/to/stroke2.png"
+      style={
+        [
+          {
+            "paddingVertical": 10,
+            "textAlign": "center",
+          },
+          {
+            "alignSelf": "center",
+            "flex": 1.2,
+            "height": 60,
+          },
+          {
+            "tintColor": "black",
+          },
+        ]
+      }
+      testID="expo-image"
+    />
+    <Text
+      style={
+        [
+          {
+            "paddingVertical": 10,
+            "textAlign": "center",
+          },
+          {
+            "backgroundColor": "#f2e7c5",
+            "borderTopLeftRadius": 40,
+            "elevation": 5,
+            "flex": 2.1,
+            "paddingLeft": 10,
+            "paddingRight": 20,
+            "shadowColor": "#fffff",
+            "shadowOffset": {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 5,
+            "textAlign": "right",
+          },
+        ]
+      }
+    >
+      Vertical
+    </Text>
+  </View>,
+  <View
+    data-visible={false}
+    testID="modal-dialog"
+  >
+    <Text
+      testID="modal-title"
+    />
+    <Text
+      onPress={[Function]}
+      testID="modal-close"
+    />
+    <View
+      data-contentfit="cover"
+      data-source="lightGridBackground.png"
+      style={
+        {
+          "height": 450,
+          "width": "100%",
+        }
+      }
+      testID="expo-image-background"
+    />
+  </View>,
+]
+`;

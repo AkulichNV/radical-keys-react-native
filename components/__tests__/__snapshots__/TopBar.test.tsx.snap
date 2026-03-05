@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopBar renders correctly and matches snapshot 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderColor": "#272f3a",
+        "borderRadius": 40,
+        "borderWidth": 1,
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "marginVertical": 40,
+        "paddingHorizontal": 10,
+        "paddingVertical": 5,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    hitSlop={8}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "flex": 0.85,
+      }
+    }
+  >
+    <Text
+      data-type="title"
+    >
+      <Text
+        data-size={30}
+        testID="antdesign-back"
+      />
+    </Text>
+  </View>
+  <Text
+    data-type="title"
+    style={
+      {
+        "flex": 1,
+        "paddingTop": 10,
+        "textAlignVertical": "center",
+      }
+    }
+  >
+    Test Title
+  </Text>
+</View>
+`;

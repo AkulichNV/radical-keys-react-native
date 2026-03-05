@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EtymologyView renders correctly and matches snapshot 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "gap": 15,
+        "justifyContent": "center",
+        "marginLeft": -10,
+        "paddingTop": 10,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      {
+        "flex": 0.06,
+        "flexDirection": "column",
+        "paddingBottom": 5,
+      }
+    }
+  >
+    <Text
+      data-type="subtitleBlue"
+    >
+      甲
+    </Text>
+  </View>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "gap": 15,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#dbcec4",
+          "borderRadius": 40,
+          "borderWidth": 1,
+          "padding": 11,
+        }
+      }
+    >
+      <View
+        data-height={80}
+        data-svgname="oracle1"
+        data-width={80}
+        testID="svg-renderer-oracle1"
+      />
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#dbcec4",
+          "borderRadius": 40,
+          "borderWidth": 1,
+          "padding": 11,
+        }
+      }
+    >
+      <View
+        data-height={80}
+        data-svgname="oracle2"
+        data-width={80}
+        testID="svg-renderer-oracle2"
+      />
+    </View>
+  </View>
+</View>
+`;

@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentView renders correctly and matches snapshot 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+      "marginTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "flex": 1,
+        "flexDirection": "row",
+        "gap": 15,
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
+          {
+            "flex": 0.55,
+          },
+          {
+            "alignItems": "center",
+            "borderColor": "#272f3a",
+            "borderRadius": 40,
+            "borderWidth": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "marginLeft": "auto",
+            "marginRight": "auto",
+            "padding": 20,
+          },
+          {
+            "backgroundColor": "#aabbcc",
+          },
+          {
+            "backgroundColor": "#ff0000",
+          },
+        ]
+      }
+    >
+      <Text
+        data-type="title"
+      >
+        <Text
+          data-size={25}
+          testID="fontawesome5-pen-fancy"
+        />
+      </Text>
+      <Text
+        data-type="subtitle"
+        style={
+          {
+            "paddingLeft": 10,
+            "textAlign": "center",
+          }
+        }
+      >
+        Правила написания
+      </Text>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
+          {
+            "flex": 0.45,
+          },
+          {
+            "alignItems": "center",
+            "borderColor": "#272f3a",
+            "borderRadius": 40,
+            "borderWidth": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "marginLeft": "auto",
+            "marginRight": "auto",
+            "padding": 20,
+          },
+          {
+            "backgroundColor": "#aabbcc",
+          },
+          false,
+        ]
+      }
+    >
+      <Text
+        data-type="title"
+      >
+        <Text
+          data-size={24}
+          testID="fontawesome5-scroll"
+        />
+      </Text>
+      <Text
+        data-type="subtitle"
+        style={
+          {
+            "paddingLeft": 10,
+            "textAlign": "center",
+          }
+        }
+      >
+        Истоки символа
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "flex": 1,
+        "marginTop": 10,
+      }
+    }
+  >
+    <View
+      data-calligraphy={
+        [
+          {
+            "gif": "stroke1.gif",
+            "strokeOrder": [
+              "step1",
+              "step2",
+            ],
+            "svg": "stroke1",
+          },
+        ]
+      }
+      testID="stroke-order-content"
+    />
+  </View>
+</View>
+`;

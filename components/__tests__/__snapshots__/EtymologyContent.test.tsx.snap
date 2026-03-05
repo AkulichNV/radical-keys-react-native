@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EtymologyContent renders correctly and matches snapshot 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "flex": 1,
+      "flexDirection": "column",
+    }
+  }
+>
+  <View
+    testID="etymology-view-Oracle Bone"
+  >
+    <Text
+      onPress={[Function]}
+      testID="etymology-title-Oracle Bone"
+    >
+      Oracle Bone
+    </Text>
+  </View>
+  <Text
+    data-color="#272f3a"
+    data-size={50}
+    style={
+      {
+        "marginLeft": 25,
+      }
+    }
+    testID="antdesign-caretdown"
+  />
+  <View
+    testID="etymology-view-Bronze"
+  >
+    <Text
+      onPress={[Function]}
+      testID="etymology-title-Bronze"
+    >
+      Bronze
+    </Text>
+  </View>
+  <Text
+    data-color="#272f3a"
+    data-size={50}
+    style={
+      {
+        "marginLeft": 25,
+      }
+    }
+    testID="antdesign-caretdown"
+  />
+  <View
+    testID="etymology-view-Seal Script"
+  >
+    <Text
+      onPress={[Function]}
+      testID="etymology-title-Seal Script"
+    >
+      Seal Script
+    </Text>
+  </View>
+  <View
+    data-visible={false}
+    testID="modal-dialog"
+  >
+    <Text
+      testID="modal-title"
+    >
+        ()
+    </Text>
+    <Text
+      onPress={[Function]}
+      testID="modal-close"
+    />
+    <View
+      testID="description-view"
+    >
+      <Text
+        testID="description-text-0"
+      />
+    </View>
+  </View>
+</View>
+`;

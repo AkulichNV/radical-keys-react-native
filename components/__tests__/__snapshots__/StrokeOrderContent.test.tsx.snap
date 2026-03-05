@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StrokeOrderContent renders correctly and matches snapshot 1`] = `
+<View>
+  <View
+    data-gifsource="gif1.gif"
+    data-strokeorder={
+      [
+        "step1",
+        "step2",
+      ]
+    }
+    data-svgsource="svg1"
+    testID="stroke-order-view-svg1"
+  />
+  <View
+    data-gifsource="gif2.gif"
+    data-strokeorder={
+      [
+        "stepA",
+      ]
+    }
+    data-svgsource="svg2"
+    testID="stroke-order-view-svg2"
+  />
+  <View
+    data-svgsource="svg3"
+    testID="stroke-order-view-svg3"
+  />
+</View>
+`;

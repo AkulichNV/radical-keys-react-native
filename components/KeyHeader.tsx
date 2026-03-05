@@ -144,7 +144,6 @@ const styles = StyleSheet.create({
     marginRight:'auto',
     padding: 10,
     position: "relative",
-    // backgroundColor: '#000000'
   },
   contentText: {
     textAlign: 'center',
