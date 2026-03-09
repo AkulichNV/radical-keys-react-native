@@ -13,7 +13,7 @@ import { ThemedView } from '@/components/ThemedView';
 import { ThemedText } from './ThemedText';
 import { AntDesign } from '@expo/vector-icons';
 
-const HEADER_HEIGHT = 250;
+const HEADER_HEIGHT = 200;
 
 type Props<T> = PropsWithChildren<{
   headerBackgroundColor: { dark: string; light: string };
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
   headerText: {
     width: '45%',
     position: 'absolute',
-    top: '65%',
+    top: '55%',
     left: '27%',
     alignItems: 'center',
     fontSize: 15,
@@ -147,8 +147,8 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '45%',
     position: 'absolute',
-    top: '53%',
-    left: '25%',
+    top: '50%',
+    left: '24%',
   },
   topComponentWrap: {
     flex: 1,

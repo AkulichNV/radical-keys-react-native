@@ -12,7 +12,7 @@ import { ThemedView } from '@/components/ThemedView';
 import { ThemedText } from './ThemedText';
 import { AntDesign } from '@expo/vector-icons';
 
-const HEADER_HEIGHT = 250;
+const HEADER_HEIGHT = 200;
 
 type Props = PropsWithChildren<{
   title: string;
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     width: '45%',
     position: 'absolute',
     top: '55%',
-    left: '27%',
+    left: '26%',
   },
   topComponentWrap: {
     paddingHorizontal: 16,
